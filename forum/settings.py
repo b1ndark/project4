@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com']
+ALLOWED_HOSTS = ['8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com',
+                 'typerforum-fb5dd209c30e.herokuapp.com']
 
 
 # Application definition
@@ -46,7 +47,7 @@ INSTALLED_APPS = [
     'cloudinary',
 
     # Others
-    
+
 
     # Apps
     'typerforum',
