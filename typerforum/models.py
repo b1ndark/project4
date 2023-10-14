@@ -3,6 +3,21 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
+CAR_MODELS = (
+    ('ek9', 'Honda Civic Type R EK9'),
+    ('ep3', 'Honda Civic Type R EP3'),
+    ('fn2', 'Honda Civic Type R FN2'),
+    ('fd2', 'Honda Civic Type R FD2'),
+    ('fk2', 'Honda Civic Type R FK2'),
+    ('fk8', 'Honda Civic Type R FK8'),
+    ('fl5', 'Honda Civic Type R FL5'),
+    ('dc2', 'Honda Integra Type R DC2'),
+    ('dc5', 'Honda Integra Type R DC5'),
+    ('nsx-r', 'Honda NSX Type R'),
+    ('cl1', 'Honda Accord Type R'),
+)
+
+
 '''
 Forum Post
 '''
@@ -11,6 +26,9 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
+    car_model = models.CharField(
+        max_length=30, choices=CAR_MODELS, default="ek9"
+    )
     featured_image = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
