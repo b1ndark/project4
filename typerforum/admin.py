@@ -10,3 +10,10 @@ class PostAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_filter = ('status', 'created_on', 'likes')
     summernote_fields = ('content')
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'body', 'post', 'created_on')
+    list_filter = ('created_on', 'name', 'likes')
+    search_fields = ['name', 'email address', 'body']

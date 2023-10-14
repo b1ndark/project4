@@ -63,10 +63,14 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
-    # approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
+    likes = models.ManyToManyField(User, related_name='comment_like', blank=True)
 
     class Meta:
         ordering = ['created_on']
+
+    def number_of_likes(self):
+        return self.likes.count()
 
     def __str__(self):
         return f'Comment {self.body} by {self.name}'
