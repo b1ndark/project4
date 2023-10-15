@@ -1,4 +1,4 @@
-        /************* Default Fonts and Colours *************/
+/************* Default Fonts and Colours *************/
 
 :root {
     /* Fonts */
@@ -6,10 +6,59 @@
     --main-font: 'Noto Serif JP', serif;
 
     /* Colours */
-    --background: #2524250f;
+    --background: #2e2c2eb6;
+    --nav: #161516de;
     --red: #b90a0a;
     --black: #000000;
     --white: #ffffff;
 
+    /* Settings */
+    --border: 1px solid #00000030;
 }
 
+/************* Nav Bar *************/
+
+html,
+body {
+    height: 100%;
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--background);
+}
+
+/************* Nav Bar *************/
+
+.navbar-dark {
+    background-color: var(--nav);
+    font-family: var(--title);
+    color: var(--white);
+}
+
+.red-r {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--red);
+    font-size: 1.5em;
+}
+
+/************* Body *************/
+
+
+/************* Footer *************/
+
+footer {
+    flex-shrink: 0;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
+}
+
+
+.social-icon {
+    height: 2rem;
+    margin: 1rem;
+}
