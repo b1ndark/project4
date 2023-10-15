@@ -1,0 +1,15 @@
+        /************* Default Fonts and Colours *************/
+
+:root {
+    /* Fonts */
+    --title: 'Noto Sans JP', sans-serif;
+    --main-font: 'Noto Serif JP', serif;
+
+    /* Colours */
+    --background: #2524250f;
+    --red: #b90a0a;
+    --black: #000000;
+    --white: #ffffff;
+
+}
+

@@ -3,6 +3,10 @@ from django.views import generic
 from .models import Post, Comment
 
 
+def home(request):
+    return render(request, 'index.html')
+
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
