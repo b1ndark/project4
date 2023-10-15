@@ -43,8 +43,9 @@
   </head>
 
   <body class="d-flex flex-column h-100 main-bg">
-    <!--            Navigation Menus            -->
 
+    <!--            Navigation Menus            -->
+    {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"
@@ -65,7 +66,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a
-                class="nav-link active"
+                class="nav-link {% if url_name == 'home' %}active{% endif %}"
                 aria-current="page"
                 href="{% url 'home' %}"
                 >Home</a
@@ -74,7 +75,7 @@
             {% if user.is_authenticated %}
             <li class="nav-item">
               <a
-                class="nav-link"
+                class="nav-link {% if url_name == 'forum' %}active{% endif %}"
                 aria-current="page"
                 href="#"
                 >Forum</a
@@ -96,6 +97,7 @@
         </div>
       </div>
     </nav>
+    {% endwith %}
 
     <main class="flex-shrink-0 main-bg">
       {% block content %}

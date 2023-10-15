@@ -10,7 +10,7 @@
     --nav: #161516de;
     --red: #b90a0a;
     --black: #000000;
-    --white: #ffffff;
+    --white: rgba(255, 255, 255, .55);
 
     /* Settings */
     --border: 1px solid #00000030;
