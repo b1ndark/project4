@@ -45,6 +45,27 @@ main {
 /************* Body *************/
 
 
+
+/*** Forum ***/
+
+.card-body {
+    background-color: var(--background);
+    color: var(--white);
+}
+
+.post-link {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.post-link:hover {
+    color: var(--white);
+}
+
+.card {
+    border: 2px solid var(--nav);;
+}
+
 /************* Footer *************/
 
 footer {
@@ -55,10 +76,16 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: var(--border);
+    color: var(--black);
+    font-weight: bolder;
 }
 
 
 .social-icon {
     height: 2rem;
     margin: 1rem;
+}
+
+.social-icon:hover {
+    color: var(--white);
 }
