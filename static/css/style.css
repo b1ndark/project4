@@ -49,6 +49,10 @@ main {
 
 /*** Forum ***/
 
+.row {
+    justify-content: center;
+}
+
 .card-body {
     background-color: var(--posts-background);
     color: var(--white);
