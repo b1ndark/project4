@@ -96,14 +96,14 @@ footer {
 
 footer a {
     color: var(--black);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .social-icon {
     height: 2rem;
     margin: 1rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.social-icon:hover {
+footer a:hover {
     color: var(--white);
 }
