@@ -72,6 +72,7 @@ main {
     color: var(--white);
     border: 2px solid var(--black);
     margin-top: 18px;
+    border-radius: 10px;
 }
 
 .page-link:hover {
@@ -93,6 +94,9 @@ footer {
     font-weight: bolder;
 }
 
+footer a {
+    color: var(--black);
+}
 
 .social-icon {
     height: 2rem;

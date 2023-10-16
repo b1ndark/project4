@@ -39,20 +39,23 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
     <!--      Favicon      -->
-    <link rel="shortcut icon" type="image/ico" href="{% static 'favicon/favicon.ico' %}">
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="{% static 'favicon/favicon.ico' %}"
+    />
 
     <!--            Page Title            -->
     <title>Type R Forum</title>
   </head>
 
   <body class="d-flex flex-column h-100 main-bg">
-
     <!--            Navigation Menus            -->
     {% include 'includes/header.html' %}
 
     <main class="flex-shrink-0 main-bg">
       {% block content %}
-      <!-- Content -->
+      <!--            Content            -->
       {% endblock content %}
     </main>
 
@@ -63,10 +66,21 @@
       </p>
       <p class="m-0 text-center">Made by Vitor Oliveira</p>
       <p class="m-0 text-center">
-        <i class="fab fa-github-square ms-3 social-icon"></i>
-        <i class="fab fa-twitter-square ms-3 social-icon"></i>
-        <i class="fab fa-instagram-square ms-3 social-icon"></i>
-        <i class="fab fa-linkedin ms-3 social-icon"></i>
+        <a href="https://github.com/b1ndark" target="_blank" title="Github"
+          ><i class="fab fa-github-square ms-3 social-icon"></i
+        ></a>
+        <a href="https://twitter.com/" target="_blank" title="Twitter"
+          ><i class="fab fa-x-twitter ms-3 social-icon"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank" title="Instagram"
+          ><i class="fab fa-instagram-square ms-3 social-icon"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/vitor-de-oliveira-50076b268/"
+          target="_blank"
+          title="Linkedin"
+          ><i class="fab fa-linkedin ms-3 social-icon"></i
+        ></a>
       </p>
     </footer>
   </body>
