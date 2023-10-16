@@ -6,11 +6,12 @@
     --main-font: 'Noto Serif JP', serif;
 
     /* Colours */
-    --background: #2e2c2eb6;
+    --background: #2c2b2ccc;
     --nav: #161516de;
     --red: #b90a0a;
     --black: #000000;
     --white: rgba(255, 255, 255, .55);
+    --posts-background: #2c2b2cb7;
 
     /* Settings */
     --border: 1px solid #000000;
@@ -49,7 +50,7 @@ main {
 /*** Forum ***/
 
 .card-body {
-    background-color: var(--background);
+    background-color: var(--posts-background);
     color: var(--white);
 }
 
@@ -64,6 +65,18 @@ main {
 
 .card {
     border: 2px solid var(--nav);;
+}
+
+.page-link {
+    background-color: var(--background);
+    color: var(--white);
+    border: 2px solid var(--black);
+    margin-top: 18px;
+}
+
+.page-link:hover {
+    color: var(--black);
+    border: 2px solid var(--black);
 }
 
 /************* Footer *************/
@@ -84,6 +97,7 @@ footer {
 .social-icon {
     height: 2rem;
     margin: 1rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .social-icon:hover {
