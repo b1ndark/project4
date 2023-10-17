@@ -6,18 +6,18 @@
     --main-font: 'Noto Serif JP', serif;
 
     /* Colours */
-    --background: #2c2b2ccc;
-    --nav: #161516de;
+    --background: #2c2b2ce3;
+    --nav: #161516f3;
     --red: #b90a0a;
     --black: #000000;
     --white: rgba(255, 255, 255, .55);
-    --posts-background: #2c2b2cb7;
+    --posts-background: #2c2b2cc9;
 
     /* Settings */
     --border: 1px solid #000000;
 }
 
-/************* Nav Bar *************/
+/************* Body *************/
 
 html,
 body {
@@ -27,6 +27,11 @@ body {
 main {
     flex: 1 0 auto;
     background-color: var(--background);
+}
+
+h1 {
+    color: var(--white);
+    padding-top: 10px;
 }
 
 /************* Nav Bar *************/
@@ -43,11 +48,11 @@ main {
     font-size: 1.5em;
 }
 
-/************* Body *************/
-
-
-
 /*** Forum ***/
+
+.col-md-12 {
+    margin: 10px;
+}
 
 .row {
     justify-content: center;
@@ -56,11 +61,30 @@ main {
 .card-body {
     background-color: var(--posts-background);
     color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-img-top {
+    border: 1px solid grey;
+    border-radius: 20px;
 }
 
 .post-link {
     color: var(--black);
     text-decoration: none;
+}
+
+.post-subtitle {
+    font-weight: bolder;
 }
 
 .post-link:hover {
@@ -69,6 +93,7 @@ main {
 
 .card {
     border: 2px solid var(--nav);;
+    border-radius: 20px;
 }
 
 .page-link {
@@ -83,6 +108,7 @@ main {
     color: var(--black);
     border: 2px solid var(--black);
 }
+
 
 /************* Footer *************/
 

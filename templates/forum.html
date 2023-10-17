@@ -12,15 +12,22 @@
 <div class="container-fluid">
   <div class="row">
     <!--   Forum Column   -->
-    <div class="col-sm-12 col-lg-10 mt-3">
+    <div class="col-sm-12 col-lg-8 mt-3">
       <div class="row">
         {% for post in post_list %}
         <div class="col-md-12">
           <div class="card mb-8">
             <div class="card-body">
+              <a href="{% url 'forum_detail' post.slug %}" class="post-link">
+                <h2 class="card-title">{{ post.title }}</h2>
+              </a>
               <div class="image-container">
                 {% if "placeholder" in post.featured_image.url %}
-                <img class="card-img-top" src="#" alt="#" />
+                <img
+                  class="card-img-top"
+                  src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
+                  alt="type r fk2"
+                />
                 {% else %}
                 <img
                   class="card-img-top"
@@ -28,19 +35,18 @@
                   alt=""
                 />
                 {% endif %}
-                <div class="image-flash">
-                  <p class="author">Author: {{ post.author }}</p>
-                </div>
               </div>
-              <a href="{% url 'forum_detail' post.slug %}" class="post-link">
-                <h2 class="card-title">{{ post.title }}</h2>
-                <p class="card-text">{{ post.excerpt }}</p>
-              </a>
-              <br />
-              <p class="card-text h6">
-                {{ post.created_on }} <i class="far fa-heart"></i>
-                {{ post.number_of_likes }}
-              </p>
+              <p class="card-text">{{ post.excerpt }}</p>
+              <div class="card-details">
+                <br />
+                <p class="card-text h6">
+                    <div class="image-flash">
+                        <p class="author">Author: {{ post.author }}</p>
+                        <p>{{ post.created_on }} <i class="far fa-heart"></i>
+                  {{ post.number_of_likes }}</p>
+                    </div>
+                </p>
+              </div>
             </div>
           </div>
         </div>
