@@ -17,7 +17,7 @@
     --border: 1px solid #000000;
 }
 
-/************* Body *************/
+/************************** Body **************************/
 
 html,
 body {
@@ -34,7 +34,7 @@ h1 {
     padding-top: 10px;
 }
 
-/************* Nav Bar *************/
+/************************** Nav Bar **************************/
 
 .navbar-dark {
     background-color: var(--nav);
@@ -48,7 +48,7 @@ h1 {
     font-size: 1.5em;
 }
 
-/************* Forum *************/
+/************************** Forum **************************/
 
 .col-md-12 {
     margin: 10px;
@@ -110,7 +110,12 @@ h1 {
     border: 2px solid var(--black);
 }
 
-/************* Forum *************/
+.created-on {
+    display: flex;
+    justify-content: space-between;
+}
+
+/************************** Forum Details **************************/
 
 .masthead-text {
     display: flex;
@@ -176,12 +181,7 @@ img {
     border: 1px solid #3f3d3d;;
 }
 
-.created-on {
-    display: flex;
-    justify-content: space-between;
-}
-
-/************* Footer *************/
+/************************** Footer **************************/
 
 footer {
     flex-shrink: 0;
@@ -210,7 +210,7 @@ footer a:hover {
 }
 
 
-/************* Media queries *************/
+/************************** Media queries **************************/
 
 /* for medium screens sizes from 1280px wide and down */
 

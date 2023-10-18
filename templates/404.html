@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %} 404 Page{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        <h1>404 Page Error!</h1>
+        <p>The page that you are looking for seems to be having an issue please go back to <a href="{% url 'home' %">Home
+            Page</a></p>
+    </div>
+{% endblock %}
