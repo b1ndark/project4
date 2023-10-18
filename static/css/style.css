@@ -48,7 +48,7 @@ h1 {
     font-size: 1.5em;
 }
 
-/*** Forum ***/
+/************* Forum *************/
 
 .col-md-12 {
     margin: 10px;
@@ -76,6 +76,7 @@ h1 {
 .card-img-top {
     border: 1px solid grey;
     border-radius: 20px;
+    width: 50%;
 }
 
 .post-link {
@@ -109,6 +110,76 @@ h1 {
     border: 2px solid var(--black);
 }
 
+/************* Forum *************/
+
+.masthead-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-details{
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    justify-content: space-between;
+}
+
+.col-1-bottom {
+    display: flex;
+}
+
+.col-1-bottom p {
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.g-0 {
+    border: 2px solid var(--nav);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    border-radius: 20px;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row>* {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.row-bottom {
+    display: flex;
+}
+
+.card {
+    background-color: var(--posts-background);
+    color: var(--white);
+}
+
+.top-container {
+    margin-top: 30px;
+}
+
+.h3-padding {
+    padding-left: 10px;
+}
+
+.comments-body {
+    border: 1px solid #3f3d3d;;
+}
+
+.created-on {
+    display: flex;
+    justify-content: space-between;
+}
 
 /************* Footer *************/
 
@@ -136,4 +207,28 @@ footer a {
 
 footer a:hover {
     color: var(--white);
+}
+
+
+/************* Media queries *************/
+
+/* for medium screens sizes from 1280px wide and down */
+
+@media screen and (max-width: 1280px) {
+
+    .card-img-top {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .image-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .card-img-top {
+        width: 100%;
+        }
 }
