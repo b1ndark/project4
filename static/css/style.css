@@ -95,19 +95,28 @@ h1 {
 .card {
     border: 2px solid var(--nav);;
     border-radius: 20px;
+    background-color: var(--posts-background);
+    color: var(--white);
 }
 
-.page-link {
+.btn {
     background-color: var(--background);
     color: var(--white);
     border: 2px solid var(--black);
     margin-top: 18px;
     border-radius: 10px;
+    font-weight: bolder;
 }
 
-.page-link:hover {
+.btn:hover {
     color: var(--black);
     border: 2px solid var(--black);
+    background-color: var(--white);
+    font-weight: bolder;
+}
+
+.btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(235, 14, 14, 0.26);
 }
 
 .created-on {
@@ -162,11 +171,6 @@ img {
 
 .row-bottom {
     display: flex;
-}
-
-.card {
-    background-color: var(--posts-background);
-    color: var(--white);
 }
 
 .top-container {
