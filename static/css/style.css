@@ -192,6 +192,10 @@ img {
     color: rgba(235, 14, 14, 0.699);
 }
 
+.a-red:hover {
+    color: rgba(161, 23, 23, 0.699);
+}
+
 .account-form {
     text-align: left;
 }
@@ -219,6 +223,10 @@ img {
 .btn-display {
     display: flex;
     justify-content: center;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: rgba(235, 14, 14, 0.699) !important;
 }
 
 
