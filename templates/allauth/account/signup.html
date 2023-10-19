@@ -5,17 +5,55 @@
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 
 {% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+<!--            Log Out Page            -->
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 mt-5 mb-5">
+            <div class="row card-body card">
+                <!--            Title            -->
+                <h1 class="pb-3">{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+                <!--            If already has a Login           -->
+                <p>{% blocktrans %}Already have an account? <a href="{{ login_url }}" class="a-red">Sign in here.</a>{% endblocktrans %}</p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+                <!--            Log Up Form            -->
+                <form class="signup account-form" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="csrfmiddlewaretoken"
+                        value="qxhl0ZHzKtDxAcVkb3MhCzLDhnFobqntdn27GQDUh77zanirasPYKca7T5bl1nAj">
+                    <div class="mb-2 form-display">
+                        <label for="id_username">Username:</label> <input type="text" name="username" placeholder="Username"
+                            autocomplete="username" minlength="1" maxlength="150" required="" id="id_username">
+                    </div>
+                    <div class="mb-2 form-display">
+                        <label for="id_email">Email:</label> <input type="email" name="email" placeholder="Email address"
+                            autocomplete="email" maxlength="320" id="id_email" required>
+                    </div>
+                    <div class="mb-2 form-display">
+                        <label for="id_password1">Password:</label> <input type="password" name="password1" placeholder="Password"
+                            autocomplete="new-password" required="" id="id_password1"> <span class="helptext"></span>
+                    </div>
+                    <ul>
+                        <li>Your password can’t be too similar to your other personal information.</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+                    <p></p>
+                    <div class="mb-2 form-display">
+                        <label for="id_password2">Password (again):</label> <input type="password" name="password2"
+                            placeholder="Password (again)" autocomplete="new-password" required="" id="id_password2">
+                    </div>
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                </form>
+                <div class="btn-display">
+                    <button type="submit" class="btn btn-signup">{% trans "Sign Up" %} &raquo;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
