@@ -221,8 +221,9 @@ img {
 }
 
 .btn-display {
-    display: flex;
     justify-content: center;
+    width: 25%;
+    margin: auto;
 }
 
 input[type="checkbox"]:checked {
