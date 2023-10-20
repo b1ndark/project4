@@ -49,6 +49,19 @@ h1 {
     font-size: 1.5em;
 }
 
+/************************** Home Page **************************/
+
+.home-card {
+    background-color: var(--posts-background);
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    margin-top: 150px;
+}
+
+
 /************************** Forum **************************/
 
 .col-md-12 {
