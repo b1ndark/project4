@@ -33,6 +33,8 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = ['8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com',
                  'typerforum-fb5dd209c30e.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com']
 
 # Application definition
 
@@ -52,6 +54,8 @@ INSTALLED_APPS = [
 
     # Others
     'django_summernote',
+    'crispy_forms',
+    'crispy_bootstrap5',
 
     # Apps
     'typerforum',
@@ -72,6 +76,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 ROOT_URLCONF = 'forum.urls'
 

@@ -226,11 +226,6 @@ img {
     margin: auto;
 }
 
-input[type="checkbox"]:checked {
-    accent-color: rgba(235, 14, 14, 0.699) !important;
-}
-
-
 /************************** Footer **************************/
 
 footer {
@@ -291,4 +286,5 @@ footer a:hover {
     .footer {
         font-size: 1em;
     }
+
 }
