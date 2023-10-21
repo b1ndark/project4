@@ -51,6 +51,13 @@ h1 {
 
 /************************** Home Page **************************/
 
+.home-main-section {
+    background-image: url('../images/typerhomepage.webp');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+
 .home-card {
     background-color: var(--posts-background);
     color: var(--white);

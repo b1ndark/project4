@@ -4,14 +4,15 @@
   <div class="row">
     <div class="col-12 mt-3 text-center">
       <div class="row">
+        <!--            Title            -->
         <h1>Welcome to the Forum!</h1>
       </div>
     </div>
   </div>
 </div>
+<!--            Forum Container            -->
 <div class="container-fluid">
   <div class="row">
-    <!--   Forum Column   -->
     <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
       <div class="row">
         {% for post in post_list %}
@@ -22,12 +23,14 @@
                 <h2 class="card-title">{{ post.title }}</h2>
               </a>
               <div class="image-container">
+                <!--            Default image            -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img
                   class="card-img-top"
                   src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
                   alt="type r fk2"
                 />
+                <!--            User posted image            -->
                 {% else %}
                 <img
                   class="card-img-top"
@@ -58,7 +61,7 @@
     </div>
   </div>
 
-  <!--            is_paginated            -->
+  <!--            is_paginated, 4 posts will be displayed per page           -->
   {% if is_paginated %}
   <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
