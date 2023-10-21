@@ -59,6 +59,7 @@ INSTALLED_APPS = [
 
     # Apps
     'typerforum',
+    'profiles',
 ]
 
 SITE_ID = 1
