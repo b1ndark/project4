@@ -8,5 +8,5 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
         labels = {
-            'body': 'Write a comment'
+            'body': 'Write a comment...'
         }

@@ -256,6 +256,11 @@ img {
     border-color: black;
 }
 
+#id_body:focus {
+    border-color: black;
+    box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
+}
+
 .form-check-input:checked {
     border-color: black;
     background-color: rgba(235, 14, 14, 0.699);
@@ -267,6 +272,10 @@ img {
 
 .form-check .form-check-input {
     margin-left: 10px;
+}
+
+.asteriskField {
+    display: none;
 }
 
 /************************** Reset Password **************************/

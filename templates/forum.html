@@ -47,7 +47,13 @@
                         <p class="author">Author: {{ post.author }}</p>
                         <div class="created-on">
                             <p>{{ post.created_on }}</p>
-                            <p><i class="far fa-heart"></i> {{ post.number_of_likes }}</p>
+                            <p><i class="far fa-heart"></i> {{ post.number_of_likes }}
+                                {% with post.comments.count as total_comments %}
+                                <strong><i class="ps-2 far fa-comments"></i>
+                                    <!-- Our total_comments variable goes before the closing strong tag -->
+                                    {{ total_comments }}</strong>
+                                {% endwith %}
+                            </p>
                         </div>
                     </div>
                 </p>
