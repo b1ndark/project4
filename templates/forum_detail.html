@@ -29,17 +29,32 @@
                     <div class="col-1-bottom">
                     <!-- The number of likes goes before the closing strong tag -->
                     <p>
-                    <strong
-                        ><i class="far fa-heart"></i> {{ post.number_of_likes }}
-                    </strong>
+                        <strong>
+                            {% if user.is_authenticated %}
+                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                {% csrf_token %}
+                                {% if liked %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
+                                {% else %}
+                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
+                                {% endif %}
+                            </form>
+                            {% else %}
+                            <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            {% endif %}
+                            <!-- The number of likes goes before the closing strong tag -->
+                            <span class="text-secondary">{{ post.number_of_likes }} </span>
+                        </strong>
                     </p>
                     <p>
-                    {% with comments.count as total_comments %}
-                    <strong
-                        ><i class="far fa-comments"></i>
-                        <!-- Our total_comments variable goes before the closing strong tag -->
-                        {{ total_comments }}</strong>
-                    {% endwith %}
+                        {% with comments.count as total_comments %}
+                        <strong
+                            ><i class="far fa-comments"></i>
+                            <!-- Our total_comments variable goes before the closing strong tag -->
+                            {{ total_comments }}</strong>
+                        {% endwith %}
                     </p>
                     </div>
                 </div>
@@ -65,44 +80,52 @@
 </div>
 <div class="container">
     <div class="row row-bottom">
-    <div class="col-lg-12 card mb-4 mt-3">
-        <h3 class="h3-padding">Comments:</h3>
-        <div class="card-body comments-body">
-            <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-            {% for comment in comments %}
-            <div class="comments" style="padding: 10px">
-                <p class="font-weight-bold">
-                    <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                    {{ comment.name }}
-                    <span class="text-muted font-weight-normal">
-                    <!-- The comment's created date goes here -->
-                    {{ comment.created_on }}
-                    </span>
-                    wrote:
-                </p>
-                <!-- The body of the comment goes before the | -->
-                {{ comment.body | linebreaks }}
-            </div>
-            <!-- Our for loop ends here -->
-            {% endfor %}
-        </div>
-    </div>
-    <div class="col-lg-12 card mb-4 mt-3">
-        <div class="card-body">
-            {% if user.is_authenticated %}
-            <h3>Comment:</h3>
-            <p>Posted by: {{ user.username }}</p>
-            <form method="POST" style="margin-top: 1.3em;">
-                {{ comment_form|crispy }}
-                {% csrf_token %}
-                <div class="btn-display text-center">
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+        <div class="col-lg-12 card mb-4 mt-3">
+            <h3 class="h3-padding">Comments:</h3>
+            <div class="card-body comments-body">
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px">
+                    <p class="font-weight-bold">
+                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
+                        {{ comment.name }}
+                        <span class="text-muted font-weight-normal">
+                        <!-- The comment's created date goes here -->
+                        {{ comment.created_on }}
+                        </span>
+                        wrote:
+                    </p>
+                    <!-- The body of the comment goes before the | -->
+                    {{ comment.body | linebreaks }}
                 </div>
-            </form>
-            {% endif %}
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    data-bs-auto-close="true" aria-expanded="false">
+                    Comment
+                </button>
+                <ul class="dropdown-menu" style="width: 100%;" aria-labelledby="dropdownMenuButton1">
+                    <div class="col-lg-12 card mb-4 mt-3">
+                        <div class="card-body">
+                            {% if user.is_authenticated %}
+                            <h3>Comment:</h3>
+                            <p>Posted by: {{ user.username }}</p>
+                            <form method="POST" style="margin-top: 1.3em;">
+                                {{ comment_form|crispy }}
+                                {% csrf_token %}
+                                <div class="btn-display text-center">
+                                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                </div>
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 

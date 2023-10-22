@@ -206,6 +206,25 @@ img {
     border: 1px solid #3f3d3d;;
 }
 
+.btn-like {
+    color: #E84610;
+    border: none;
+    background: transparent;
+}
+
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
+
+.dropdown-menu.show {
+    background: transparent;
+    border: transparent;
+}
+
+
 /************************** Forms **************************/
 
 .a-red {
