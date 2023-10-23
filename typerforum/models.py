@@ -27,8 +27,7 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default="ek9"
-    )
+        max_length=30, choices=CAR_MODELS, default="ek9")
     featured_image = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
