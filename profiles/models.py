@@ -10,7 +10,8 @@ class UserProfile(models.Model):
     User profile so user can update its details
     example 'email'
     """
-    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        User, related_name='profile', on_delete=models.CASCADE)
     name = models.CharField(max_length=100, null=True, blank=True)
     car_model = models.CharField(
         max_length=30, choices=CAR_MODELS, default="ek9"
