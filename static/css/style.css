@@ -325,6 +325,29 @@ img {
     box-shadow: var(--boxshadow);
 }
 
+.profile-home-card {
+    background-color: var(--posts-background);
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 2px solid var(--nav);
+}
+
+.profile-content-details {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.edit-button {
+    display: flex;
+}
 
 /************************** Footer **************************/
 
