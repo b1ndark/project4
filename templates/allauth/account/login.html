@@ -18,7 +18,7 @@
 
                 <!--            If already has login            -->
                 <p>{% blocktrans %}If you have not created an account yet, 
-                <a href="{{ signup_url }}" class="a-red">Please register here.</a>{% endblocktrans %}</p>
+                <a href="../../profiles/signup" class="a-red">Please register here.</a>{% endblocktrans %}</p>
                 <div class="account-form">
                     <form class="login" method="POST" action="{% url 'account_login' %}">
                         {% csrf_token %}

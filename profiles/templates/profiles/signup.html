@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock head_title %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!--            Log Out Page            -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 mt-5 mb-5">
+            <div class="row card-body card">
+                <!--            Title            -->
+                <h1 class="pb-3 text-center">{% trans "Sign Up" %}</h1>
+
+                <!--            If already has a Login           -->
+                <p>Already have an account? <a href="{% url 'account_login' %}" class="a-red">Sign in here.</a></p>
+
+                <!--            Sign Up Form            -->
+                <div class="account-form">
+                    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <div class="btn-display">
+                            <button type="submit" class="btn btn-signup">{% trans "Sign Up" %} &raquo;</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -26,6 +26,7 @@ body {
 }
 
 main {
+    margin-top: 70px;
     flex: 1 0 auto;
     background-color: var(--background);
 }
@@ -36,6 +37,11 @@ h1 {
 }
 
 /************************** Nav Bar **************************/
+
+.navbar {
+    position: fixed;
+    width: 100%;
+}
 
 .navbar-dark {
     background-color: var(--nav);
@@ -114,6 +120,7 @@ h1 {
 }
 
 .card {
+    position: static;
     border: 2px solid var(--nav);;
     border-radius: 20px;
     background-color: var(--posts-background);
