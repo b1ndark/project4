@@ -3,14 +3,16 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from typerforum.models import CAR_MODELS
 from django_countries.fields import CountryField
+from django.dispatch import receiver
 
 
 class UserProfile(models.Model):
     """
     User profile so user can update its details
-    example 'email'
+    example 'city'
     """
-    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
+    user = models.OneToOneField(
+        User, related_name='profile', on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100, null=True, blank=True)
     last_name = models.CharField(max_length=100, null=True, blank=True)
     car_model = models.CharField(
@@ -22,13 +24,13 @@ class UserProfile(models.Model):
     postcode = models.CharField(max_length=15, null=True, blank=True)
 
     def __str__(self):
-        return str(self.user.username)
+        return self.user.username
 
 
-def create_user_profile(sender, instance, created, **kwargs):
+@receiver(post_save, sender=User)
+def create_user_profile(instance, created, **kwargs):
+    """
+    create an user profile
+    """
     if created:
-        user_profile = UserProfile(user=instance)
-        user_profile.save()
-
-
-post_save.connect(create_user_profile, sender=User)
+        UserProfile.objects.create(user=instance)
