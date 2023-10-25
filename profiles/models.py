@@ -11,7 +11,8 @@ class UserProfile(models.Model):
     example 'email'
     """
     user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
-    name = models.CharField(max_length=100, null=True, blank=True)
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
     car_model = models.CharField(
         max_length=30, choices=CAR_MODELS, default="ek9"
     )
