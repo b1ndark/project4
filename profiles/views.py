@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from .models import UserProfile
 from .forms import SignupForm, ProfileForm
 from django.contrib.auth import login
+from django.contrib.auth.forms import UserChangeForm
 
 
 class UserProfiles(TemplateView):
@@ -33,3 +34,16 @@ def signup(request):
         form = SignupForm()
 
     return render(request, 'profiles/signup.html', {'form': form})
+
+
+def editProfile(request):
+    if request.method == 'POST':
+        form = UserChangeForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('profile.html')
+    else:
+        form = SignupForm()
+
+    return render(request, 'profiles/edit_profile.html', {'form': form})

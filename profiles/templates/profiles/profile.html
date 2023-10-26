@@ -5,7 +5,7 @@
 {% block title %}- Profile - {{profile.user.username}}{% endblock %}
 
 {% block content %}
-<!--            Profile container            -->
+<!--            Profile Page/container            -->
 <section class="align-items-center home-main-section">
     <div class="container-fluid col-lg-6 pt-2 pb-2">
         <div class="col-lg-12 card mt-4">
@@ -29,7 +29,10 @@
             {% if request.user == profile.user %}
             <div class="row mb-5 edit-button">
                 <div class="btn-display text-center">
-                    <button id="btn-edit" class="btn">Edit</button>
+                    <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' %}">
+                        {% csrf_token %}
+                        <button id="btn-edit" class="btn">Edit</button>
+                    </form>
                 </div>
             </div>
             {% endif %}
