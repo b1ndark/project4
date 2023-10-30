@@ -113,8 +113,8 @@
                             <h3>Comment:</h3>
                             <p>Posted by: {{ user.username }}</p>
                             <form method="POST" style="margin-top: 1.3em;">
-                                {{ comment_form|crispy }}
                                 {% csrf_token %}
+                                {{ comment_form|crispy }}
                                 <div class="btn-display text-center">
                                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                                 </div>

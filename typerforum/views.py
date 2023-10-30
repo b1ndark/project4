@@ -73,6 +73,12 @@ class PostDetail(View):
         )
 
 
+class AddPost(generic.CreateView):
+    model = Post
+    template_name = 'forum_add_post.html'
+    fields = '__all__'
+
+
 class PostLike(View):
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
@@ -81,5 +87,5 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        
+
         return HttpResponseRedirect(reverse('forum_detail', args=[slug]))

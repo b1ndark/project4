@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.shortcuts import reverse
 
 
 CAR_MODELS = (
@@ -45,6 +46,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('forum_detail', args=[self.slug])
+
     def number_of_likes(self):
         return self.likes.count()
 
@@ -57,8 +61,8 @@ Post Comments
 class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
-    first_name = models.CharField(max_length=100, null=True, blank=True)
-    last_name = models.CharField(max_length=100, null=True, blank=True)
+    first_name = models.CharField(max_length=100, default='someone')
+    last_name = models.CharField(max_length=100, default='someone')
     email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
