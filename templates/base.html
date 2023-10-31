@@ -50,9 +50,11 @@
     </head>
 
     <body class="d-flex flex-column h-100 main-bg">
+        
         <!--            Navigation Menus            -->
         {% include 'includes/header.html' %}
         <main class="flex-shrink-0 main-bg">
+
             <!--            Allert messages            -->
             <div class="container">
                 <div class="row">
@@ -67,6 +69,7 @@
                 </div>
             </div>
             {% block content %}
+
             <!--            Content            -->
             {% endblock content %}
         </main>

@@ -14,10 +14,14 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
+
+            <!--            Button to take you to the add a Post Page            -->
             <div class="btn-add-post">
                 <a type="button" class="btn btn-lg" href="{% url 'add_post' %}">Add Post</a>
             </div>
             <div class="row">
+
+                <!--            For loop to iterate through each Post in Post list            -->
                 {% for post in post_list %}
                 <div class="col-md-12">
                     <div class="card mb-8">
@@ -33,7 +37,7 @@
                                 src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
                                 alt="type r fk2"
                                 />
-                                <!--            User posted image            -->
+                                <!--            Else User posted image            -->
                                 {% else %}
                                 <img
                                 class="card-img-top"
@@ -47,13 +51,18 @@
                                 <br />
                                 <p class="card-text h6">
                                     <div class="image-flash">
+
+                                        <!--            Display the Author of the Post            -->
                                         <p class="author">Author: {{ post.author }}</p>
                                         <div class="created-on">
+
+                                            <!--            Post created on            -->
                                             <p>{{ post.created_on }}</p>
                                             <p><i class="far fa-heart"></i> {{ post.number_of_likes }}
                                                 {% with post.comments.count as total_comments %}
                                                 <strong><i class="ps-2 far fa-comments"></i>
-                                                    <!-- Our total_comments variable goes before the closing strong tag -->
+
+                                                    <!--            Total Comments in the Post            -->
                                                     {{ total_comments }}</strong>
                                                 {% endwith %}
                                             </p>

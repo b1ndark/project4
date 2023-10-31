@@ -1,5 +1,5 @@
-<!--            Navigation Menus            -->
 
+<!--            Navigation Menus            -->
 {% with request.resolver_match.url_name as url_name %}
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
@@ -19,6 +19,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!--            If User is Authenticated it will display its Username and, be able to access the profile            -->
         {% if user.is_authenticated %}
         <li class="nav-item">
             <a class="nav-link {% if url_name == 'profile' %}active{% endif %}" aria-current="page"
@@ -33,6 +35,8 @@
             >Home</a
           >
         </li>
+
+        <!--            If User is Authenticated it will be able to access the forum and Logout button            -->
         {% if user.is_authenticated %}
         <li class="nav-item">
           <a
@@ -45,6 +49,8 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
         </li>
+
+        <!--            Else the User will have to Signup or Signin            -->
         {% else %}
         <li class="nav-item">
           <a class="nav-link" href="../../../profiles/signup">Sign Up</a>

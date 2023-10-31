@@ -76,7 +76,8 @@ class PostDetail(View):
 class AddPost(generic.CreateView):
     model = Post
     template_name = 'forum_add_post.html'
-    fields = '__all__'
+    fields = ('title', 'slug', 'author', 'car_model',
+              'featured_image', 'content', 'excerpt', 'status',)
 
 
 class PostLike(View):
