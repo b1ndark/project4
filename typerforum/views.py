@@ -1,8 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from .models import Post, Comment
 from .forms import CommentForm
 from django.http import HttpResponseRedirect
+from django.db.models import Q
+from django.contrib import messages
 
 
 def home(request):
@@ -21,11 +23,30 @@ class PostList(generic.ListView):
     template_name = 'forum.html'
     paginate_by = 4
 
+    def get_queryset(self, **kwargs):
+        """
+        Searh for a post
+        """
+        query = self.request.GET.get('q')
+
+        if query:
+
+            posts = Post.objects.filter(
+                Q(title__icontains=query) |
+                Q(content__icontains=query) |
+                Q(car_model__icontains=query)
+            )
+        else:
+            posts = Post.objects.all()
+
+        return posts
+
 
 class PostDetail(View):
     """
     Render Forum Detail Page and display the Post and its Comments
     """
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -92,6 +113,7 @@ class PostLike(View):
     """
     To like Posts
     """
+
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 

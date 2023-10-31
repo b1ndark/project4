@@ -55,6 +55,15 @@ h1 {
     font-size: 1.5em;
 }
 
+.search-bar-btn {
+    background-color: var(--background);
+    color: var(--white);
+    border: 2px solid var(--black);
+    margin-left: 5px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
 /************************** Home Page **************************/
 
 .home-main-section {
