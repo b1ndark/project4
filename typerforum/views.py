@@ -6,14 +6,16 @@ from django.http import HttpResponseRedirect
 
 
 def home(request):
+    """
+    Render Home Page
+    """
     return render(request, 'index.html')
 
 
-def forum(request):
-    return render(request, 'forum.html')
-
-
 class PostList(generic.ListView):
+    """
+    Render Forum Page and display the Posts
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'forum.html'
@@ -21,6 +23,9 @@ class PostList(generic.ListView):
 
 
 class PostDetail(View):
+    """
+    Render Forum Detail Page and display the Post and its Comments
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -74,6 +79,9 @@ class PostDetail(View):
 
 
 class AddPost(generic.CreateView):
+    """
+    Render Forum Add Post Page so User can a Add Post
+    """
     model = Post
     template_name = 'forum_add_post.html'
     fields = ('title', 'slug', 'author', 'car_model',
@@ -81,6 +89,9 @@ class AddPost(generic.CreateView):
 
 
 class PostLike(View):
+    """
+    To like Posts
+    """
     def post(self, request, slug):
         post = get_object_or_404(Post, slug=slug)
 

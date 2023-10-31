@@ -3,7 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.shortcuts import reverse
 
-
+"""
+Car model list for User to choose one of the List
+"""
 CAR_MODELS = (
     ('ek9', 'Honda Civic Type R EK9'),
     ('ep3', 'Honda Civic Type R EP3'),
@@ -26,6 +28,9 @@ STATUS = ((0, 'Draft'), (1, 'Published'))
 
 
 class Post(models.Model):
+    """
+    Post Model/Content
+    """
     title = models.CharField(max_length=200, unique=True)
     car_model = models.CharField(
         max_length=30, choices=CAR_MODELS, default="ek9")
@@ -59,6 +64,9 @@ Post Comments
 
 
 class Comment(models.Model):
+    """
+    Comment Model/Content
+    """
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
     first_name = models.CharField(max_length=100, default='someone')

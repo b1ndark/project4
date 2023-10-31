@@ -18,6 +18,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
+
+            <!--            Back button to Forum            -->
             <div class="btn-add-post">
                 <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>
             </div>
@@ -28,6 +30,7 @@
                             {% if user.is_authenticated %}
                             <h3>Post:</h3>
                             <p>Posted by: {{ user.username }}</p>
+                            
                             <!--            Post form            -->
                             <form method="POST" style="margin-top: 1.3em;">
                                 {% csrf_token %}

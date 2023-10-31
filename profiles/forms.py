@@ -7,6 +7,9 @@ from django_countries.fields import CountryField
 
 
 class ProfileForm(forms.ModelForm):
+    """
+    To display the Profile form
+    """
 
     class Meta:
         model = UserProfile
@@ -23,6 +26,10 @@ class ProfileForm(forms.ModelForm):
 
 
 class SignupForm(UserCreationForm):
+    """
+    To display the Signup form
+    """
+
     first_name = forms.CharField(required=False)
     last_name = forms.CharField(required=False)
     email = forms.EmailField(required=True)
@@ -34,6 +41,10 @@ class SignupForm(UserCreationForm):
 
 
 class EditProfileForm(UserChangeForm):
+    """
+    To display the Edit Profile form
+    """
+
     first_name = forms.CharField(required=False)
     last_name = forms.CharField(required=False)
     email = forms.EmailField(required=False)
