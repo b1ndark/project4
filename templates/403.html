@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+<!--            403 Forbidden ERROR Page            -->
+{% block title %} - 403 Forbidden Error Page{% endblock %}
+
+{% block content %}
+
+<!--            403 Forbidden ERROR Page Container            -->
+<div class="container text-center">
+    <h1>403 - Forbidden Error Page!</h1>
+    <p>You do not have permission to access or view this page! Please go back to <a href="{% url 'home' %">Home
+            Page</a></p>
+</div>
+{% endblock %}
