@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %}
+
+{% load crispy_forms_tags %}
+
+<!--            Edit Post Content goes in this block content so it displays within the base.html            -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3 text-center">
+            <div class="row">
+                <!--            Title            -->
+                <h1>Edit Post!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--            Add Post Container            -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
+
+            <!--            Back button to Forum            -->
+            <div class="btn-add-post">
+                <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-lg-12 card mb-4 mt-3">
+                        <div class="card-body">
+                            {% if user.is_authenticated %}
+                            <h3>Post:</h3>
+                            <p>Posted by: {{ user.username }}</p>
+
+                            <!--            Edit Post form            -->
+                            <form method="POST" style="margin-top: 1.3em;">
+                                {% csrf_token %}
+                                {{ form|crispy }}
+                                <div class="btn-display text-center">
+                                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                </div>
+                            </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
