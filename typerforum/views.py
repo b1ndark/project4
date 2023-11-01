@@ -109,6 +109,15 @@ class AddPost(generic.CreateView):
               'featured_image', 'content', 'excerpt', 'status',)
 
 
+class EditPost(generic.UpdateView):
+    """
+    Render Forum Add Post Page so User can a Add Post
+    """
+    model = Post
+    template_name = 'forum_edit_post.html'
+    fields = ('title', 'car_model', 'featured_image', 'content',)
+
+
 class PostLike(View):
     """
     To like Posts

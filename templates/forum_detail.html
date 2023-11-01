@@ -14,6 +14,12 @@
 </div>
 <div class="masthead top-container">
     <div class="container">
+        {% if request.user == post.author %}
+        <!--            Button to take you to the Edit Post form            -->
+        <div class="btn-add-post mb-4">
+            <a type="button" class="btn btn-lg" href="{% url 'edit_post' post.slug %}">Edit Post</a>
+        </div>
+        {% endif %}
         <div class="row g-0 card-body">
             <div class="col-md-6 masthead-text">
 
@@ -141,7 +147,6 @@
                 </ul>
             </div>
         </div>
-
         <!--            Back button to Forum            -->
         <div class="btn-add-post mb-4">
             <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>
