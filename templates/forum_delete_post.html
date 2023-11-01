@@ -2,47 +2,41 @@
 
 {% load crispy_forms_tags %}
 
-<!--            Edit Post Content goes in this block content so it displays within the base.html            -->
+<!--            Delete Post Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 text-center">
             <div class="row">
                 <!--            Title            -->
-                <h1>Edit Post!</h1>
+                <h1>Delete {{ post.title }}!</h1>
             </div>
         </div>
     </div>
 </div>
 
-<!--            Add Post Container            -->
+<!--            Delete Post Container            -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
-            <div class="d-flex justify-content-between">
-                <!--            Back button to Forum            -->
-                <div class="btn-add-post">
-                    <a type="button" class="btn btn-lg" href="{% url 'forum_detail' post.slug %}">Back</a>
-                </div>
 
-                <!--            Delete button to Forum            -->
-                <div class="btn-add-post">
-                    <a type="button" class="btn btn-lg" href="{% url 'delete_post' post.slug %}">Delete</a>
-                </div>
+            <!--            Back button to Edit Post            -->
+            <div class="btn-add-post">
+                <a type="button" class="btn btn-lg" href="{% url 'edit_post' post.slug %}">Back</a>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-lg-12 card mb-4 mt-3">
                         <div class="card-body">
                             {% if user.is_authenticated %}
-                            <h3>Post:</h3>
+                            <h3>Post: <strong>{{ post.title }}</strong></h3>
                             <p>Posted by: {{ user.username }}</p>
 
-                            <!--            Edit Post form            -->
-                            <form method="POST" style="margin-top: 1.3em;">
+                            <!--            Delete Post form            -->
+                            <form method="POST" style="margin-top: 1.3em;" class="text-center">
                                 {% csrf_token %}
-                                {{ form|crispy }}
+                                <h3>Are you sure that you want to <strong style="color: var(--red);">delete</strong> this Post?</h3>
                                 <div class="btn-display text-center">
-                                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                    <button type="submit" class="btn btn-signup btn-lg">Delete</button>
                                 </div>
                             </form>
                             {% endif %}

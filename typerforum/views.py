@@ -5,6 +5,7 @@ from .forms import CommentForm
 from django.http import HttpResponseRedirect
 from django.db.models import Q
 from django.contrib import messages
+from django.urls import reverse_lazy
 
 
 def home(request):
@@ -111,11 +112,22 @@ class AddPost(generic.CreateView):
 
 class EditPost(generic.UpdateView):
     """
-    Render Forum Add Post Page so User can a Add Post
+    Render Forum Edit Post Page so User can a Edit Post
     """
     model = Post
     template_name = 'forum_edit_post.html'
     fields = ('title', 'car_model', 'featured_image', 'content',)
+
+
+class DeletePost(generic.DeleteView):
+    """
+    Render Forum Delete Post Page so User can a Delete Post
+    and redirect to forum
+    """
+    model = Post
+    template_name = 'forum_delete_post.html'
+
+    success_url = reverse_lazy('forum')
 
 
 class PostLike(View):
