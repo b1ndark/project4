@@ -10,6 +10,6 @@ urlpatterns = [
     path('forum/add_post/', views.AddPost.as_view(), name='add_post'),
     path('forum/edit/<slug:slug>/',
          views.EditPost.as_view(), name='edit_post'),
-    path('forum/edit/delete/<slug:slug>/',
+    path('forum/edit/<slug:slug>/delete/',
          views.DeletePost.as_view(), name='delete_post'),
 ]
