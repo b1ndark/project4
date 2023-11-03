@@ -142,7 +142,7 @@ class DeletePost(SuccessMessageMixin, generic.DeleteView):
 
 class EditComment(SuccessMessageMixin, generic.UpdateView):
     """
-    Render Forum Edit Post Page so User can a Edit Post
+    Render Forum Edit Comment Page so User can a Edit Post
     """
     model = Comment
     template_name = 'forum_edit_comment.html'
@@ -152,7 +152,7 @@ class EditComment(SuccessMessageMixin, generic.UpdateView):
 
 class DeleteComment(SuccessMessageMixin, generic.DeleteView):
     """
-    Render Forum Delete Post Page so User can a Delete Comment
+    Render Forum Delete Comment Page so User can a Delete Comment
     and redirect to forum
     """
     model = Comment
@@ -163,6 +163,26 @@ class DeleteComment(SuccessMessageMixin, generic.DeleteView):
 
 
 class PostLike(View):
+    """
+    To like Posts
+    """
+
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.add_message(self.request, messages.ERROR,
+                                 "You have unliked the Post")
+        else:
+            post.likes.add(request.user)
+            messages.add_message(self.request, messages.SUCCESS,
+                                 "You have liked the Post")
+
+        return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+
+
+class CommentLike(View):
     """
     To like Posts
     """
