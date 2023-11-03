@@ -114,6 +114,12 @@
 
                     <!--            Comment body            -->
                     {{ comment.body | linebreaks }}
+                    {% if user.is_authenticated %}
+                    <!--            Button to take you to the Edit Post form            -->
+                    <div class="btn-add-post mb-4">
+                        <a type="button" class="btn btn-sm" href="{% url 'edit_comment' comment.pk %}">Edit</a>
+                    </div>
+                    {% endif %}
                 </div>
 
                 <!-- Our for loop ends here -->

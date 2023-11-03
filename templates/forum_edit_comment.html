@@ -2,13 +2,13 @@
 
 {% load crispy_forms_tags %}
 
-<!--            Edit Post Content goes in this block content so it displays within the base.html            -->
+<!--            Edit Comment Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 mt-3 text-center">
             <div class="row">
                 <!--            Title            -->
-                <h1>Edit Post!</h1>
+                <h1>Edit Comment!</h1>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
             <div class="d-flex justify-content-between">
                 <!--            Back button to Forum            -->
                 <div class="btn-add-post">
-                    <a type="button" class="btn btn-lg" href="{% url 'forum_detail' post.slug %}">Back</a>
+                    <a type="button" class="btn btn-lg" href="../../../">Back</a>
                 </div>
             </div>
             <div class="row">
@@ -29,10 +29,10 @@
                     <div class="col-lg-12 card mb-4 mt-3">
                         <div class="card-body">
                             {% if user.is_authenticated %}
-                            <h3>Post:</h3>
+                            <h3>Comment:</h3>
                             <p>Posted by: {{ user.username }}</p>
 
-                            <!--            Edit Post form            -->
+                            <!--            Edit Comment form            -->
                             <form method="POST" style="margin-top: 1.3em;">
                                 {% csrf_token %}
                                 {{ form|crispy }}
@@ -42,7 +42,7 @@
                                     </div>
                                     <!--            Delete button to Forum            -->
                                     <div class="btn-add-post">
-                                        <a type="button" class="btn btn-lg" href="{% url 'delete_post' post.slug %}">Delete</a>
+                                        <a type="button" class="btn btn-lg" href="{% url 'delete_comment' comment.pk %}">Delete</a>
                                     </div>
                                 </div>
                                 

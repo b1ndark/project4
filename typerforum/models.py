@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.shortcuts import reverse
+from django.urls import reverse_lazy
 
 """
 Car model list for User to choose one of the List

@@ -12,4 +12,6 @@ urlpatterns = [
          views.EditPost.as_view(), name='edit_post'),
     path('forum/edit/<slug:slug>/delete/',
          views.DeletePost.as_view(), name='delete_post'),
+    path('forum/edit/comment/<int:pk>/',
+         views.EditComment.as_view(), name='edit_comment'),
 ]

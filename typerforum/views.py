@@ -114,7 +114,7 @@ class AddPost(SuccessMessageMixin, generic.CreateView):
     model = Post
     template_name = 'forum_add_post.html'
     fields = ('title', 'slug', 'author', 'car_model',
-              'featured_image', 'content', 'excerpt', 'status',)
+              'featured_image', 'content', 'excerpt',)
     success_message = "Your Post has been added"
 
 
@@ -136,8 +136,18 @@ class DeletePost(SuccessMessageMixin, generic.DeleteView):
     model = Post
     template_name = 'forum_delete_post.html'
 
-    success_url = reverse_lazy('forum')
+    success_url = reverse_lazy('forum_detail')
     success_message = "Your Post has been Deleted"
+
+
+class EditComment(SuccessMessageMixin, generic.UpdateView):
+    """
+    Render Forum Edit Post Page so User can a Edit Post
+    """
+    model = Comment
+    template_name = 'forum_edit_comment.html'
+    fields = ('body',)
+    success_message = "Your Comment has been Updated"
 
 
 class PostLike(View):
