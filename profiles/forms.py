@@ -13,14 +13,11 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'car_model',
-                  'city', 'county', 'country', 'postcode']
+        fields = ['first_name', 'last_name', 'county', 'country', 'postcode']
 
         labels = {
             'first_name': 'First Name',
             'last_name': 'Last Name',
-            'car_model': 'Car Model',
-            'city': 'City',
             'county': 'County',
             'country': 'Country',
             'postcode': 'Postcode'

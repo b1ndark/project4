@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from django.db.models import Q
 from django.contrib import messages
 from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 def home(request):
@@ -38,6 +39,9 @@ class PostList(generic.ListView):
                 Q(car_model__icontains=query)
             )
         else:
+            if query == '':
+                messages.add_message(self.request, messages.ERROR,
+                                    "No results found. Please try Post 'title'")
             posts = Post.objects.all()
 
         return posts
@@ -84,8 +88,11 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.add_message(self.request, messages.SUCCESS,
+                                 "Your comment has been added to the Post")
         else:
             comment_form = CommentForm()
+            
 
         return render(
             request,
@@ -94,13 +101,13 @@ class PostDetail(View):
                 'post': post,
                 'comments': comments,
                 'commented': True,
-                'liked': liked,
-                'comment_form': CommentForm()
+                'comment_form': CommentForm(),
+                'liked': liked
             },
         )
 
 
-class AddPost(generic.CreateView):
+class AddPost(SuccessMessageMixin, generic.CreateView):
     """
     Render Forum Add Post Page so User can a Add Post
     """
@@ -108,18 +115,20 @@ class AddPost(generic.CreateView):
     template_name = 'forum_add_post.html'
     fields = ('title', 'slug', 'author', 'car_model',
               'featured_image', 'content', 'excerpt', 'status',)
+    success_message = "Your Post has been added"
 
 
-class EditPost(generic.UpdateView):
+class EditPost(SuccessMessageMixin, generic.UpdateView):
     """
     Render Forum Edit Post Page so User can a Edit Post
     """
     model = Post
     template_name = 'forum_edit_post.html'
     fields = ('title', 'car_model', 'featured_image', 'content',)
+    success_message = "Your Post has been Updated"
 
 
-class DeletePost(generic.DeleteView):
+class DeletePost(SuccessMessageMixin, generic.DeleteView):
     """
     Render Forum Delete Post Page so User can a Delete Post
     and redirect to forum
@@ -128,6 +137,7 @@ class DeletePost(generic.DeleteView):
     template_name = 'forum_delete_post.html'
 
     success_url = reverse_lazy('forum')
+    success_message = "Your Post has been Deleted"
 
 
 class PostLike(View):
@@ -140,7 +150,11 @@ class PostLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.add_message(self.request, messages.ERROR,
+                                 "You have unliked the Post")
         else:
             post.likes.add(request.user)
+            messages.add_message(self.request, messages.SUCCESS,
+                                 "You have liked the Post")
 
         return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
