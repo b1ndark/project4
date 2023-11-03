@@ -150,6 +150,18 @@ class EditComment(SuccessMessageMixin, generic.UpdateView):
     success_message = "Your Comment has been Updated"
 
 
+class DeleteComment(SuccessMessageMixin, generic.DeleteView):
+    """
+    Render Forum Delete Post Page so User can a Delete Comment
+    and redirect to forum
+    """
+    model = Comment
+    template_name = 'forum_delete_comment.html'
+
+    success_url = reverse_lazy('forum')
+    success_message = "Your Comment has been Deleted"
+
+
 class PostLike(View):
     """
     To like Posts
