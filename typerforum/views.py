@@ -40,8 +40,8 @@ class PostList(generic.ListView):
             )
         else:
             if query == '':
-                messages.add_message(self.request, messages.ERROR,
-                                    "No results found. Please try Post 'title'")
+                messages.add_message(
+                    self.request, messages.ERROR, "No results found. Please try Post 'title'")
             posts = Post.objects.all()
 
         return posts
@@ -90,9 +90,9 @@ class PostDetail(View):
             comment.save()
             messages.add_message(self.request, messages.SUCCESS,
                                  "Your comment has been added to the Post")
+            return HttpResponseRedirect('../')
         else:
             comment_form = CommentForm()
-            
 
         return render(
             request,
