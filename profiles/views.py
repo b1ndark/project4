@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserChangeForm
 from django.views import generic
 from django.contrib import messages
 from django.urls import reverse_lazy
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 class UserProfiles(TemplateView):
@@ -17,13 +18,34 @@ class UserProfiles(TemplateView):
     template_name = "profiles/profile.html"
 
     def get_context_data(self, **kwargs):
-        profile = UserProfile.objects.get(user=self.kwargs['user'])
+        profile = UserProfile.objects.get(user=self.kwargs['pk'])
         context = {
             "profile": profile,
             'form': ProfileForm(instance=profile)
         }
 
         return context
+
+
+class EditProfile(SuccessMessageMixin, generic.UpdateView):
+    """
+    Render Edit Profile Page so User can a Edit Profile
+    """
+    model = UserProfile
+    template_name = 'profiles/edit_profile.html'
+    fields = ('first_name', 'last_name', 'car_model',
+              'county', 'city', 'postcode', 'country',)
+
+    def get_context_data(self, **kwargs):
+        profile = UserProfile.objects.get(user=self.kwargs['pk'])
+
+        context = {
+            "profile": profile,
+            'form': EditProfileForm(instance=profile)
+        }
+
+        return context
+    success_message = "Your Profile has been Updated"
 
 
 def signup(request):
@@ -45,30 +67,3 @@ def signup(request):
         form = SignupForm()
 
     return render(request, 'profiles/signup.html', {'form': form})
-
-
-def editProfile(request):
-    """
-    Edit Template
-    """
-    form = EditProfileForm(instance=request.user)
-    if request.method == 'POST':
-
-        form = EditProfileForm(request.POST, instance=request.user)
-
-        if form.is_valid():
-            form = EditProfileForm(instance=request.user)
-            user = form.save()
-            login(request, user)
-            messages.add_message(request, messages.SUCCESS,
-                                 "Your Profile has been updated")
-            return redirect('/')
-        else:
-            form = EditProfileForm(instance=request.user)
-            messages.add_message(request, messages.ERROR,
-                                 "Please fill the form correctly")
-
-    else:
-        form = EditProfileForm(instance=request.user)
-
-    return render(request, 'profiles/edit_profile.html', {'form': form})

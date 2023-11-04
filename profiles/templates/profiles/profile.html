@@ -16,20 +16,21 @@
                         <h3 class="mb-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
                     </div>
                     <div class="profile-content-details">
-                        <p><strong>Username:</strong> {{ profile.user }}</p>
-                        <p><strong>Name:</strong> {{ profile.user.first_name }} {{ profile.user.last_name }}</p>
-                        <p><strong>Car model:</strong> {{ profile.user.car_model }}</p>
-                        <p><strong>City:</strong> {{ profile.user.city }}</p>
-                        <p><strong>County:</strong> {{ profile.user.county }}</p>
-                        <p><strong>Country:</strong> {{ profile.user.country }}</p>
-                        <p><strong>Postcode:</strong> {{ profile.user.postcode }}</p>
+                        <p><strong>Username:</strong> {{ profile.user.username }}</p>
+                        <p><strong>Name:</strong> {{ profile.first_name }} {{ profile.last_name }}</p>
+                        <p><strong>Car model:</strong> {{ profile.car_model }}</p>
+                        <p><strong>Email:</strong> {{ profile.email }}</p>
+                        <p><strong>City:</strong> {{ profile.city }}</p>
+                        <p><strong>County:</strong> {{ profile.county }}</p>
+                        <p><strong>Country:</strong> {{ profile.country }}</p>
+                        <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
                     </div>
                 </div>
             </div>
             {% if request.user == profile.user %}
             <div class="row mb-5 edit-button">
                 <div class="btn-display text-center">
-                    <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' %}">
+                    <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
                         {% csrf_token %}
                         <button id="btn-edit" class="btn">Edit</button>
                     </form>

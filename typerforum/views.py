@@ -41,7 +41,8 @@ class PostList(generic.ListView):
         else:
             if query == '':
                 messages.add_message(
-                    self.request, messages.ERROR, "No results found. Please try Post 'title'")
+                    self.request, messages.ERROR, "No results found.\
+                         Please try for example 'Post title'")
             posts = Post.objects.all()
 
         return posts
