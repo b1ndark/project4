@@ -59,6 +59,10 @@
             <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
             </li>
             {% endif %}
+            <li class="nav-item">
+                <a class="nav-link {% if url_name == 'contact' %}active{% endif %}" aria-current="page"
+                    href="{% url 'contact' %}">Contact</a>
+            </li>
         </ul>
         {% if user.is_authenticated %}
         {% if url_name == 'forum' %}
