@@ -32,12 +32,9 @@ class SignupForm(UserCreationForm):
     """
     To display the Signup form
     """
-
-    email = forms.EmailField(required=True)
-
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'password1', 'password2']
 
 
 class EditProfileForm(UserChangeForm):
@@ -48,15 +45,16 @@ class EditProfileForm(UserChangeForm):
     first_name = forms.CharField(required=False)
     last_name = forms.CharField(required=False)
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default="ek9"
+        max_length=30, choices=CAR_MODELS, default="Select Car Model"
     )
+    user_email = models.EmailField(default="email")
     city = forms.CharField(required=False)
     county = forms.CharField(required=False)
-    country = CountryField(blank_label='Select country')
+    country = CountryField(blank_label='Select Country')
     postcode = forms.CharField(required=False)
     password = None
 
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'car_model',
+        fields = ['first_name', 'last_name', 'user_email', 'car_model',
                   'city', 'county', 'country', 'postcode']
