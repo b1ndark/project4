@@ -322,14 +322,25 @@ img {
     display: none;
 }
 
+/************************** Contact Form Page **************************/
+
+.contact-form-card {
+    background-color: var(--posts-background);
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
 /************************** Reset Password **************************/
+
 .btn-reset {
     justify-content: center;
     width: auto;
     margin: auto;
     border-color: #000000;
 }
-
 
 .account-form form p {
     display: flex;

@@ -2,6 +2,8 @@
 
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 {% load static %}
 
 <!--            Contact Content goes in this block content so it displays within the base.html            -->
@@ -10,7 +12,7 @@
         <div class="row">
             <div class="col-12 mt-3 text-center">
                 <div class="row">
-                    
+
                     <!--            Title            -->
                     <h1>Contact Type R Forum</h1>
                 </div>
@@ -25,17 +27,21 @@
         <div class="row">
 
             <!--            Container            -->
-            <div class="home-card col-10 text-center">
-                <h3 class="mb-5 mt-3">Contact Form</h3>
-                <p>
+            <div class="contact-form-card col-10 text-center ps-3 pe-3">
+                <div>
+                    <h3 class="mt-3">Contact Form</h3>
+                </div>
 
-                </p>
-                <p>
-
-                </p>
-                <p>
-
-                </p>
+                <!--            Contact Form            -->
+                <div class="account-form">
+                    <form class="contact" id="contact_form" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="btn-display mb-3">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
