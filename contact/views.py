@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .models import UserContact
 from .forms import ContactForm
@@ -13,7 +13,8 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             messages.add_message(request, messages.SUCCESS,
-                                 "Your Form has been submited, we will reply shortly")
+                                 "Your Form has been submited,\
+                                     we will reply shortly")
             return redirect('/')
         else:
             messages.add_message(request, messages.ERROR,

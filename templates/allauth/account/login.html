@@ -17,8 +17,8 @@
                 <h1 class="pb-3">{% trans "Sign In" %}</h1>
 
                 <!--            If already has login            -->
-                <p>{% blocktrans %}If you have not created an account yet, 
-                <a href="../../profiles/signup" class="a-red">Please register here.</a>{% endblocktrans %}</p>
+                <p>If you have not created an account yet, 
+                <a href="{% url 'signup' %}" class="a-red">Please register here.</a></p>
                 <div class="account-form">
                     <form class="login" method="POST" action="{% url 'account_login' %}">
                         {% csrf_token %}
