@@ -15,14 +15,13 @@ class UserProfile(models.Model):
     user = models.OneToOneField(
         User, related_name='profile', on_delete=models.CASCADE)
     user_email = models.EmailField(
-        max_length=70, blank=True, default="", unique=True)
+        max_length=70, blank=True)
     first_name = models.CharField(
         max_length=100, null=True, blank=True, default="")
     last_name = models.CharField(
         max_length=100, null=True, blank=True, default="")
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default=""
-    )
+        max_length=30, choices=CAR_MODELS, default="")
     city = models.CharField(max_length=40, null=True, blank=True, default="")
     county = models.CharField(max_length=40, null=True, blank=True, default="")
     country = CountryField(blank_label='Select country',
