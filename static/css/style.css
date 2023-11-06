@@ -341,6 +341,20 @@ img {
     margin-top: 60px;
 }
 
+.form-control:focus {
+    color: #1b1c1d;
+    background-color: #fff;
+    border-color: black;
+    outline: 0;
+    box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
+}
+
+.form-select:focus {
+    border-color: black;
+    outline: 0;
+    box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
+}
+
 /************************** Reset Password **************************/
 
 .btn-reset {
