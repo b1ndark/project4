@@ -16,6 +16,5 @@ urlpatterns = [
     path('forum/edit/comment/<int:pk>/',
          views.EditComment.as_view(), name='edit_comment'),
     path('forum/edit/<int:pk>/delete_comment/',
-         views.DeleteComment.as_view(), name='delete_comment')
-
+         views.DeleteComment.as_view(), name='delete_comment'),
 ]
