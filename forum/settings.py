@@ -31,11 +31,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-b1ndark-project4-o3fitdazyh.us2.codeanyapp.com',
                  'typerforum-fb5dd209c30e.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-b1ndark-project4-sx67lbxq25.us2.codeanyapp.com']
+    'https://8000-b1ndark-project4-o3fitdazyh.us2.codeanyapp.com']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 

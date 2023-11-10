@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 from django.http import HttpResponseRedirect
 from django.db.models import Q
 from django.contrib import messages
@@ -114,8 +114,12 @@ class AddPost(SuccessMessageMixin, generic.CreateView):
     """
     model = Post
     template_name = 'forum_add_post.html'
-    fields = ('title', 'slug', 'author', 'car_model',
+    fields = ('title', 'slug', 'car_model',
               'featured_image', 'content', 'excerpt',)
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
     success_message = "Your Post has been added"
 
 

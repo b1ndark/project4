@@ -37,8 +37,7 @@ class Post(models.Model):
         max_length=30, choices=CAR_MODELS, default="ek9")
     featured_image = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='forum_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     excerpt = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
