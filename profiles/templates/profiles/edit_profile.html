@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans " - Edit Profile" %}{% endblock head_title %}
+{% block title %} - Edit {{profile.user.username}}'s Profile{% endblock %}
 
 {% load crispy_forms_tags %}
 
