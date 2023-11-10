@@ -14,7 +14,7 @@
 </div>
 <div class="masthead top-container">
     <div class="container">
-        {% if request.user == post.author %}
+        {% if user.is_superuser or request.user == post.author %}
         <!--            Button to take you to the Edit Post form            -->
         <div class="btn-add-post mb-4">
             <a type="button" class="btn btn-lg" href="{% url 'edit_post' post.slug %}">Edit Post</a>
@@ -116,7 +116,7 @@
                     {{ comment.body | linebreaks }}
 
                     <!--            Button to take you to the Edit Post form            -->
-                    {% if request.user.username == comment.name %}
+                    {% if user.is_superuser or request.user.username == comment.name %}
                     <div class="btn-add-post mb-4">
                         <a type="button" class="btn btn-sm" href="{% url 'edit_comment' comment.pk %}">Edit</a>
                     </div>
