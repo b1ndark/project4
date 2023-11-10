@@ -107,6 +107,13 @@ h1 {
     color: var(--red);
 }
 
+/************************** Alert Messages **************************/
+
+.alert-msg{
+    display: flex;
+    justify-content: center;
+}
+
 /************************** Forum **************************/
 
 .col-md-12 {
