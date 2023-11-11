@@ -1,14 +1,18 @@
-# **Type R Forum**
+# **Type<span style="color: red; font-weight: bolder;">R</span> Forum**
 
-## Welcome to [Type R Forum](#),
+## Welcome to [TypeR Forum](#),
 
-<p> #
-<p> #
+<p> Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
+<p> The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered, experiences with a certain Type<span style="color: red; font-weight: bolder;">R</span> model, any thoughts and ideias.
 <p> #
 <p> #
 <br>
 
 ![image](#)
+
+<p> <span style="font-weight: bolder;">To open the links in this document in a new browser tab please press CTRL + Mouse Click</span>
+
+[**My TypeR Forum website on Am I Responsive**](#)
 
 ---
 
@@ -81,13 +85,13 @@ Goals:
     - #
     - #  
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
 ## **Design**
 
-### Typography
+### **Typography**
 
 Colours used:
 
@@ -105,11 +109,11 @@ Colours used:
 
 <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-### Features
+### **Features**
 
 - #### #
 
@@ -169,57 +173,54 @@ Colours used:
 
       ![image](#)
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Programs and tools used
+## **Programs and tools used**
 
 - [Codeanywhere](https://app.codeanywhere.com/) - To create the project.
 - [Github](https://github.com/) - Where the website is stored.
 - [Spell Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - To check spelling.
 - [Gyazo](https://gyazo.com/) - To take Screenshots.
 - [Cloud Convert](https://cloudconvert.com/) - To resize and convert screenshots.
-- [CI Python Linter](https://pep8ci.herokuapp.com/) - To check for python code errors.
+- [W3C HTML](https://validator.w3.org/#validate_by_input) - To check for HTML code errors.
+- [W3C CSS](https://jigsaw.w3.org/css-validator/) - To check for CSS code errors.
+- [JSHint](https://jshint.com/) - To check for JavaScript code errors.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - To check for Python code errors.
+- [WAVE](https://wave.webaim.org/) - To help improving accessibility to individuals with disabilities, by showing where there might be errors.
 - [screen Pal](https://screenpal.com/) - To record the screen.
 - [Giphy](https://giphy.com/create/gifmaker) - To create gifs.
-- [Heroku](https://dashboard.heroku.com/apps) - To deploy the game.
-- [Code Institute Template](#) - To create project template.
-- [Luci Chart](https://www.lucidchart.com/pages/) - To create the game diagram.
-- [#](#) - #
+- [Heroku](https://dashboard.heroku.com/apps) - To deploy the TypeR forum website.
+- [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - To create project template.
+- [ElephantSQL](https://www.elephantsql.com/) - database to store the data.
+- [Font Awesome](https://fontawesome.com/) - To display icons.
+- [Favicon](https://favicon.io/) - To create the website favicon.
+- [Am I Responsive?](https://ui.dev/amiresponsive) - To display the website on different devices.
+- [Google Fonts](https://fonts.google.com/) - For the fonts used in the website.
+- [Uizard](https://uizard.io/) - To create the website wireframes.
+- [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/p/word/cfq7ttc0hlkm?activetab=pivot:overviewtab) - To write some texts to apply in the project.
 
-[Back to the top](#type-r-forum)
-
----
-
-## Languages
-
-- ### Python
-
-    - Python code passes with no errors when checked on CI Python Linter
-        - run.py page - PASS  
-      <br>
-
-      ![image](#)
-      <br>  
-
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Flow Chart
+## **Languages**
 
-- To help me with the logic and to create the app I have used [Lucidchart](#) to create a flow chart.  
+- ### **Python**
+
+  - Python code passes with no errors when checked on CI Python Linter
+    - run.py page - PASS  
     <br>
 
     ![image](#)
-    <br>  
+    <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Testing
+## **Testing**
 
 - The Type R Forum has been tested and it works on different types of computers with different browsers:
   - #
@@ -235,7 +236,7 @@ Colours used:
 - #
  <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
@@ -250,39 +251,39 @@ Colours used:
 
  <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Bugs
+## **Bugs**
 
 - #
     - #
   <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Deployment
+## **Deployment**
 
-### My Deployment
+### **My Deployment**
 
 - The website was deployed to Github pages. Steps to deploy:  
 
 1. Open Github
-2. Log in into your Github account. 
-3. In the Github repository select the project. 
-4. Navigate to the settings tab. 
-5. Then scroll down and on your left select Pages. 
-6. Go to branch, and select master branch. 
-7. Once master branch is selected, wait a moment and it will provide a page link to the website.  
+2. Log in into your Github account.
+3. In the Github repository select the project.
+4. Navigate to the settings tab.
+5. Then scroll down and on your left select Pages.
+6. Go to branch, and select master branch.
+7. Once master branch is selected, wait a moment and it will provide a page link to the website.
 <br>
   
-- The live link can be found here - [Type R Forum](#).
+- The live link can be found here - [Type R Forum](b).
   <br>
 
-### Local Deployment
+### **Local Deployment**
 
 #### Fork the repository
 
@@ -322,35 +323,36 @@ Colours used:
   13. Once is connected you can either have automatic or manual deployment
   14. Choose your preferred one by pressing deploy
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Credits
+## **Credits**
 
-- ### Content
+- ### **Content**
 
-    - #:
-      - [#](#)
-      - [#](#)
-      
-    - #:
-      - [#](#)
-      - [#](#)
-      - [#](#)
-      
-    - I have used Readme structure from my third project as a template.
+  - #:
+    - [#](#)
+    - [#](#)
+
+  - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
+    - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+    - [Dee Mc - Part one](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)
+    - [Dee Mc - Part Two](https://www.youtube.com/playlist?list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln)
+    - [Tech With Tim](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9)
+
+  - I have used the Readme structure from my third project as a template.
 
   <br>
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
 
 ---
 
-## Acknowledgments
+## **Acknowledgments**
 
-- #
-- #
-- #
+- I would like to thank my mentor [Graeme Taylor](https://github.com/G-Taylor) for helping me along the way in completing my Fourth milestone project.
+- I would like to thank Code Institute Tutors for helping me when I had issues along the project.
+- Also, I would like to thank friends and family for helping with testing the TypeR Forum.
 
-[Back to the top](#type-r-forum)
+[**Back to the top**](#type-r-forum)
