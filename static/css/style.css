@@ -264,14 +264,14 @@ img {
 }
 
 .btn-like {
-    color: #E84610;
+    color: var(--red);
     border: none;
     background: transparent;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: var(--red);
     background: transparent;
     border: none;
 }
@@ -307,7 +307,7 @@ img {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 5px;
-    border: 2px solid #000000;
+    border: 2px solid var(--black);
     padding: 0.4rem 1rem;
     background-clip: padding-box;
 }
@@ -329,21 +329,21 @@ img {
 }
 
 .form-control:focus {
-    border-color: black;
+    border-color: var(--black);
 }
 
 #id_body:focus {
-    border-color: black;
+    border-color: var(--black);
     box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
 }
 
 .form-check-input:checked {
-    border-color: black;
+    border-color: var(--black);
     background-color: rgba(235, 14, 14, 0.699);
 }
 
 .form-check-input:focus {
-    border-color: black;
+    border-color: var(--black);
 }
 
 .form-check .form-check-input {
@@ -377,13 +377,13 @@ img {
 .form-control:focus {
     color: #1b1c1d;
     background-color: #fff;
-    border-color: black;
+    border-color: var(--black);
     outline: 0;
     box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
 }
 
 .form-select:focus {
-    border-color: black;
+    border-color: var(--black);
     outline: 0;
     box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
 }
@@ -394,7 +394,7 @@ img {
     justify-content: center;
     width: auto;
     margin: auto;
-    border-color: #000000;
+    border-color: var(--black);
 }
 
 .account-form form p {
@@ -406,13 +406,13 @@ img {
 .account-form form p input {
     border-radius: 10px;
     margin-top: 5px;
-    border: 2px solid #000000;
+    border: 2px solid var(--black);
     padding: 0.4rem 1rem;
     background-clip: padding-box;
 }
 
 .account-form form p input:focus {
-    border-color: #000000;
+    border-color: var(--black);
     box-shadow: var(--boxshadow);
 }
 
