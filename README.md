@@ -2,15 +2,17 @@
 
 ## Welcome to [TypeR Forum](#),
 
-<p> Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
-<p> The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered, experiences with a certain TypeR model, any thoughts and ideias.
-<p> #
-<p> #
-<br>
+Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
+
+The website is targeted for everyone, from every age group, what it counts and mathers is the TypeR spirit.
+
+You can expect a website that is easy to navigate and a friendly community that is ready to help each other.
+
+The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered, experiences with a certain TypeR model, any thoughts and ideias.
 
 ![image](#)
 
- **To open the links in this document in a new browser tab please press CTRL + Mouse Click**
+#### **To open the links in this document in a new browser tab please press CTRL + Mouse Click**
 
 [**My TypeR Forum website on Am I Responsive**](#)
 
@@ -18,74 +20,79 @@
 
 ## **Content**
 
-- [**Type R Forum**](#type-r-forum)
-  - [Welcome to Type R Forum,](#welcome-to-type-r-forum)
+- [**TypeR Forum**](#typer-forum)
+  - [**Welcome to Type R Forum,**](#welcome-to-typer-forum)
   - [**Content**](#content)
   - [**User Experience**](#user-experience)
   - [**Design**](#design)
     - [Typography](#typography)
-      - [#](#)
-      - [#](#)
+      - [Fonts](#fonts-used)
+      - [Colours](#colours-used)
     - [Features](#features)
-  - [Programs and tools used](#programs-and-tools-used)
-  - [Languages](#languages)
-  - [Flow Chart](#flow-chart)
-  - [Testing](#testing)
+  - [**Programs and tools used**](#programs-and-tools-used)
+  - [**Languages**](#languages)
+    - [HTML](x)
+    - [CSS](x)
+    - [JavaScript](x)
+    - [Python](x)
+  - [**Testing**](#testing)
     - [#](#)
     - [#](#)
     - [#](#)
     - [#](#)
-  - [Bugs](#bugs)
-  - [Deployment](#deployment)
+  - [**Bugs**](#bugs)
+  - [**Deployment**](#deployment)
     - [My Deployment](#my-deployment)
     - [Local Deployment](#local-deployment)
       - [Fork the repository](#fork-the-repository)
       - [Clone the repository](#clone-the-repository)
       - [Heroku deployment](#heroku-deployment)
-  - [Credits](#credits)
-  - [Acknowledgments](#acknowledgments)
+  - [**Credits**](#credits)
+  - [**Acknowledgments**](#acknowledgments)
 
 ---
 
 ## **User Experience**
 
-Visitors:
+### **Visitors**
 
-- #
-- #
-- #
+- Users will experience a friendly comunity where users and moderators cooperate together to healp each other.
+- Users will be provided with all the support that they might need.
+- The website forum content is carefully supervised to make sure that everyone is being respected.
+- The objective of the TypeR forum is to get the TypeR community together.
 
-Goals:
+### **Goals**
 
-- #
-- #
-- #
-- #
+- The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered.
+- To share experiences with a certain TypeR model that they might have had.
+- To try help each other with certain problems thta they have encountered by sharing any thoughts and ideias.
+- x
 
-#:
+### **The TypeR forum**
 
-- #
-- #
-    - #
-    - #  
-    - #  
-- #
-    - #
-    - #  
-    - #  
-- #
-- #
-- #
-    - #
-    - #
-- #
-- #
-- #
-    - #
-    - #
-    - #  
+- The website is presented with a welcoming message in the Home page.
+- The navbar if you are not logged in will have the following options:
+  - **Home** - If pressed takes you to Home page where you will have a welcoming message with a Typer in the background
+  - **Sign Up** - If pressed takes you to the Sign Up page where you will be able to register to access the Forum, once you have filled the form and submited a notification will be presented to let you know that you have signed up and logged in.
+  - **Sign In** - If pressed takes you to the Login page where you will be able to login so you can access the Forum and your profile, once you have filled the form and pressed signin a notification will be presented to let you know that you are logged in.
+  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit incase you need to contact the support
+- If you are logged in the navbar will hvve the following options:
+  - **Home** - If pressed takes you to Home page where you will have a welcoming message with a Typer in the background
+  - **Hello,'username'** - If pressed takes you to your profile where you will be able to update it.
+  - **Forum** - If pressed takes you to the Forum where you will be able to read other Users posts and share your experiences.
+  - **Logout** - If pressed takes you to the logout page where you can confirm it, once logout a notification will be presented to let you know that you have logged out.
+  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit incase you need to contact the support
+- User profile lets you:
+  - Edit profile so its allways updated with the correct details.
+- Once in the Forum page you will be able to:
+  - View the Users posts, this page is paginated, will show up to four posts per page
+  - Add a post so others can see your ideias
+  - In the navbar you have a search bar where you will be able to look for a certain post
+- If User is the admin you will have extra features:
+  - Admin page button in the navbar which will take you to the Admin page where you will be able to control the Website/Forum/Users
+  - Admin also will have within the Forum access to Users profiles to prevent any abusive content.
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -95,7 +102,7 @@ Goals:
 
 #### Fonts used
 
-From [Google Fonts](https://fonts.google.com/):
+From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - [**'Noto Sans JP', sans-serif**](https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=Hello%20World!&noto.query=Noto+Sans+JP&noto.lang=ja_Jpan&noto.script=Jpan&query=Noto+Serif+Japanese)
 - [**'Noto Serif JP', serif**](https://fonts.google.com/noto/specimen/Noto+Serif+JP?preview.text=Hello%20World!&noto.query=Noto+Serif+JP&noto.lang=ja_Jpan&noto.script=Jpan&query=Noto+Serif+Japanese)
@@ -115,8 +122,7 @@ From [Google Fonts](https://fonts.google.com/):
 
 ![image](assets/readme/colours/colorkit.webp "palette_colour")
 
-
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -126,7 +132,7 @@ From [Google Fonts](https://fonts.google.com/):
 
 <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -190,7 +196,7 @@ From [Google Fonts](https://fonts.google.com/):
 
       ![image](#)
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -219,22 +225,41 @@ From [Google Fonts](https://fonts.google.com/):
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/p/word/cfq7ttc0hlkm?activetab=pivot:overviewtab) - Used to write some texts to apply in the project.
 - [ColorKit](https://colorkit.co/) - Used to create the colour palette.
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
 ## **Languages**
 
+- ### **HTML**
+
+  - HTML code passes with no errors when checked on W3C Markup Validation Service
+    - page - PASS
+
+    ![image](#)
+
+- ### **CSS**
+
+  - CSS code passes with no errors when checked on W3C CSS Validation Service
+    - style.css file - PASS
+
+    ![image](#)
+
+- ### **JavaScript**
+
+  - Python code passes with no errors when checked on JSHint
+    - Script.js file - PASS
+
+    ![image](#)
+
 - ### **Python**
 
   - Python code passes with no errors when checked on CI Python Linter
-    - run.py page - PASS  
-    <br>
+    -  page - PASS
 
     ![image](#)
-    <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -254,7 +279,7 @@ From [Google Fonts](https://fonts.google.com/):
 - #
  <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -269,7 +294,7 @@ From [Google Fonts](https://fonts.google.com/):
 
  <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -279,7 +304,7 @@ From [Google Fonts](https://fonts.google.com/):
     - #
   <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -296,10 +321,8 @@ From [Google Fonts](https://fonts.google.com/):
 5. Then scroll down and on your left select Pages.
 6. Go to branch, and select master branch.
 7. Once master branch is selected, wait a moment and it will provide a page link to the website.
-<br>
-  
+
 - The live link can be found here - [Type R Forum](b).
-  <br>
 
 ### **Local Deployment**
 
@@ -341,7 +364,7 @@ From [Google Fonts](https://fonts.google.com/):
   13. Once is connected you can either have automatic or manual deployment
   14. Choose your preferred one by pressing deploy
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -363,7 +386,7 @@ From [Google Fonts](https://fonts.google.com/):
 
   <br>
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
@@ -373,4 +396,4 @@ From [Google Fonts](https://fonts.google.com/):
 - I would like to thank Code Institute Tutors for helping me when I had issues along the project.
 - Also, I would like to thank friends and family for helping with testing the TypeR Forum.
 
-[**Back to the top**](#typer-forum)
+[**Back to the top**](#typer-forum "back_to_the_top")
