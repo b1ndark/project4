@@ -31,10 +31,10 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [Features](#features)
   - [**Programs and tools used**](#programs-and-tools-used)
   - [**Languages**](#languages)
-    - [HTML](x)
-    - [CSS](x)
-    - [JavaScript](x)
-    - [Python](x)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
   - [**Testing**](#testing)
     - [#](#)
     - [#](#)
@@ -170,29 +170,28 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### #
 
+  - #
+  - #
     - #
     - #
-        - #
-        - #
       <br>
 
       ![image](#)
 
 - #### #
 
+  - #
+  - #
     - #
     - #
-        - #
-        - #
-        - #
+    - #
       <br>
 
       ![image](#)
 
 - #### #
 
-    - #
-      <br>
+  - #
 
       ![image](#)
 
@@ -255,7 +254,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **Python**
 
   - Python code passes with no errors when checked on CI Python Linter
-    -  page - PASS
+    - page - PASS
 
     ![image](#)
 
@@ -283,7 +282,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### #
+### x
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | --- | --- | --- | --- | --- |
@@ -292,17 +291,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | # | # | # | # | pass |
 | # | # | # | # | pass |
 
- <br>
-
 [**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
 ## **Bugs**
 
-- #
-    - #
-  <br>
+- x
+  - x
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -322,7 +318,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 6. Go to branch, and select master branch.
 7. Once master branch is selected, wait a moment and it will provide a page link to the website.
 
-- The live link can be found here - [Type R Forum](b).
+- The live link can be found here - [Type R Forum](x).
 
 ### **Local Deployment**
 
@@ -330,14 +326,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   1. Open Github.
   2. Log in or sign up.
-  3. Look for my repository [Type R Forum](#).
+  3. Look for my repository [Type R Forum](x).
   4. Last on the right corner you will find the fork button(click on it).
 
 #### Clone the repository
 
   1. Open Github
   2. Log in or Sign up
-  3. Look for my repository [Type R Forum](#)
+  3. Look for my repository [Type R Forum](x)
   4. Look for code button next to the Gitpod button at the top right(click on it).
   5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
   6. Once selected copy the link that is shown.
@@ -373,8 +369,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **Content**
 
   - #:
-    - [#](#)
-    - [#](#)
+    - [x](x)
+    - [x](x)
 
   - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
     - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
@@ -383,8 +379,6 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - [Tech With Tim](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9)
 
   - I have used the Readme structure from my third project as a template.
-
-  <br>
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 

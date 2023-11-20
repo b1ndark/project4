@@ -49,16 +49,16 @@
             >
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            <a class="nav-link {% if url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
             </li>
 
             <!--            Else the User will have to Signup or Signin            -->
             {% else %}
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+            <a class="nav-link {% if url_name == 'signup' %}active{% endif %}" href="{% url 'signup' %}">Sign Up</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_login' %}">Sign In</a>
+            <a class="nav-link {% if url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Sign In</a>
             </li>
             {% endif %}
 
