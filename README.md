@@ -1,6 +1,6 @@
 # **TypeR Forum**
 
-## Welcome to [TypeR Forum](#),
+## Welcome to [TypeR Forum](x)
 
 Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
 
@@ -12,38 +12,35 @@ The main goal of the forum is to create a comunity where people will help and sh
 
 ![image](#)
 
-#### **To open the links in this document in a new browser tab please press CTRL + Mouse Click**
+```To open the links in this document in a new browser tab please press CTRL + Mouse Click```
 
-[**My TypeR Forum website on Am I Responsive**](#)
+[**My TypeR Forum website on Am I Responsive**](x)
 
 ---
 
 ## **Content**
 
 - [**TypeR Forum**](#typer-forum)
-  - [**Welcome to Type R Forum,**](#welcome-to-typer-forum)
+  - [Welcome to TypeR Forum](#welcome-to-typer-forum)
   - [**Content**](#content)
   - [**User Experience**](#user-experience)
+    - [**Visitors**](#visitors)
+    - [**Goals**](#goals)
+    - [**The TypeR forum**](#the-typer-forum)
   - [**Design**](#design)
-    - [Typography](#typography)
-      - [Fonts](#fonts-used)
-      - [Colours](#colours-used)
-    - [Features](#features)
+    - [**Typography**](#typography)
+      - [Fonts used](#fonts-used)
+      - [Colours used](#colours-used)
+    - [x](#x)
+    - [**Features**](#features)
   - [**Programs and tools used**](#programs-and-tools-used)
   - [**Languages**](#languages)
-    - [HTML](#html)
-    - [CSS](#css)
-    - [JavaScript](#javascript)
-    - [Python](#python)
   - [**Testing**](#testing)
-    - [#](#)
-    - [#](#)
-    - [#](#)
-    - [#](#)
+    - [x](#x-1)
   - [**Bugs**](#bugs)
   - [**Deployment**](#deployment)
-    - [My Deployment](#my-deployment)
-    - [Local Deployment](#local-deployment)
+    - [**My Deployment**](#my-deployment)
+    - [**Local Deployment**](#local-deployment)
       - [Fork the repository](#fork-the-repository)
       - [Clone the repository](#clone-the-repository)
       - [Heroku deployment](#heroku-deployment)
@@ -126,11 +123,9 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### #
+### x
 
 ![image](#)
-
-<br>
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -138,62 +133,110 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ### **Features**
 
-- #### #
+- #### Nav Bar
 
-    - #
-    - #
-      <br>
+  - Once in the website the User will be presnted with a navbar at the top of the page which is fixed so it follows the User so the same one doesn't have to scroll up to find it.
+  - Within the navbar the User will find the following buttons/links
+    - The forum logo on the left if pressed takes you back to the home page
+    - Home button which when pressed will take you to the home page
+    - Contact button that will take you to the contact page so you can get in touch with the support for any kind of mather
+    - If not Logged In it will display the following
+      - Sign Up button that will take you to the Signup page where the User will be able to register to access the Forum by filling the form.
+      - Sign In button to take the User to the Login page to enable access to the Forum
+    - If Logged In the navbar will have the following displayed
+      - Forum button which when pressed will take you to the Forum where you will be able to explore, add and commments posts
+      - Log Out button that will take you to the Log Out page so the USer can confirm
+    - If Admin is Logged In you will have an extra button
+      - Admin page button to take you to the admin page where you can manage the website
 
-      ![image](#)
+    ![image](#)
 
-- #### #
+- #### Footer
 
-    - #
-    - #
-        - #
-        - #
-        - #
-      <br>
+  - The User is presented a message 'This Website is for Educational Purpose only'
+  - Website Author and Socials
 
-      ![image](#)
+    ![image](#)
 
-- #### #
+- #### Home Page
 
-    - #
-    - #
-        - #
-        - #
-        - #
-      <br>
+  - The User is presented with a welcoming message and a few basic rules, a typeR in the background.
 
-      ![image](#)
+    ![image](#)
 
-- #### #
+- #### Contact Page
 
-  - #
-  - #
-    - #
-    - #
-      <br>
+  - The User will be presented with a form to fill incase in need of conatcting the support for any reason/mather
+  - If Submited the User will get a notification
 
-      ![image](#)
+    ![image](#)
 
-- #### #
+- #### Sign Up Page
 
-  - #
-  - #
-    - #
-    - #
-    - #
-      <br>
+  - The User will have a Signup form whithin the Signup page to fill incase the same one wantes to become part of the TypeR community
+  - If Submited the User will get a notification and automaticaly logged in
 
-      ![image](#)
+    ![image](#)
 
-- #### #
+- #### Sign In Page
 
-  - #
+  - The User will have a Login form to fill if already has a login and wants to access the Forum and be part of the community
+  - If the user logs in, it will be redirected to the Home page and a notification will display
+  - If the User does not have a loggin there is a link to press that will take gim to the Sign Up page
 
-      ![image](#)
+    ![image](#)
+
+- #### Log Out Page
+
+  - Within the log out page the User will have a question whether wants to log out
+  - If confirmed it will be redirected to the Home page and a notification displayed
+
+    ![image](#)
+
+- #### Forum Page
+
+  - The accessed the User will have a list of Posts displayed
+  - If there is more than four posts the page will be paginated where the User will be able to go next/previous page
+  - Within the Forum page a Search bar is displayed in the navbar so the User can look for the pretended post
+  - At the top there is a Add Post button that will take you to the Add Post page so you can add posts and contribute to the community
+  - When a post within the Post list is selected it will take you to the Post detail page
+
+    ![image](#)
+
+- #### Post Detail Page
+
+  - A post is displayed and the User can comment
+  - If the User is the Post auhtor an Edit button is displayed which when pressed takes you to the Edit Post page
+
+    ![image](#)
+
+- #### Edit Post Page
+
+  - If User pressed Edit then the Edit page is displayed so the Post can be either edited or deleted
+  - If the Post is edited and submited a notification will be pressented to the User
+
+    ![image](#)
+
+- #### Delete Post Page
+
+  - A Delete Post confirmation is displayed
+  - If the User confirms, the Post is deleted and a notification displayed
+
+    ![image](#)
+
+- #### Edit Comment Page
+
+  - If User pressed Edit then the Edit comment page is displayed so the Comment can be either edited or deleted
+  - If the Comment is edited and submited a notification will be pressented to the User
+
+    ![image](#)
+
+- #### Delete Comment Page
+
+  - A Delete Comment confirmation is displayed
+  - If the User confirms, the Comment is deleted and a notification displayed
+
+    ![image](#)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -265,18 +308,21 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 ## **Testing**
 
 - The Type R Forum has been tested and it works on different types of computers with different browsers:
-  - #
-  - #
-  - #
+  - Chrome
+  - Safari
+  - Microsoft Edge
+  - Firefox
 - It has been tested and work on different mobile phone brands:
-  - #
-  - #
-  - #
-  - #
-  - #
-- #
-- #
- <br>
+  - Iphone 11 pro
+  - Iphone 12 pro
+  - Realme x2
+  - Xiaomi note 8
+  - Hauwei p30 lite
+  - Poco F5 pro
+
+- x
+
+- x
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -297,8 +343,18 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ## **Bugs**
 
-- x
-  - x
+- I was having an issue with CSRF_TRUSTED_ORIGINS.
+  - To fix it I had to add CSRF_TRUSTED_ORIGINS to the app settings.
+
+- Found a bug while testing the comments, once commented if the User refreshed the page it would duplicate the same comment.
+  - To fix it I have redirected the User to The Forum after commenting.
+
+- Add Post within the Admin page was working fine but, while on the website when adding a Post the picture wasn't being posted.
+  - After looking for the issue found that I needed to add to the form the following
+
+  ```ruby
+  enctype="multipart/form-data"
+  ```
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
