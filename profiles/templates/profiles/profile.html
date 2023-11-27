@@ -40,15 +40,26 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div>
-                        <p class="m-0 text-center">
-                            <a href=" {{ profile.facebook_url }} " target="_blank" title="Facebook"><i
-                                    class="fab fa-facebook-square ms-3 social-icon"></i></a>
-                            <a href=" {{ profile.twitter_url }} " target="_blank" title="Twitter"><i class="fab fa-x-twitter ms-3 social-icon"></i></a>
-                            <a href=" {{ profile.instagram_url }} " target="_blank" title="Instagram"><i
-                                    class="fab fa-instagram-square ms-3 social-icon"></i></a>
-                            <a href=" {{ profile.youtube_url }} " target="_blank" title="Youtube"><i
-                                    class="fab fa-youtube ms-3 social-icon"></i></a>
+                    <div class="mb-2 socials">
+                        <p class="mt-2 mb-1">
+                            <h4 class="text-center">Socials</h4>
+                        </p>
+                        <p class="text-center">
+                            {% if profile.facebook_url %}
+                                <a href=" {{ profile.facebook_url }} " target="_blank" title="Facebook"><i
+                                        class="fab fa-facebook-square m-3 social-icon"></i></a>
+                            {% endif %}
+                            {% if profile.twitter_url %}
+                                <a href=" {{ profile.twitter_url }} " target="_blank" title="Twitter"><i class="fab fa-x-twitter m-3 social-icon"></i></a>
+                            {% endif %}
+                            {% if profile.instagram_url %}
+                                <a href=" {{ profile.instagram_url }} " target="_blank" title="Instagram"><i
+                                    class="fab fa-instagram-square m-3 social-icon"></i></a>
+                            {% endif %}
+                            {% if profile.youtube_url %}
+                                <a href=" {{ profile.youtube_url }} " target="_blank" title="Youtube"><i
+                                    class="fab fa-youtube m-3 social-icon"></i></a>
+                            {% endif %}
                         </p>
                     </div>
                 </div>

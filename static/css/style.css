@@ -437,10 +437,10 @@ img {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    height: 700px;
     margin-top: 50px;
     margin-bottom: 50px;
     border: 2px solid var(--nav);
+    justify-content: space-around;
 }
 
 .profile-content-details {
@@ -454,6 +454,16 @@ img {
 .edit-button {
     display: flex;
     margin-bottom: 30px;
+}
+
+.socials a {
+    font-size: 1.2em;
+    color: var(--black);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.socials a:hover {
+    color: var(--white);
 }
 
 /************************** Footer **************************/
