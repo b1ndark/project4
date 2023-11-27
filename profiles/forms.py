@@ -57,4 +57,13 @@ class EditProfileForm(UserChangeForm):
     class Meta:
         model = UserProfile
         fields = ['first_name', 'last_name', 'profile_image', 'user_email',
-                  'car_model', 'city', 'county', 'country', 'postcode']
+                  'car_model', 'city', 'county', 'country', 'postcode',
+                  'facebook_url', 'twitter_url', 'instagram_url', 
+                  'youtube_url']
+
+        labels = {
+            'facebook_url': 'Facebook',
+            'twitter_url': 'Twitter',
+            'instagram_url': 'Instagram',
+            'youtube_url': 'Youtube'
+        }

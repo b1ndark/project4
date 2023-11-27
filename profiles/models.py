@@ -31,6 +31,14 @@ class UserProfile(models.Model):
         max_length=15, null=True, blank=True, default="")
     profile_image = CloudinaryField(
         'profile-image', default="defaultProfilePicture")
+    facebook_url = models.CharField(
+        max_length=250, null=True, blank=True, default="")
+    twitter_url = models.CharField(
+        max_length=250, null=True, blank=True, default="")
+    instagram_url = models.CharField(
+        max_length=250, null=True, blank=True, default="")
+    youtube_url = models.CharField(
+        max_length=250, null=True, blank=True, default="")
 
     def __str__(self):
         return self.user.username
