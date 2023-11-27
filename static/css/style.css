@@ -109,9 +109,22 @@ h1 {
 
 /************************** Alert Messages **************************/
 
-.alert-msg{
+.alert-msg {
     display: flex;
     justify-content: center;
+}
+
+.user-profile {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profile-picture {
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: auto;
+    align-items: center;
 }
 
 /************************** Forum **************************/

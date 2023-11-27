@@ -5,26 +5,42 @@
 {% block title %} - {{profile.user.username}}'s Profile{% endblock %}
 
 {% block content %}
+
 <!--            Profile Page/container            -->
 <section class="align-items-center home-main-section">
     <div class="container-fluid col-lg-6 pt-2 pb-2">
         <div class="col-lg-12 card mt-4">
             <div class="row row-bottom">
-            <!--            Container            -->
+
+                <!--            Container            -->
                 <div class="profile-home-card col-10">
                     <div class="row">
                         <h3 class="mb-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
                     </div>
-                    <div class="profile-content-details">
-                        <p><strong>Username:</strong> {{ profile.user.username }}</p>
-                        <p><strong>Name:</strong> {{ profile.first_name }} {{ profile.last_name }}</p>
-                        <p><strong>Car model:</strong> {{ profile.car_model }}</p>
-                        <p><strong>Email:</strong> {{ profile.user_email }}</p>
-                        <p><strong>City:</strong> {{ profile.city }}</p>
-                        <p><strong>County:</strong> {{ profile.county }}</p>
-                        <p><strong>Country:</strong> {{ profile.country }}</p>
-                        <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
+                    <div class="user-profile">
+                        <div class="profile-content-details">
+                            <p><strong>Username:</strong> {{ profile.user.username }}</p>
+                            <p><strong>Name:</strong> {{ profile.first_name }} {{ profile.last_name }}</p>
+                            <p><strong>Car model:</strong> {{ profile.car_model }}</p>
+                            <p><strong>Email:</strong> {{ profile.user_email }}</p>
+                            <p><strong>City:</strong> {{ profile.city }}</p>
+                            <p><strong>County:</strong> {{ profile.county }}</p>
+                            <p><strong>Country:</strong> {{ profile.country }}</p>
+                            <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
+                        </div>
+                        <div class="profile-picture">
+
+                            <!--            Default Profile Picture incase user does not upload an Profile picture image            -->
+                            {% if "defaultProfilePicture" in profile.profile_image.url %}
+                            <img src="{% static 'default_profile/default_profile_picture.png' %}" width="100%" />
+                            
+                            <!--            Else if the User does upload a Profile image            -->
+                            {% else %}
+                            <img src=" {{ profile.profile_image.url }}" width="100%" />
+                            {% endif %}
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             {% if request.user == profile.user %}
