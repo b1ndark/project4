@@ -29,7 +29,8 @@ class UserProfile(models.Model):
                            null=True, blank=True, default="")
     postcode = models.CharField(
         max_length=15, null=True, blank=True, default="")
-    profile_image = CloudinaryField('profile-image', default="defaultProfilePicture")
+    profile_image = CloudinaryField(
+        'profile-image', default="defaultProfilePicture")
 
     def __str__(self):
         return self.user.username

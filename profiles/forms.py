@@ -56,5 +56,5 @@ class EditProfileForm(UserChangeForm):
 
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'user_email', 'car_model',
-                  'city', 'county', 'country', 'postcode']
+        fields = ['first_name', 'last_name', 'profile_image', 'user_email',
+                  'car_model', 'city', 'county', 'country', 'postcode']

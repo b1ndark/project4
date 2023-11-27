@@ -19,7 +19,7 @@
 
                 <!--            Sign Up Form            -->
                 <div class="account-form">
-                    <form class="signup" method="post">
+                    <form class="signup" enctype="multipart/form-data" method="post">
                         {% csrf_token %}
                         {{ form|crispy }}
                         <div class="btn-display">

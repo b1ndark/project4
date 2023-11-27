@@ -429,6 +429,8 @@ img {
     box-shadow: var(--boxshadow);
 }
 
+/************************** Profile **************************/
+
 .profile-home-card {
     background-color: var(--posts-background);
     color: var(--white);
@@ -451,6 +453,7 @@ img {
 
 .edit-button {
     display: flex;
+    margin-bottom: 30px;
 }
 
 /************************** Footer **************************/
@@ -546,6 +549,25 @@ footer a:hover {
     .row-index {
         margin-right: -22px;
         margin-left: -22px;
+    }
+
+    .profile-home-card {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .user-profile {
+        flex-direction: column-reverse;
+    }
+
+    .profile-picture {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .edit-button {
+        margin-bottom: 15px;
     }
 
 }

@@ -13,9 +13,9 @@
             <div class="row row-bottom">
 
                 <!--            Container            -->
-                <div class="profile-home-card col-10">
+                <div class="profile-home-card col-md-12 col-lg-10">
                     <div class="row">
-                        <h3 class="mb-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
+                        <h3 class="mb-md-3 mb-lg-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
                     </div>
                     <div class="user-profile">
                         <div class="profile-content-details">
@@ -32,11 +32,11 @@
 
                             <!--            Default Profile Picture incase user does not upload an Profile picture image            -->
                             {% if "defaultProfilePicture" in profile.profile_image.url %}
-                            <img src="{% static 'default_profile/default_profile_picture.png' %}" width="100%" />
+                            <img src="{% static 'default_profile/default_profile_picture.png' %}" width="240" height="240"/>
                             
                             <!--            Else if the User does upload a Profile image            -->
                             {% else %}
-                            <img src=" {{ profile.profile_image.url }}" width="100%" />
+                            <img src=" {{ profile.profile_image.url }}" width="240" height="240" />
                             {% endif %}
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             {% if request.user == profile.user %}
-            <div class="row mb-5 edit-button">
+            <div class="row edit-button">
                 <div class="btn-display text-center">
                     <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
                         {% csrf_token %}
