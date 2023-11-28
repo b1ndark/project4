@@ -9,6 +9,7 @@
 {% block content %}
 
 <!--            Edit Profile Page/container            -->
+{% if request.user == profile.user %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 mt-5 mb-5">
@@ -31,5 +32,6 @@
         </div>
     </div>
 </div>
+{% endif %}
 
 {% endblock content %}

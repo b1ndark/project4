@@ -109,17 +109,18 @@
                     <p class="font-weight-bold">
 
                         <!--            Comment name            -->
-                        {{ comment.name }}
-                        <span class="text-muted font-weight-normal">
-
-                        <!--            Comments date which was created on            -->
-                        {{ comment.created_on }}
-                        </span>
+                        <strong>{{ comment.name }}</strong>
                         wrote:
                     </p>
 
                     <!--            Comment body            -->
                     {{ comment.body | linebreaks }}
+
+                    <span class="text-muted font-weight-normal">
+                    
+                        <!--            Comments date which was created on            -->
+                        {{ comment.created_on }}
+                    </span>
                 </div>
 
                 <!--            Button to take you to the Edit Post form            -->
@@ -151,7 +152,7 @@
                 {% endif %}
             </div>
         </div>
-        
+
         <!--            Back button to Forum            -->
         <div class="btn-add-post mb-4">
             <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>

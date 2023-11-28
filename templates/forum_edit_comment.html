@@ -6,6 +6,7 @@
 
 {% load crispy_forms_tags %}
 
+{% if user.is_authenticated and request.user.username == comment.name %}
 <!--            Edit Comment Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
     <div class="row">
@@ -26,7 +27,7 @@
             <div class="d-flex justify-content-between">
 
                 <!--            Back button to Forum            -->
-                <div class="btn-add-post">
+                <div class="btn-add-post" title="Back">
                     <a type="button" class="btn btn-lg" href="../../../">Back</a>
                 </div>
             </div>
@@ -34,25 +35,22 @@
                 <div class="col-md-12">
                     <div class="col-lg-12 card mb-4 mt-3">
                         <div class="card-body">
-                            {% if user.is_authenticated %}
-                            <p>Commented by: {{ comment.name }}</p>
 
                             <!--            Edit Comment form            -->
                             <form method="POST" style="margin-top: 1.3em;">
                                 {% csrf_token %}
                                 {{ form|crispy }}
                                 <div class="d-flex justify-content-between">
-                                    <div class="btn-add-post">
-                                        <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                    <div class="btn-add-post" title="Submit">
+                                        <button type="submit" class="btn btn-signup btn-sm">Submit</button>
                                     </div>
 
                                     <!--            Delete button to Forum            -->
-                                    <div class="btn-add-post">
-                                        <a type="button" class="btn btn-lg" href="{% url 'delete_comment' comment.pk %}">Delete</a>
+                                    <div class="btn-add-post" title="Delete">
+                                        <a type="button" class="btn btn-sm" href="{% url 'delete_comment' comment.pk %}">Delete</a>
                                     </div>
                                 </div>
                             </form>
-                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -60,5 +58,6 @@
         </div>
     </div>
 </div>
+{% endif %}
 
 {% endblock %}
