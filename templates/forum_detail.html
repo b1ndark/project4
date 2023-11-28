@@ -39,52 +39,51 @@
                     </div>
                     <div class="col-1-bottom">
 
-                    <!--            If user is authenticated, if liked            -->
-                    <p>
-                        <strong>
-                            {% if user.is_authenticated %}
-                            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                {% csrf_token %}
-                                {% if liked %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="fas fa-heart"></i></button>
+                        <!--            If user is authenticated, if liked            -->
+                        <p>
+                            <strong>
+                                {% if user.is_authenticated %}
+                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    {% if liked %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                            class="fas fa-heart"></i></button>
+                                    {% else %}
+                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                            class="far fa-heart"></i></button>
+                                    {% endif %}
+                                </form>
                                 {% else %}
-                                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                        class="far fa-heart"></i></button>
+                                <span class="text-secondary"><i class="far fa-heart"></i></span>
                                 {% endif %}
-                            </form>
-                            {% else %}
-                            <span class="text-secondary"><i class="far fa-heart"></i></span>
-                            {% endif %}
 
-                            <!--            Number of likes in the Post            -->
-                            <span class="text-secondary">{{ post.number_of_likes }} </span>
-                        </strong>
-                    </p>
-                    <p>
-                        {% with comments.count as total_comments %}
-                        <strong
-                            ><i class="far fa-comments"></i>
+                                <!--            Number of likes in the Post            -->
+                                <span class="text-secondary">{{ post.number_of_likes }} </span>
+                            </strong>
+                        </p>
+                        <p>
+                            {% with comments.count as total_comments %}
+                            <strong
+                                ><i class="far fa-comments"></i>
 
-                            <!--            Total Comments in the Post            -->
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </p>
+                                <!--            Total Comments in the Post            -->
+                                {{ total_comments }}</strong>
+                            {% endwith %}
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="d-none d-md-block col-md-6 masthead-image">
+            <div class="d-none d-md-flex col-md-6 post-view-image">
 
                 <!--            Default Image incase user does not upload an image            -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img
                 src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
-                width="100%"
-                />
+                width="500" height="400"/>
 
                 <!--            Else if the User does upload an image            -->
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%" />
+                <img src=" {{ post.featured_image.url }}" width="500" height="400"/>
                 {% endif %}
             </div>
         </div>
@@ -97,13 +96,16 @@
 </div>
 <div class="container">
     <div class="row row-bottom d-flex flex-column">
-        <div class="col-lg-12 card mb-4 mt-3">
+
+        <!--            If there is any comment            -->
+        {% if comments %}
+        <div class="col-lg-12 card mt-3">
             <h3 class="h3-padding">Comments:</h3>
-            <div class="card-body comments-body">
+            <div class="comment-card-body comments-body">
                 
                 <!--            Iterate through each comment in comments            -->
                 {% for comment in comments %}
-                <div class="comments" style="padding: 10px">
+                <div class="comments" style="padding: 20px">
                     <p class="font-weight-bold">
 
                         <!--            Comment name            -->
@@ -118,38 +120,38 @@
 
                     <!--            Comment body            -->
                     {{ comment.body | linebreaks }}
-
-                    <!--            Button to take you to the Edit Post form            -->
-                    {% if user.is_superuser or request.user.username == comment.name %}
-                    <div class="btn-add-post mb-4">
-                        <a type="button" class="btn btn-sm" href="{% url 'edit_comment' comment.pk %}">Edit</a>
-                    </div>
-                    {% endif %}
                 </div>
+
+                <!--            Button to take you to the Edit Post form            -->
+                {% if user.is_superuser or request.user.username == comment.name %}
+                <div class="btn-add-post mb-4" style="padding-right: 20px" title="Edit comment" >
+                    <a type="button" class="btn btn-sm" href="{% url 'edit_comment' comment.pk %}"><i class="fa-regular fa-pen-to-square"></i></a>
+                </div>
+                {% endif %}
 
                 <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
-            <div class="col-lg-12 card mb-4 mt-3">
-                <div class="card-body">
-            
-                    <!--            If user is authenticated can comment the Post            -->
-                    {% if user.is_authenticated %}
-                    <h3>Comment:</h3>
-                    <p>Posted by: {{ user.username }}</p>
-            
-                    <!--            Comment form            -->
-                    <form method="POST" style="margin-top: 1.3em;">
-                        {% csrf_token %}
-                        {{ comment_form|crispy }}
-                        <div class="btn-display text-center">
-                            <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                        </div>
-                    </form>
-                    {% endif %}
-                </div>
+        </div>
+        {% endif %}
+        <div class="col-lg-12 card mb-4">
+            <div class="card-body">
+        
+                <!--            If user is authenticated can comment the Post            -->
+                {% if user.is_authenticated %}
+
+                <!--            Comment form            -->
+                <form method="POST" style="margin-top: 1.3em;">
+                    {% csrf_token %}
+                    {{ comment_form|crispy }}
+                    <div class="btn-display text-center" title="Submit">
+                        <button type="submit" class="btn btn-sm btn-signup btn-lg">Submit</button>
+                    </div>
+                </form>
+                {% endif %}
             </div>
         </div>
+        
         <!--            Back button to Forum            -->
         <div class="btn-add-post mb-4">
             <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>

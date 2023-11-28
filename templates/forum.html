@@ -15,6 +15,7 @@
         </div>
     </div>
 </div>
+
 <!--            Forum Container            -->
 <div class="container-fluid">
     <div class="row">
@@ -40,15 +41,13 @@
                                 <img
                                 class="card-img-top"
                                 src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
-                                alt="type r fk2"
-                                />
+                                alt="type r fk2" width="500" height="400"/>
                                 <!--            Else User posted image            -->
                                 {% else %}
                                 <img
                                 class="card-img-top"
                                 src="{{ post.featured_image.url }}"
-                                alt=""
-                                />
+                                alt=" {{ post.title }}'s image" width="500" height="400"/>
                                 {% endif %}
                             </div>
                             <p class="card-text">{{ post.excerpt }}</p>
