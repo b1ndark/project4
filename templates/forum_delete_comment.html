@@ -23,25 +23,24 @@
 <!--            Delete Comment Container            -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
+        <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
 
             <!--            Back button to Edit Comment            -->
             <div class="btn-add-post">
-                <a type="button" class="btn btn-lg" href="{% url 'edit_comment' comment.pk %}">Back</a>
+                <a type="button" class="btn" href="{% url 'edit_comment' comment.pk %}">Back</a>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-lg-12 card mb-4 mt-3">
                         <div class="card-body">
-                            <p>Commented by: {{ user.username }}</p>
 
                             <!--            Delete Comment form            -->
                             <form method="POST" style="margin-top: 1.3em;" class="text-center">
                                 {% csrf_token %}
-                                <h3>Are you sure that you want to <strong style="color: var(--red);">delete</strong>
-                                    this Comment?</h3>
+                                <h4>Are you sure that you want to <strong style="color: var(--red);">delete</strong>
+                                    your comment?</h4>
                                 <div class="btn-display text-center mt-4">
-                                    <button type="submit" class="search-bar-btn btn-lg btn-outline-danger">Delete</button>
+                                    <button type="submit" class="btn-delete p-1 px-2 btn-outline-danger">Delete</button>
                                 </div>
                             </form>
                         </div>

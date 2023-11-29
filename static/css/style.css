@@ -275,6 +275,8 @@ img {
 
 .row-bottom {
     display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .top-container {
@@ -354,7 +356,7 @@ img {
 
 .btn-display {
     justify-content: center;
-    width: 25%;
+    align-items: center;
     margin: auto;
 }
 
@@ -432,6 +434,14 @@ img {
     border-color: var(--black);
     outline: 0;
     box-shadow: 0 0 8px 0.1rem rgba(235, 14, 14, 0.699);
+}
+
+.btn-delete {
+    background-color: var(--background);
+    color: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+    font-weight: bolder;
 }
 
 /************************** Reset Password **************************/
@@ -531,15 +541,6 @@ footer a:hover {
 
 /************************** Media queries **************************/
 
-/* for large screens sizes from 1600px wide and down */
-
-@media screen and (max-width: 1600px) {
-    .btn-display {
-        width: 30%;
-    }
-}
-
-
 /* for medium screens sizes from 1280px wide and down */
 
 @media screen and (max-width: 1280px) {
@@ -551,11 +552,6 @@ footer a:hover {
     .footer {
         font-size: 1.1em;
     }
-
-    .btn-display {
-        width: 33%;
-    }
-
 }
 
 /* for small screens sizes from 768px wide and down */
@@ -573,10 +569,6 @@ footer a:hover {
 
     .footer {
         font-size: 1em;
-    }
-
-    .btn-display {
-        width: 25%;
     }
 
     .home-card {
@@ -610,15 +602,11 @@ footer a:hover {
     }
 
     .edit-button {
+        margin-top: 15px;
         margin-bottom: 15px;
     }
 
-}
-
-/* for extra small screens sizes from 576px wide and down */
-
-@media screen and (max-width: 576px) {
-    .btn-display {
-        width: 40%;
+    .account-form div {
+        padding: 1px;
     }
 }

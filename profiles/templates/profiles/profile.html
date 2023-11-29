@@ -26,7 +26,7 @@
                             <p><strong>Last name:</strong> {{ profile.last_name }}</p>
                             {% endif %}
                             {% if profile.get_car_model_display %}
-                            <p><strong>Car model:</strong> {{ profile.get_car_model_display }}</p>
+                            <p><strong>Car:</strong> {{ profile.get_car_model_display }}</p>
                             {% endif %}
                             {% if profile.user_email %}
                             <p><strong>Email:</strong> {{ profile.user_email }}</p>
@@ -37,8 +37,8 @@
                             {% if profile.county %}
                             <p><strong>County:</strong> {{ profile.county }}</p>
                             {% endif %}
-                            {% if profile.country %}
-                            <p><strong>Country:</strong> {{ profile.country }}</p>
+                            {% if profile.get_country_display %}
+                            <p><strong>Country:</strong> {{ profile.get_country_display }}</p>
                             {% endif %}
                             {% if profile.postcode %}
                             <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
@@ -63,18 +63,18 @@
                         <p class="text-center">
                             {% if profile.facebook_url %}
                                 <a href=" {{ profile.facebook_url }} " target="_blank" title="Facebook"><i
-                                        class="fab fa-facebook-square m-3 social-icon"></i></a>
+                                        class="fab fa-facebook-f m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.twitter_url %}
-                                <a href=" {{ profile.twitter_url }} " target="_blank" title="Twitter"><i class="fab fa-x-twitter m-3 social-icon"></i></a>
+                                <a href=" {{ profile.twitter_url }} " target="_blank" title="Twitter"><i class="fab fa-x-twitter m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.instagram_url %}
                                 <a href=" {{ profile.instagram_url }} " target="_blank" title="Instagram"><i
-                                    class="fab fa-instagram-square m-3 social-icon"></i></a>
+                                    class="fab fa-instagram m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.youtube_url %}
                                 <a href=" {{ profile.youtube_url }} " target="_blank" title="Youtube"><i
-                                    class="fab fa-youtube m-3 social-icon"></i></a>
+                                    class="fab fa-youtube m-2 social-icon"></i></a>
                             {% endif %}
                         </p>
                     </div>
@@ -85,7 +85,7 @@
                 <div class="btn-display text-center">
                     <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
                         {% csrf_token %}
-                        <button id="btn-edit" class="btn">Edit</button>
+                        <button id="btn-edit" class="btn btn-edit mt-0">Edit</button>
                     </form>
                 </div>
             </div>

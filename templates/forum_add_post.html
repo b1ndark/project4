@@ -25,7 +25,7 @@
 
             <!--            Back button to Forum            -->
             <div class="btn-add-post">
-                <a type="button" class="btn btn-lg" href="{% url 'forum' %}">Back</a>
+                <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -39,7 +39,7 @@
                                 {% csrf_token %}
                                 {{ form|crispy }}
                                 <div class="btn-display text-center">
-                                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                                    <button type="submit" class="btn btn-signup">Submit</button>
                                 </div>
                             </form>
                             {% endif %}
