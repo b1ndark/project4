@@ -30,47 +30,55 @@
                 <!--            Post content            -->
                 <p class="card-text">{{ post.content | safe }}</p>
                 <div class="content-details">
-                    <div class="col-1-top">
-
-                        <!--            Post Author and Date that was created on            -->
-                        <p class="post-subtitle">
-                        {{ post.author }} | {{ post.created_on }}
-                        </p>
+                    {% if post.get_car_model_display %}
+                    <div class="mb-1">
+                        <strong>Car:</strong> {{ post.get_car_model_display }}
                     </div>
-                    <div class="col-1-bottom">
+                    {% endif %}
+                    <div class="content-details-bottom">
+                        <div class="col-1-top">
 
-                        <!--            If user is authenticated, if liked            -->
-                        <p>
-                            <strong>
-                                {% if user.is_authenticated %}
-                                <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                    {% csrf_token %}
-                                    {% if liked %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                            class="fas fa-heart"></i></button>
+                            <!--            Post Author and Date that was created on            -->
+                            <p class="post-subtitle">
+                            {{ post.author }} | {{ post.created_on }}
+                            </p>
+                        </div>
+                        <div class="col-1-bottom">
+
+                            <!--            If user is authenticated, if liked            -->
+                            <p>
+                                <strong>
+                                    {% if user.is_authenticated %}
+                                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                        {% csrf_token %}
+                                        {% if liked %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                                class="fas fa-heart"></i></button>
+                                        {% else %}
+                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
+                                                class="far fa-heart"></i></button>
+                                        {% endif %}
+                                    </form>
                                     {% else %}
-                                    <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                            class="far fa-heart"></i></button>
+                                    <span class="text-secondary"><i class="far fa-heart"></i></span>
                                     {% endif %}
-                                </form>
-                                {% else %}
-                                <span class="text-secondary"><i class="far fa-heart"></i></span>
-                                {% endif %}
 
-                                <!--            Number of likes in the Post            -->
-                                <span class="text-secondary">{{ post.number_of_likes }} </span>
-                            </strong>
-                        </p>
-                        <p>
-                            {% with comments.count as total_comments %}
-                            <strong
-                                ><i class="far fa-comments"></i>
+                                    <!--            Number of likes in the Post            -->
+                                    <span class="text-secondary">{{ post.number_of_likes }} </span>
+                                </strong>
+                            </p>
+                            <p>
+                                {% with comments.count as total_comments %}
+                                <strong
+                                    ><i class="far fa-comments"></i>
 
-                                <!--            Total Comments in the Post            -->
-                                {{ total_comments }}</strong>
-                            {% endwith %}
-                        </p>
+                                    <!--            Total Comments in the Post            -->
+                                    {{ total_comments }}</strong>
+                                {% endwith %}
+                            </p>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="d-none d-md-flex col-md-6 post-view-image">

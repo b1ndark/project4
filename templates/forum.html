@@ -52,27 +52,33 @@
                             </div>
                             <p class="card-text">{{ post.excerpt }}</p>
                             <div class="card-details">
-                                <br />
-                                <p class="card-text h6">
-                                    <div class="image-flash">
+                                <br/>
+                                <div class="image-flash">
+                                    {% if post.get_car_model_display %}
+                                    <div>
+                                        <p><strong>Car:</strong> {{ post.get_car_model_display }}</p>
+                                    </div>
+                                    {% endif %}
+                                    <div>
 
                                         <!--            Display the Author of the Post            -->
-                                        <p class="author">Author: {{ post.author }}</p>
-                                        <div class="created-on">
-
-                                            <!--            Post created on            -->
-                                            <p>{{ post.created_on }}</p>
-                                            <p><i class="far fa-heart"></i> {{ post.number_of_likes }}
-                                                {% with post.comments.count as total_comments %}
-                                                <strong><i class="ps-2 far fa-comments"></i>
-
-                                                    <!--            Total Comments in the Post            -->
-                                                    {{ total_comments }}</strong>
-                                                {% endwith %}
-                                            </p>
-                                        </div>
+                                        <p class="author"><strong>Author:</strong> {{ post.author }}</p>
                                     </div>
-                                </p>
+                                    
+                                    <div class="created-on">
+
+                                        <!--            Post created on            -->
+                                        <p>{{ post.created_on }}</p>
+                                        <p><i class="far fa-heart"></i> {{ post.number_of_likes }}
+                                            {% with post.comments.count as total_comments %}
+                                            <strong><i class="ps-2 far fa-comments"></i>
+
+                                                <!--            Total Comments in the Post            -->
+                                                {{ total_comments }}</strong>
+                                            {% endwith %}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

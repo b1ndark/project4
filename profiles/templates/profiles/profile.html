@@ -17,16 +17,32 @@
                     <div class="row">
                         <h3 class="mb-md-3 mb-lg-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
                     </div>
-                    <div class="user-profile">
+                    <div class="user-profile mb-3">
                         <div class="profile-content-details">
-                            <p><strong>Username:</strong> {{ profile.user.username }}</p>
-                            <p><strong>Name:</strong> {{ profile.first_name }} {{ profile.last_name }}</p>
-                            <p><strong>Car model:</strong> {{ profile.car_model }}</p>
+                            {% if profile.first_name %}
+                            <p><strong>First name:</strong> {{ profile.first_name }}</p>
+                            {% endif %}
+                            {% if profile.last_name %}
+                            <p><strong>Last name:</strong> {{ profile.last_name }}</p>
+                            {% endif %}
+                            {% if profile.get_car_model_display %}
+                            <p><strong>Car model:</strong> {{ profile.get_car_model_display }}</p>
+                            {% endif %}
+                            {% if profile.user_email %}
                             <p><strong>Email:</strong> {{ profile.user_email }}</p>
+                            {% endif %}
+                            {% if profile.city %}
                             <p><strong>City:</strong> {{ profile.city }}</p>
+                            {% endif %}
+                            {% if profile.county %}
                             <p><strong>County:</strong> {{ profile.county }}</p>
+                            {% endif %}
+                            {% if profile.country %}
                             <p><strong>Country:</strong> {{ profile.country }}</p>
+                            {% endif %}
+                            {% if profile.postcode %}
                             <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
+                            {% endif %}
                         </div>
                         <div class="profile-picture">
 

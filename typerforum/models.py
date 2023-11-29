@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 Car model list for User to choose one of the List
 """
 CAR_MODELS = (
+    ('select', ''),
     ('ek9', 'Honda Civic Type R EK9'),
     ('ep3', 'Honda Civic Type R EP3'),
     ('fn2', 'Honda Civic Type R FN2'),
@@ -34,7 +35,7 @@ class Post(models.Model):
     """
     title = models.CharField(max_length=200, unique=True)
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default="ek9")
+        max_length=30, choices=CAR_MODELS, default="")
     featured_image = CloudinaryField('image', default='placeholder')
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
