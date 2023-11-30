@@ -1,30 +1,28 @@
-{% extends "base.html" %}
-
-{% load i18n %}
-
-{% block title %} - Edit {{profile.user.username}}'s Profile{% endblock %}
-
-{% load crispy_forms_tags %}
-
+{% extends "base.html" %} {% load i18n %} {% block title %} - Edit
+{{profile.user.username}}'s Profile{% endblock %} {% load crispy_forms_tags %}
 {% block content %}
 
 <!--            Edit Profile Page/container            -->
 {% if request.user == profile.user %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 mt-5 mb-5">
-            <div class="row card-body card">
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-4 mt-3 mb-5">
 
+            <!--            Back button to the profile            -->
+            <div class="btn-custom mt-0 mb-4">
+            <a type="button" class="btn" href="../">Back</a>
+            </div>
+            <div class="row card-body card">
+                
                 <!--            Title            -->
                 <h1 class="pb-3 text-center">{% trans "Edit Profile" %}</h1>
 
                 <!--            Sign Up Form            -->
                 <div class="account-form">
                     <form class="signup" enctype="multipart/form-data" method="post">
-                        {% csrf_token %}
-                        {{ form|crispy }}
+                        {% csrf_token %} {{ form|crispy }}
                         <div class="btn-display">
-                            <button type="submit" class="btn">{% trans "Update" %}</button>
+                        <button type="submit" class="btn">{% trans "Update" %}</button>
                         </div>
                     </form>
                 </div>
@@ -32,6 +30,4 @@
         </div>
     </div>
 </div>
-{% endif %}
-
-{% endblock content %}
+{% endif %} {% endblock content %}

@@ -52,7 +52,7 @@
                             
                             <!--            Else if the User does upload a Profile image            -->
                             {% else %}
-                            <img src=" {{ profile.profile_image.url }}" alt="{{ profile.user.name }}'s profile picture" width="240" height="240"/>
+                            <img src="{{ profile.profile_image.url }}" alt="{{ profile.user.name }}'s profile picture" width="240" height="240"/>
                             {% endif %}
                         </div>
                     </div>
@@ -62,18 +62,18 @@
                         </p>
                         <p class="text-center">
                             {% if profile.facebook_url %}
-                                <a href=" {{ profile.facebook_url }} " target="_blank" title="Facebook"><i
+                                <a href="{{ profile.facebook_url }}" target="_blank" title="Facebook"><i
                                         class="fab fa-facebook-f m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.twitter_url %}
-                                <a href=" {{ profile.twitter_url }} " target="_blank" title="Twitter"><i class="fab fa-x-twitter m-2 social-icon"></i></a>
+                                <a href="{{ profile.twitter_url }}" target="_blank" title="Twitter"><i class="fab fa-x-twitter m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.instagram_url %}
-                                <a href=" {{ profile.instagram_url }} " target="_blank" title="Instagram"><i
+                                <a href="{{ profile.instagram_url }}" target="_blank" title="Instagram"><i
                                     class="fab fa-instagram m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.youtube_url %}
-                                <a href=" {{ profile.youtube_url }} " target="_blank" title="Youtube"><i
+                                <a href="{{ profile.youtube_url }}" target="_blank" title="Youtube"><i
                                     class="fab fa-youtube m-2 social-icon"></i></a>
                             {% endif %}
                         </p>

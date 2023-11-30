@@ -58,7 +58,7 @@ class EditProfileForm(UserChangeForm):
         model = UserProfile
         fields = ['first_name', 'last_name', 'profile_image', 'user_email',
                   'car_model', 'city', 'county', 'country', 'postcode',
-                  'facebook_url', 'twitter_url', 'instagram_url', 
+                  'facebook_url', 'twitter_url', 'instagram_url',
                   'youtube_url']
 
         labels = {
