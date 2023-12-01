@@ -21,6 +21,11 @@
                 <div class="account-form">
                     <form class="signup" enctype="multipart/form-data" method="post">
                         {% csrf_token %} {{ form|crispy }}
+                        <ul>
+                            <li>
+                                <p class="form-text">When adding social links, please make sure to include 'https://' in your link</p>
+                            </li>
+                        </ul>
                         <div class="btn-display">
                         <button type="submit" class="btn">{% trans "Update" %}</button>
                         </div>
