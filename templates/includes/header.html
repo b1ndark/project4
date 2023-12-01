@@ -78,10 +78,12 @@
         </ul>
         {% if user.is_authenticated %}
         {% if url_name == 'forum' %}
-        <form class="d-flex me-3 mb-2 mb-lg-0" method="GET" action="{% url 'forum' %}">
-            <input class="form-control" name="q" type="search" placeholder="Search Post" aria-label="Search">
-            <button class="search-bar-btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <div class="d-none d-md-block">
+            <form class="d-flex me-3 mb-2 mb-lg-0" method="GET" action="{% url 'forum' %}">
+                <input class="form-control" name="q" type="search" placeholder="Search Post" aria-label="Search">
+                <button class="search-bar-btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
         {% endif %}
         {% endif %}
         <span class="navbar-text text-muted"> The Power Of Dreams </span>

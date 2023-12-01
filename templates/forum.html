@@ -16,15 +16,24 @@
     </div>
 </div>
 
+
 <!--            Forum Container            -->
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-lg-6 mt-3">
-
+            
             <!--            Button to take you to the add a Post Page            -->
-            <div class="btn-add-post mb-4">
-                <a type="button" class="btn" href="{% url 'add_post' %}">Add Post</a>
+            <div class="btn-add-post mb-4" title="Add Post">
+                <a type="button" class="add-post" href="{% url 'add_post' %}"><i class="fa-solid fa-file-circle-plus"></i></a>
             </div>
+            {% if user.is_authenticated %}
+            <div class="d-md-none d-flex justify-content-center mt-3 ms-2">
+                <form class="d-flex me-3 mb-2 mb-lg-0" method="GET" action="{% url 'forum' %}">
+                    <input class="form-control" name="q" type="search" placeholder="Search Post" aria-label="Search">
+                    <button class="search-bar-btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            {% endif %}
             <div class="row">
 
                 <!--            For loop to iterate through each Post in Post list            -->

@@ -214,6 +214,16 @@ h1 {
     width: auto;
 }
 
+.add-post {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.add-post:hover {
+    color: var(--red);
+}
+
 /************************** Forum Details **************************/
 
 .comment-card-body {
