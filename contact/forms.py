@@ -20,5 +20,5 @@ class ContactForm(forms.ModelForm):
             'email': 'Email',
             'car_model': 'Car Model',
             'subject': 'Subject',
-            'message_content': 'Content of the message'
+            'message_content': 'Message'
         }
