@@ -20,7 +20,7 @@
     <div class="container col-sm-12 col-md-10 col-lg-7">
         {% if user.is_superuser or request.user == post.author %}
         <!--            Button to take you to the Edit Post form            -->
-        <div class="btn-custom mb-4">
+        <div class="btn-custom mb-4" title="Edit Post">
             <a type="button" class="btn" href="{% url 'edit_post' post.slug %}">Edit Post</a>
         </div>
         {% endif %}
@@ -40,7 +40,8 @@
 
                             <!--            Post Author and Date that was created on            -->
                             <p class="post-subtitle">
-                            {{ post.author }} | {{ post.created_on }}
+                                <a class="author-profile" href="{% url 'profile' post.author.id %}" title="{{ post.author }}'s profile">{{ post.author }}</a>
+                             | {{ post.created_on }}
                             </p>
                         </div>
                         <div class="col-1-bottom">
@@ -102,12 +103,12 @@
         <hr />
     </div>
 </div>
-<div class="container">
+<div class="container col-sm-12 col-md-10 col-lg-7">
     <div class="row row-bottom">
 
         <!--            If there is any comment            -->
         {% if comments %}
-        <div class="col-sm-12 col-md-10 col-lg-10 card mt-3">
+        <div class="col-sm-12 col-md-10 col-lg-12 card mt-3">
             <h3 class="h3-padding">Comments:</h3>
             <div class="comment-card-body comments-body">
                 
@@ -143,7 +144,7 @@
             </div>
         </div>
         {% endif %}
-        <div class="col-sm-12 col-md-10 col-lg-10 card mb-4">
+        <div class="col-sm-12 col-md-10 col-lg-12 card mb-4">
             <div class="card-body">
         
                 <!--            If user is authenticated can comment the Post            -->
@@ -153,8 +154,8 @@
                 <form method="POST" style="margin-top: 1.3em;">
                     {% csrf_token %}
                     {{ comment_form|crispy }}
-                    <div class="btn-display text-center" title="Submit">
-                        <button type="submit" class="btn btn-sm btn-signup btn-lg">Submit</button>
+                    <div class="btn-display text-center" title="Add comment">
+                        <button type="submit" class="btn btn-sm btn-signup btn-lg"><i class="fa-regular fa-paper-plane"></i></button>
                     </div>
                 </form>
                 {% endif %}
@@ -162,7 +163,7 @@
         </div>
 
         <!--            Back button to Forum            -->
-        <div class="btn-add-post mb-4">
+        <div class="btn-add-post mb-4" title="Back to Forum">
             <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
         </div>
     </div>

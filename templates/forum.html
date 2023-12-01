@@ -62,7 +62,7 @@
                                     <div>
 
                                         <!--            Display the Author of the Post            -->
-                                        <p class="author"><strong>Author:</strong> {{ post.author }}</p>
+                                        <p class="author"><strong>Author:</strong> <a class="author-profile" href="{% url 'profile' post.author.id %}" title="{{ post.author }}'s profile">{{ post.author }}</a></p>
                                     </div>
                                     
                                     <div class="created-on">

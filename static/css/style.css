@@ -319,6 +319,15 @@ img {
     margin-bottom: 3px;
 }
 
+.author-profile {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.author-profile:hover {
+    color: var(--red);
+}
+
 
 /************************** Forms **************************/
 
