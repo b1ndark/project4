@@ -499,7 +499,6 @@ img {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     margin-bottom: 50px;
     border: 2px solid var(--nav);
     justify-content: space-around;
@@ -516,6 +515,7 @@ img {
 .edit-button {
     display: flex;
     margin-bottom: 30px;
+    align-content: flex-end;
 }
 
 .socials a {
@@ -526,6 +526,16 @@ img {
 
 .socials a:hover {
     color: var(--white);
+}
+
+.profile-update {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title-danger {
+    color: var(--red);
 }
 
 /************************** Footer **************************/
@@ -622,5 +632,13 @@ footer a:hover {
 
     .account-form div {
         padding: 1px;
+    }
+
+    .profile-update {
+        margin-top: 10px;
+    }
+
+    .title-danger {
+        margin-bottom: -20px;
     }
 }

@@ -9,11 +9,11 @@
 <!--            Profile Page/container            -->
 <section class="align-items-center home-main-section">
     <div class="container-fluid col-lg-6 pt-2 pb-2">
-        <div class="col-lg-12 card mt-4">
+        <div class="col-lg-12 card mt-5">
             <div class="row row-bottom">
 
                 <!--            Container            -->
-                <div class="profile-home-card col-md-12 col-lg-10">
+                <div class="profile-home-card col-12">
                     <div class="row">
                         <h3 class="mb-md-3 mb-lg-5 mt-3 text-center">{{ profile.user.username }}'s Profile</h3>
                     </div>
@@ -81,18 +81,25 @@
                 </div>
             </div>
             {% if request.user == profile.user %}
-            <div class="row edit-button">
-                <div class="btn-display text-center">
-                    <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
-                        {% csrf_token %}
-                        <button id="btn-edit" class="btn btn-edit mt-0">Edit</button>
-                    </form>
+            <div class="profile-update">
+                <div class="row edit-button">
+                    <div class="btn-display text-center">
+                        <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
+                            {% csrf_token %}
+                            <button id="btn-edit" class="btn btn-edit mt-0">Edit</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="row edit-button">
-                <div class="btn-display text-center">
-                    <div class="btn-add-post">
-                        <a type="button" class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>
+                <div>
+                    <div class="row">
+                        <h4 class="title-danger text-center">Danger!</h4>
+                    </div>
+                    <div class="row edit-button">
+                        <div class="btn-display text-center">
+                            <div class="btn-add-post">
+                                <a type="button" class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -52,11 +52,11 @@ class EditProfile(SuccessMessageMixin, generic.UpdateView):
 
 class DeleteProfile(SuccessMessageMixin, generic.DeleteView):
     """
-    Render Profile delete Page so User can a Delete Profile
+    Render Account delete Page so User can a Delete Account
     and get redirect to Home page
     """
     model = User
-    template_name = 'profiles/delete_profile.html'
+    template_name = 'profiles/delete_account.html'
 
     def get_context_data(self, **kwargs):
         profile = UserProfile.objects.get(user=self.kwargs['pk'])
