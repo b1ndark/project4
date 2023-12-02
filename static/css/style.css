@@ -98,12 +98,12 @@ h1 {
     margin-top: 150px;
 }
 
-.home-page-a {
+.red-a-link {
     color: var(--white);
     font-weight: bolder;
 }
 
-.home-page-a:hover {
+.red-a-link:hover {
     color: var(--red);
 }
 
