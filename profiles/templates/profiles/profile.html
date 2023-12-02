@@ -89,6 +89,13 @@
                     </form>
                 </div>
             </div>
+            <div class="row edit-button">
+                <div class="btn-display text-center">
+                    <div class="btn-add-post">
+                        <a type="button" class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>
+                    </div>
+                </div>
+            </div>
             {% endif %}
         </div>
     </div>

@@ -8,6 +8,7 @@ from django.views import generic
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.models import User
 
 
 class UserProfiles(TemplateView):
@@ -47,6 +48,28 @@ class EditProfile(SuccessMessageMixin, generic.UpdateView):
 
         return context
     success_message = "Your Profile has been Updated"
+
+
+class DeleteProfile(SuccessMessageMixin, generic.DeleteView):
+    """
+    Render Profile delete Page so User can a Delete Profile
+    and get redirect to Home page
+    """
+    model = User
+    template_name = 'profiles/delete_profile.html'
+
+    def get_context_data(self, **kwargs):
+        profile = UserProfile.objects.get(user=self.kwargs['pk'])
+
+        context = {
+            "profile": profile,
+            'form': EditProfileForm(instance=profile)
+        }
+
+        return context
+
+    success_url = reverse_lazy('home')
+    success_message = "Your Account has successfully been Deleted"
 
 
 def signup(request):

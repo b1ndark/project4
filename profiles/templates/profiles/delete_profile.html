@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} - Delete {{ user.username }}'s Account{% endblock %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+{% if request.user == profile.user %}
+<!--            Delete Profile            -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3 text-center">
+            <div class="row">
+                <!--            Title            -->
+                <h1>Delete {{ user.username }}'s Account!</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--            Delete Post Container            -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
+
+            <!--            Back button to Profile            -->
+            <div class="btn-custom">
+                <a type="button" class="btn" href="../">Back</a>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-lg-12 card mb-4 mt-3">
+                        <div class="card-body">
+
+                            <!--            Delete Account form            -->
+                            <form method="POST" style="margin-top: 1.3em;" class="text-center">
+                                {% csrf_token %}
+                                <h5>We are sorry to see you going</h5>
+                                <h5>Are you sure that you want to <strong style="color: var(--red);">delete</strong>
+                                    your account?</h5>
+                                <div class="btn-display text-center mt-4">
+                                    <button type="submit" class="btn-delete p-1 px-2 btn-outline-danger">Delete</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
