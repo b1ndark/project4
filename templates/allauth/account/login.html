@@ -18,7 +18,7 @@
 
                 <!--            If already has login            -->
                 <p>If you have not created an account yet, 
-                <a href="{% url 'signup' %}" class="a-red">Please register here.</a></p>
+                <a href="{% url 'signup' %}" class="red-a-link">Please register here.</a></p>
                 <div class="account-form">
                     <form class="login" method="POST" action="{% url 'account_login' %}">
                         {% csrf_token %}
@@ -28,7 +28,7 @@
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
                         <!--            To reset password            -->
-                        <a class="button secondaryAction a-red" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                        <a class="button secondaryAction red-a-link" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                         <div class="btn-display">
                             <button class="btn btn-signup" type="submit">{% trans "Sign In" %}</button>   
                         </div>

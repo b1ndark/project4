@@ -10,7 +10,7 @@
     --nav: #161516f3;
     --red: #b90a0a;
     --black: #000000;
-    --white: rgba(255, 255, 255, .55);
+    --white: rgb(255, 255, 255);
     --posts-background: #2c2b2cc9;
 
     /* Settings */
@@ -341,12 +341,12 @@ img {
 
 /************************** Forms **************************/
 
-.a-red {
-    color: rgba(235, 14, 14, 0.699);
+.form-label {
+    font-weight: bolder;
 }
 
-.a-red:hover {
-    color: rgba(161, 23, 23, 0.699);
+.form-check {
+    font-weight: bolder;
 }
 
 .account-form {
@@ -416,9 +416,14 @@ img {
 }
 
 .textarea {
+    margin-top: 5px;
     resize: none;
     width: 100%;
     height: 100px;
+}
+
+.form-select {
+    margin-top: 5px;
 }
 
 /************************** Contact Form Page **************************/

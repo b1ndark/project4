@@ -356,6 +356,9 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   enctype="multipart/form-data"
   ```
 
+- When deployed to heroku I was having a bug with the background image as it wasn't showing in the website
+  - After the conversation with tutor that helped me understand what was wrong I then uploaded the image to cloudinary and used the link instead of having it stored within static folder.
+
 [**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
