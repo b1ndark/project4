@@ -86,7 +86,7 @@
             {% if request.user == profile.user %}
             <div class="profile-update">
                 <div class="row edit-button">
-                    <div class="btn-display text-center">
+                    <div class="btn-display text-center" title="Edit Profile">
                         <form class="signup" id="signup_form" method="post"
                             action="{% url 'edit_profile' profile.pk %}">
                             {% csrf_token %}
@@ -98,7 +98,7 @@
                     <div class="row">
                         <h4 class="title-danger text-center">Danger!</h4>
                     </div>
-                    <div class="row edit-button">
+                    <div class="row edit-button" title="Delete Account">
                         <div class="btn-display text-center">
                             <div class="btn-add-post">
                                 <a type="button" class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>

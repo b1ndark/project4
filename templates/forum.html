@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %} - Forum{% endblock %} {% block
-content %}
+{% extends 'base.html' %} {% block title %} - Forum{% endblock %} 
+{% block content %}
 
 <!--            Forum Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
@@ -49,7 +49,7 @@ content %}
         <div class="col-md-12">
           <div class="card mb-8">
             <div class="card-body">
-              <a href="{% url 'forum_detail' post.slug %}" class="post-link">
+              <a href="{% url 'forum_detail' post.pk %}" class="post-link">
                 <h2 class="card-title">{{ post.title }}</h2>
               </a>
               <div class="image-container">
@@ -101,8 +101,8 @@ content %}
                     <!--            Post created on            -->
                     <p>{{ post.created_on }}</p>
                     <p>
-                      <i class="far fa-heart"></i> {{ post.number_of_likes }} {%
-                      with post.comments.count as total_comments %}
+                      <i class="far fa-heart"></i> {{ post.number_of_likes }} 
+                      {% with post.comments.count as total_comments %}
                       <strong
                         ><i class="ps-2 far fa-comments"></i>
 

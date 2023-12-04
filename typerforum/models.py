@@ -37,7 +37,6 @@ class Post(models.Model):
     car_model = models.CharField(
         max_length=30, choices=CAR_MODELS, default="")
     featured_image = CloudinaryField('image', default='placeholder')
-    slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     excerpt = models.TextField()
@@ -53,7 +52,7 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('forum_detail', args=[self.slug])
+        return reverse('forum_detail', args=[self.pk])
 
     def number_of_likes(self):
         return self.likes.count()

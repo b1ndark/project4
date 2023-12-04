@@ -1,6 +1,7 @@
-{% extends 'base.html' %} {% block title %} - Edit {{ comment.name }}'s
-Comment{% endblock %} {% block content %} {% load crispy_forms_tags %} {% if
-user.is_authenticated and request.user.username == comment.name %}
+{% extends 'base.html' %} 
+{% block title %} - Edit {{ comment.name }}'s Comment{% endblock %} 
+{% block content %} {% load crispy_forms_tags %} 
+{% if user.is_authenticated and request.user.username == comment.name %}
 <!--            Edit Comment Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
   <div class="row">

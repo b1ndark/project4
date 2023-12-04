@@ -53,9 +53,9 @@ class PostDetail(View):
     Render Forum Detail Page and display the Post and its Comments
     """
 
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, pk, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.filter(approved=True).order_by('-created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -73,9 +73,9 @@ class PostDetail(View):
             },
         )
 
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, pk=pk)
         comments = post.comments.filter(approved=True).order_by('-created_on')
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
@@ -114,8 +114,7 @@ class AddPost(SuccessMessageMixin, generic.CreateView):
     """
     model = Post
     template_name = 'forum_add_post.html'
-    fields = ('title', 'slug', 'car_model',
-              'featured_image', 'content', 'excerpt',)
+    fields = ('title', 'car_model', 'featured_image', 'content', 'excerpt',)
 
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -141,7 +140,7 @@ class DeletePost(SuccessMessageMixin, generic.DeleteView):
     model = Post
     template_name = 'forum_delete_post.html'
 
-    success_url = reverse_lazy('forum_detail')
+    success_url = reverse_lazy('forum')
     success_message = "Your Post has been Deleted"
 
 
@@ -172,8 +171,8 @@ class PostLike(View):
     To like Posts
     """
 
-    def post(self, request, slug):
-        post = get_object_or_404(Post, slug=slug)
+    def post(self, request, title):
+        post = get_object_or_404(Post, title=title)
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
@@ -184,24 +183,4 @@ class PostLike(View):
             messages.add_message(self.request, messages.SUCCESS,
                                  "You have liked the Post")
 
-        return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
-
-
-class CommentLike(View):
-    """
-    To like Posts
-    """
-
-    def post(self, request, slug):
-        post = get_object_or_404(Post, slug=slug)
-
-        if post.likes.filter(id=request.user.id).exists():
-            post.likes.remove(request.user)
-            messages.add_message(self.request, messages.ERROR,
-                                 "You have unliked the Post")
-        else:
-            post.likes.add(request.user)
-            messages.add_message(self.request, messages.SUCCESS,
-                                 "You have liked the Post")
-
-        return HttpResponseRedirect(reverse('forum_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('forum_detail', args=[self.pk]))

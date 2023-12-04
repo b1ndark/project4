@@ -1,6 +1,7 @@
-{% extends 'base.html' %} {% block title %} - Edit {{ post.author }}'s Post{%
-endblock %} {% block content %} {% load crispy_forms_tags %} {% if
-user.is_authenticated and request.user == post.author %}
+{% extends 'base.html' %} 
+{% block title %} - Edit {{ post.author }}'s Post {% endblock %} 
+{% block content %} {% load crispy_forms_tags %} 
+{% if user.is_authenticated and request.user == post.author %}
 <!--            Edit Post Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
   <div class="row">
@@ -20,7 +21,7 @@ user.is_authenticated and request.user == post.author %}
       <div class="d-flex justify-content-between">
         <!--            Back button to the Post            -->
         <div class="btn-custom">
-          <a type="button" class="btn" href="{% url 'forum_detail' post.slug %}"
+          <a type="button" class="btn" href="{% url 'forum_detail' post.pk %}"
             >Back</a
           >
         </div>
@@ -50,7 +51,7 @@ user.is_authenticated and request.user == post.author %}
                     <a
                       type="button"
                       class="btn btn-sm"
-                      href="{% url 'delete_post' post.slug %}"
+                      href="{% url 'delete_post' post.pk %}"
                       >Delete</a
                     >
                   </div>
