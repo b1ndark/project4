@@ -27,14 +27,14 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Visitors**](#visitors)
     - [**Goals**](#goals)
     - [**The TypeR forum**](#the-typer-forum)
-  - [User Stories(Epics)](#user-storiesepics)
-    - [Epic 1 - Structure](#epic-1---structure)
-    - [Epic 2 - Home and Error Pages](#epic-2---home-and-error-pages)
-    - [Epic 3 - User Management](#epic-3---user-management)
-    - [Epic 4 - Forum - Posts](#epic-4---forum---posts)
-    - [Epic 5 - Forum - Comments](#epic-5---forum---comments)
-    - [Epic 6 - Admin and Deployment](#epic-6---admin-and-deployment)
-    - [Epic 7 - Documentation](#epic-7---documentation)
+  - [**User Stories(Epics)**](#user-storiesepics)
+    - [**Epic 1 - Structure**](#epic-1---structure)
+    - [**Epic 2 - Home and Error Pages**](#epic-2---home-and-error-pages)
+    - [**Epic 3 - User Management**](#epic-3---user-management)
+    - [**Epic 4 - Forum - Posts**](#epic-4---forum---posts)
+    - [**Epic 5 - Forum - Comments**](#epic-5---forum---comments)
+    - [**Epic 6 - Admin and Deployment**](#epic-6---admin-and-deployment)
+    - [**Epic 7 - Documentation**](#epic-7---documentation)
   - [**Design**](#design)
     - [**Typography**](#typography)
       - [Fonts used](#fonts-used)
@@ -101,61 +101,61 @@ The main goal of the forum is to create a comunity where people will help and sh
 
 ---
 
-## User Stories(Epics)
+## **User Stories(Epics)**
 
-### Epic 1 - Structure
+### **Epic 1 - Structure**
 
-    - As a developer I can create a base.html file so that all other pages can reuse it
-    - As a developer I can create static folder so that it can store all the other subfolders and files
-    - As a developer I can create a footer so that it can store all socials
-    - As a developer I can create a navbar so that it can store all import links to their respective pages for the User to access
-    - As developer I can create a includes folder so that I can store the navbar and footer file in it to keep the file tidy
-    - As developer I can Setup all the import features so that it is ready to deploy to heroku
+- As a developer I can create a base.html file so that all other pages can reuse it
+- As a developer I can create static folder so that it can store all the other subfolders and files
+- As a developer I can create a footer so that it can store all socials
+- As a developer I can create a navbar so that it can store all import links to their respective pages for the User to access
+- As developer I can create a includes folder so that I can store the navbar and footer file in it to keep the file tidy
+- As developer I can Setup all the import features so that it is ready to deploy to heroku
 
-### Epic 2 - Home and Error Pages
+### **Epic 2 - Home and Error Pages**
 
-    - As a User I can view the home page so that I get a welcome message
-    - As a User I can get 404 Error page so that I know that something went wrong
-    - As a User I can a 403 Forbidden Error so that I know that I haven't got permission to access a web page or something else
-    - As a User I can get a 500 error page so that I know that there was a internal server error
+- As a User I can view the home page so that I get a welcome message
+- As a User I can get 404 Error page so that I know that something went wrong
+- As a User I can a 403 Forbidden Error so that I know that I haven't got permission to access a web page or something else
+- As a User I can get a 500 error page so that I know that there was a internal server error
 
-### Epic 3 - User Management
+### **Epic 3 - User Management**
 
-    - As a User I can sign up/register so that I can login
-    - As a User I can check for registration confirmation so that I know that I have successfully registered
-    - As a User I can login so that I can load my account
-    - As a user I can see a confirmation of login so that I know that I have successfully logged in
-    - As a User I can view Profile page so that I can modify or view other users profile
+- As a User I can sign up/register so that I can login
+- As a User I can check for registration confirmation so that I know that I have successfully registered
+- As a User I can login so that I can load my account
+- As a user I can see a confirmation of login so that I know that I have successfully logged in
+- As a User I can view Profile page so that I can modify or view other users profile
 
-### Epic 4 - Forum - Posts
+### **Epic 4 - Forum - Posts**
 
-    - As a User I can select Forum page so that I can view posts
-    - As a User I can view a post so that I can be updated
-    - As a User I can search so that I easily find the post
-    - As a User I can add a post to the forum so that the community can see my post in order to help others or be helped
-    - As a User I can edit a post so that I can correct grammar errors
-    - As a User I can delete a post that I have created so that the post is deleted from the forum
+- As a User I can select Forum page so that I can view posts
+- As a User I can view a post so that I can be updated
+- As a User I can search so that I easily find the post
+- As a User I can add a post to the forum so that the community can see my post in order to help others or be helped
+- As a User I can edit a post so that I can correct grammar errors
+- As a User I can delete a post that I have created so that the post is deleted from the forum
 
-### Epic 5 - Forum - Comments
+### **Epic 5 - Forum - Comments**
 
-    - As a User I can view comments so that I can see what people have commented on posts
-    - As a User I can add a comment to the post that I am interested in so that other users/post owner can read my opinion
-    - As a User I can receive a notification so that I know that my comment has successfully been posted
-    - As a user I can edit a comment so that comment is corrected/updated
+- As a User I can view comments so that I can see what people have commented on posts
+- As a User I can add a comment to the post that I am interested in so that other users/post owner can read my opinion
+- As a User I can receive a notification so that I know that my comment has successfully been posted
+- As a user I can edit a comment so that comment is corrected/updated
 
-### Epic 6 - Admin and Deployment
+### **Epic 6 - Admin and Deployment**
 
-    - As a Admin I can login so that I can manage the forum
-    - As a Admin I want to access the admin page so that I can Add/Edit/Modifty Posts, I can delete Users, I can delete comments
-    - As a developer I can deploy the website to heroku so that Users can start using it
+- As a Admin I can login so that I can manage the forum
+- As a Admin I want to access the admin page so that I can Add/Edit/Modifty Posts, I can delete Users, I can delete comments
+- As a developer I can deploy the website to heroku so that Users can start using it
 
-### Epic 7 - Documentation
+### **Epic 7 - Documentation**
 
-    - Write the readme with all documentation
-      - Content nav menu
-      - User Experience
-      - Document all tests done to the project
-      - Address all recourses used to complete the project
+- Write the readme with all documentation
+  - Content nav menu
+  - User Experience
+  - Document all tests done to the project
+  - Address all recourses used to complete the project
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
