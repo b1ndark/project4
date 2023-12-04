@@ -48,32 +48,35 @@
 
                             <!--            Default Profile Picture incase user does not upload an Profile picture image            -->
                             {% if "defaultProfilePicture" in profile.profile_image.url %}
-                            <img src="{% static 'default_profile/default_profile_picture.png' %}" alt="Default profile picture" width="240" height="240"/>
-                            
+                            <img src="{% static 'default_profile/default_profile_picture.png' %}"
+                                alt="Default profile picture" width="240" height="240" />
+
                             <!--            Else if the User does upload a Profile image            -->
                             {% else %}
-                            <img src="{{ profile.profile_image.url }}" alt="{{ profile.user.name }}'s profile picture" width="240" height="240"/>
+                            <img src="{{ profile.profile_image.url }}" alt="{{ profile.user.name }}'s profile picture"
+                                width="240" height="240" />
                             {% endif %}
                         </div>
                     </div>
                     <div class="mb-2 socials">
                         <p class="mt-2 mb-1">
-                            <h4 class="text-center">Socials</h4>
+                        <h4 class="text-center">Socials</h4>
                         </p>
                         <p class="text-center">
                             {% if profile.facebook_url %}
-                                <a href="{{ profile.facebook_url }}" target="_blank" title="Facebook"><i
-                                        class="fab fa-facebook-f m-2 social-icon"></i></a>
+                            <a href="{{ profile.facebook_url }}" target="_blank" title="Facebook"><i
+                                    class="fab fa-facebook-f m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.twitter_url %}
-                                <a href="{{ profile.twitter_url }}" target="_blank" title="Twitter"><i class="fab fa-x-twitter m-2 social-icon"></i></a>
+                            <a href="{{ profile.twitter_url }}" target="_blank" title="Twitter"><i
+                                    class="fab fa-x-twitter m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.instagram_url %}
-                                <a href="{{ profile.instagram_url }}" target="_blank" title="Instagram"><i
+                            <a href="{{ profile.instagram_url }}" target="_blank" title="Instagram"><i
                                     class="fab fa-instagram m-2 social-icon"></i></a>
                             {% endif %}
                             {% if profile.youtube_url %}
-                                <a href="{{ profile.youtube_url }}" target="_blank" title="Youtube"><i
+                            <a href="{{ profile.youtube_url }}" target="_blank" title="Youtube"><i
                                     class="fab fa-youtube m-2 social-icon"></i></a>
                             {% endif %}
                         </p>
@@ -84,7 +87,8 @@
             <div class="profile-update">
                 <div class="row edit-button">
                     <div class="btn-display text-center">
-                        <form class="signup" id="signup_form" method="post" action="{% url 'edit_profile' profile.pk %}">
+                        <form class="signup" id="signup_form" method="post"
+                            action="{% url 'edit_profile' profile.pk %}">
                             {% csrf_token %}
                             <button id="btn-edit" class="btn btn-edit mt-0">Edit</button>
                         </form>

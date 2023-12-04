@@ -1,54 +1,65 @@
-{% extends 'base.html' %}
-
-{% block title %} - Home{% endblock %}
-
-{% block content %}
-
-{% load static %}
+{% extends 'base.html' %} {% block title %} - Home{% endblock %} 
+{% block content %} {% load static %}
 
 <!--            Index Content goes in this block content so it displays within the base.html            -->
 
-
 <!--            Main Section with background image and a container            -->
 <section class="align-items-center home-main-section">
-    <div class="container">
-        <div class="row row-index">
-            <!--            Container            -->
-            <div class="home-card col-10 text-center p-3">
-                <h3 class="mb-lg-5 mt-lg-3 mb-md-0 mt-md-0">Welcome to Type<span style="color: var(--red); font-weight: bolder;">R</span> Forum</h3>
-                <p>
-                    Welcome to the forum where the users will be able to exchange experiences, ideias and solutions
-                </p>
-                <p>
-                    The main goal of the forum is to create a comunity where people will help and share their problems that they may have
-                    encontered, experiences with a certain Type<span style="color: var(--red); font-weight: bolder;">R</span> model, any
-                    thoughts and ideias.
-                </p>
-                <p>
-                    There are lots of advantages and benefits to being part of Type<span style="color: var(--red); font-weight: bolder;">R</span> Forum,
-                    from getting to know other Type<span style="color: var(--red); font-weight: bolder;">R</span> enthusiasts to share lived experiences and 
-                    to be able to help or source help within the comunity.
-                </p>
-                <h4>Rules</h4>
-                <p>
-                    Be civilized, do not post anything that a reasonable person would consider offensive, abusive, or hate speech.
-                </p>
-                <p>
-                    Keep it clean. Don't post anything obscene or sexually explicit.
-                </p>
-                <p>
-                    The main rule of the Forum is to respect the forum and everyone. 
-                </p>
-                <p>
-                    In order to access the Forum you will have to <a class="red-a-link" href="{% url 'signup' %}">Signup</a> or if you
-                    already have an account please <a class="red-a-link" href="{% url 'account_login' %}">Signin</a>.
-                </p>
-                <h4>Contact</h4>
-                <p>
-                    If you have any questions, Please do not hesitate and <a class="red-a-link" href="{% url 'contact' %}">contact US!</a> 
-                </p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row row-index">
+      <!--            Container            -->
+      <div class="home-card col-10 text-center p-3">
+        <h3 class="mb-lg-5 mt-lg-3 mb-md-0 mt-md-0">
+          Welcome to Type<span style="color: var(--red); font-weight: bolder"
+            >R</span
+          >
+          Forum
+        </h3>
+        <p>
+          Welcome to the forum where the users will be able to exchange
+          experiences, ideias and solutions
+        </p>
+        <p>
+          The main goal of the forum is to create a comunity where people will
+          help and share their problems that they may have encontered,
+          experiences with a certain Type<span
+            style="color: var(--red); font-weight: bolder"
+            >R</span
+          >
+          model, any thoughts and ideias.
+        </p>
+        <p>
+          There are lots of advantages and benefits to being part of Type<span
+            style="color: var(--red); font-weight: bolder"
+            >R</span
+          >
+          Forum, from getting to know other Type<span
+            style="color: var(--red); font-weight: bolder"
+            >R</span
+          >
+          enthusiasts to share lived experiences and to be able to help or
+          source help within the comunity.
+        </p>
+        <h4>Rules</h4>
+        <p>
+          Be civilized, do not post anything that a reasonable person would
+          consider offensive, abusive, or hate speech.
+        </p>
+        <p>Keep it clean. Don't post anything obscene or sexually explicit.</p>
+        <p>The main rule of the Forum is to respect the forum and everyone.</p>
+        <p>
+          In order to access the Forum you will have to
+          <a class="red-a-link" href="{% url 'signup' %}">Signup</a> or if you
+          already have an account please
+          <a class="red-a-link" href="{% url 'account_login' %}">Signin</a>.
+        </p>
+        <h4>Contact</h4>
+        <p>
+          If you have any questions, Please do not hesitate and
+          <a class="red-a-link" href="{% url 'contact' %}">contact US!</a>
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 {% endblock %}

@@ -1,123 +1,150 @@
-{% extends 'base.html' %}
-
-{% block title %} - Forum{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% block title %} - Forum{% endblock %} {% block
+content %}
 
 <!--            Forum Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mt-3 text-center">
-            <div class="row">
-                <!--            Title            -->
-                <h1>Welcome to the Forum!</h1>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 mt-3 text-center">
+      <div class="row">
+        <!--            Title            -->
+        <h1>Welcome to the Forum!</h1>
+      </div>
     </div>
+  </div>
 </div>
-
 
 <!--            Forum Container            -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-lg-6 mt-3">
-            
-            <!--            Button to take you to the add a Post Page            -->
-            <div class="btn-add-post mb-4" title="Add Post">
-                <a type="button" class="add-post" href="{% url 'add_post' %}"><i class="fa-solid fa-file-circle-plus"></i></a>
-            </div>
-            {% if user.is_authenticated %}
-            <div class="d-md-none d-flex justify-content-center mt-3 ms-2">
-                <form class="d-flex me-3 mb-2 mb-lg-0" method="GET" action="{% url 'forum' %}">
-                    <input class="form-control" name="q" type="search" placeholder="Search Post" aria-label="Search">
-                    <button class="search-bar-btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-            {% endif %}
-            <div class="row">
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-lg-6 mt-3">
+      <!--            Button to take you to the add a Post Page            -->
+      <div class="btn-add-post mb-4" title="Add Post">
+        <a type="button" class="add-post" href="{% url 'add_post' %}"
+          ><i class="fa-solid fa-file-circle-plus"></i
+        ></a>
+      </div>
+      {% if user.is_authenticated %}
+      <div class="d-md-none d-flex justify-content-center mt-3 ms-2">
+        <form
+          class="d-flex me-3 mb-2 mb-lg-0"
+          method="GET"
+          action="{% url 'forum' %}"
+        >
+          <input
+            class="form-control"
+            name="q"
+            type="search"
+            placeholder="Search Post"
+            aria-label="Search"
+          />
+          <button class="search-bar-btn btn-outline-success" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+      {% endif %}
+      <div class="row">
+        <!--            For loop to iterate through each Post in Post list            -->
+        {% for post in post_list %}
+        <div class="col-md-12">
+          <div class="card mb-8">
+            <div class="card-body">
+              <a href="{% url 'forum_detail' post.slug %}" class="post-link">
+                <h2 class="card-title">{{ post.title }}</h2>
+              </a>
+              <div class="image-container">
+                <!--            Default image            -->
+                {% if "placeholder" in post.featured_image.url %}
+                <img
+                  class="card-img-top"
+                  src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
+                  alt="type r fk2"
+                  width="500"
+                  height="400"
+                />
+                <!--            Else User posted image            -->
+                {% else %}
+                <img
+                  class="card-img-top"
+                  src="{{ post.featured_image.url }}"
+                  alt=" {{ post.title }}'s image"
+                  width="500"
+                  height="400"
+                />
+                {% endif %}
+              </div>
+              <p class="card-text">{{ post.excerpt }}</p>
+              <div class="card-details">
+                <br />
+                <div class="image-flash">
+                  {% if post.get_car_model_display %}
+                  <div>
+                    <p>
+                      <strong>Car:</strong> {{ post.get_car_model_display }}
+                    </p>
+                  </div>
+                  {% endif %}
+                  <div>
+                    <!--            Display the Author of the Post            -->
+                    <p class="author">
+                      <strong>Author:</strong>
+                      <a
+                        class="author-profile"
+                        href="{% url 'profile' post.author.id %}"
+                        title="{{ post.author }}'s profile"
+                        >{{ post.author }}</a
+                      >
+                    </p>
+                  </div>
 
-                <!--            For loop to iterate through each Post in Post list            -->
-                {% for post in post_list %}
-                <div class="col-md-12">
-                    <div class="card mb-8">
-                        <div class="card-body">
-                            <a href="{% url 'forum_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
-                            </a>
-                            <div class="image-container">
-                                <!--            Default image            -->
-                                {% if "placeholder" in post.featured_image.url %}
-                                <img
-                                class="card-img-top"
-                                src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
-                                alt="type r fk2" width="500" height="400"/>
-                                <!--            Else User posted image            -->
-                                {% else %}
-                                <img
-                                class="card-img-top"
-                                src="{{ post.featured_image.url }}"
-                                alt=" {{ post.title }}'s image" width="500" height="400"/>
-                                {% endif %}
-                            </div>
-                            <p class="card-text">{{ post.excerpt }}</p>
-                            <div class="card-details">
-                                <br/>
-                                <div class="image-flash">
-                                    {% if post.get_car_model_display %}
-                                    <div>
-                                        <p><strong>Car:</strong> {{ post.get_car_model_display }}</p>
-                                    </div>
-                                    {% endif %}
-                                    <div>
+                  <div class="created-on">
+                    <!--            Post created on            -->
+                    <p>{{ post.created_on }}</p>
+                    <p>
+                      <i class="far fa-heart"></i> {{ post.number_of_likes }} {%
+                      with post.comments.count as total_comments %}
+                      <strong
+                        ><i class="ps-2 far fa-comments"></i>
 
-                                        <!--            Display the Author of the Post            -->
-                                        <p class="author"><strong>Author:</strong> <a class="author-profile" href="{% url 'profile' post.author.id %}" title="{{ post.author }}'s profile">{{ post.author }}</a></p>
-                                    </div>
-                                    
-                                    <div class="created-on">
-
-                                        <!--            Post created on            -->
-                                        <p>{{ post.created_on }}</p>
-                                        <p><i class="far fa-heart"></i> {{ post.number_of_likes }}
-                                            {% with post.comments.count as total_comments %}
-                                            <strong><i class="ps-2 far fa-comments"></i>
-
-                                                <!--            Total Comments in the Post            -->
-                                                {{ total_comments }}</strong>
-                                            {% endwith %}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <!--            Total Comments in the Post            -->
+                        {{ total_comments }}</strong
+                      >
+                      {% endwith %}
+                    </p>
+                  </div>
                 </div>
-                {% endfor %}
+              </div>
             </div>
+          </div>
         </div>
+        {% endfor %}
+      </div>
     </div>
+  </div>
 
-    <!--            is_paginated, 4 posts will be displayed per page           -->
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li>
-                <a href="?page={{ page_obj.previous_page_number }}" class="page-link btn"
-                >&laquo; PREV
-                </a>
-            </li>
-            {% endif %} {% if page_obj.has_next %}
-            <li>
-                <a href="?page={{ page_obj.next_page_number }}" class="page-link btn">
-                NEXT &raquo;</a
-                >
-            </li>
+  <!--            is_paginated, 4 posts will be displayed per page           -->
+  {% if is_paginated %}
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a
+          href="?page={{ page_obj.previous_page_number }}"
+          class="page-link btn"
+          >&laquo; PREV
+        </a>
+      </li>
+      {% endif %} {% if page_obj.has_next %}
+      <li>
+        <a href="?page={{ page_obj.next_page_number }}" class="page-link btn">
+          NEXT &raquo;</a
+        >
+      </li>
 
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
 </div>
 
 {% endblock %}

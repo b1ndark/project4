@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 <!--            404 ERROR Page            -->
-{% block title %} - 404 Error Page{% endblock %}
-
-{% block content %}
+{% block title %} - 404 Error Page{% endblock %} {% block content %}
 
 <!--            404 ERROR Page Container            -->
-    <div class="container text-center mt-5">
-        <h1 class="mt-5">404 - Error!</h1>
-        <p style="color: var(--white);" class="mt-5">The page that you are looking for seems to be having an issue please go back to <a class="red-a-link" href="{% url 'home' %}">Home
-            Page</a></p>
-    </div>
+<div class="container text-center mt-5">
+  <h1 class="mt-5">404 - Error!</h1>
+  <p style="color: var(--white)" class="mt-5">
+    The page that you are looking for seems to be having an issue please go back
+    to <a class="red-a-link" href="{% url 'home' %}">Home Page</a>
+  </p>
+</div>
 {% endblock %}

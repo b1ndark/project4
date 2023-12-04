@@ -1,54 +1,55 @@
-{% extends 'base.html' %}
-
-{% block title %} - Delete Post{% endblock %}
-
-{% block content %}
-
-{% load crispy_forms_tags %}
-
-{% if user.is_authenticated and request.user == post.author %}
+{% extends 'base.html' %} {% block title %} - Delete Post{% endblock %} {% block
+content %} {% load crispy_forms_tags %} {% if user.is_authenticated and
+request.user == post.author %}
 <!--            Delete Post Content goes in this block content so it displays within the base.html            -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mt-3 text-center">
-            <div class="row">
-                <!--            Title            -->
-                <h1>Delete {{ post.title }} Post!</h1>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 mt-3 text-center">
+      <div class="row">
+        <!--            Title            -->
+        <h1>Delete {{ post.title }} Post!</h1>
+      </div>
     </div>
+  </div>
 </div>
 
 <!--            Delete Post Container            -->
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
+  <div class="row">
+    <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
+      <!--            Back button to Edit Post            -->
+      <div class="btn-custom">
+        <a type="button" class="btn" href="{% url 'edit_post' post.slug %}"
+          >Back</a
+        >
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-lg-12 card mb-4 mt-3">
+            <div class="card-body">
+              <h4>Post: <strong>{{ post.title }}</strong></h4>
 
-            <!--            Back button to Edit Post            -->
-            <div class="btn-custom">
-                <a type="button" class="btn" href="{% url 'edit_post' post.slug %}">Back</a>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-lg-12 card mb-4 mt-3">
-                        <div class="card-body">
-                            <h4>Post: <strong>{{ post.title }}</strong></h4>
-
-                            <!--            Delete Post form            -->
-                            <form method="POST" style="margin-top: 1.3em;" class="text-center">
-                                {% csrf_token %}
-                                <h5>Are you sure that you want to <strong style="color: var(--red);">delete</strong> this Post?</h5>
-                                <div class="btn-display text-center mt-4">
-                                    <button type="submit" class="btn-delete p-1 px-2 btn-outline-danger">Delete</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+              <!--            Delete Post form            -->
+              <form method="POST" style="margin-top: 1.3em" class="text-center">
+                {% csrf_token %}
+                <h5>
+                  Are you sure that you want to
+                  <strong style="color: var(--red)">delete</strong> this Post?
+                </h5>
+                <div class="btn-display text-center mt-4">
+                  <button
+                    type="submit"
+                    class="btn-delete p-1 px-2 btn-outline-danger"
+                  >
+                    Delete
+                  </button>
                 </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-{% endif %}
-
-{% endblock %}
+{% endif %} {% endblock %}

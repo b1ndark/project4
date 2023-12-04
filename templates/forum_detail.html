@@ -1,174 +1,196 @@
-{% extends 'base.html' %}
-
-{% block title %} - Forum - {{ post.title }}{% endblock %}
-
-{% block content %}
-
-{% load crispy_forms_tags %}
+{% extends 'base.html' %} {% block title %} - Forum - {{ post.title }}{%
+endblock %} {% block content %} {% load crispy_forms_tags %}
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mt-3 text-center">
-            <div class="row">
-                <!--            Post Title            -->
-                <h1 class="post-title">{{ post.title }}</h1>
-            </div>
-        </div>
+  <div class="row">
+    <div class="col-12 mt-3 text-center">
+      <div class="row">
+        <!--            Post Title            -->
+        <h1 class="post-title">{{ post.title }}</h1>
+      </div>
     </div>
+  </div>
 </div>
 <div class="masthead top-container">
-    <div class="container col-sm-12 col-md-10 col-lg-7">
-        {% if user.is_superuser or request.user == post.author %}
-        <!--            Button to take you to the Edit Post form            -->
-        <div class="btn-custom mb-4" title="Edit Post">
-            <a type="button" class="btn" href="{% url 'edit_post' post.slug %}">Edit Post</a>
-        </div>
-        {% endif %}
-        <div class="row g-0 card-body">
-            <div class="col-md-6 masthead-text">
-
-                <!--            Post content            -->
-                <p class="card-text">{{ post.content | safe }}</p>
-                <div class="content-details">
-                    {% if post.get_car_model_display %}
-                    <div class="mb-1">
-                        <strong>Car:</strong> {{ post.get_car_model_display }}
-                    </div>
-                    {% endif %}
-                    <div class="content-details-bottom">
-                        <div class="col-1-top">
-
-                            <!--            Post Author and Date that was created on            -->
-                            <p class="post-subtitle">
-                                <a class="author-profile" href="{% url 'profile' post.author.id %}" title="{{ post.author }}'s profile">{{ post.author }}</a>
-                             | {{ post.created_on }}
-                            </p>
-                        </div>
-                        <div class="col-1-bottom">
-
-                            <!--            If user is authenticated, if liked            -->
-                            <p>
-                                <strong>
-                                    {% if user.is_authenticated %}
-                                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                                        {% csrf_token %}
-                                        {% if liked %}
-                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                                class="fas fa-heart"></i></button>
-                                        {% else %}
-                                        <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn-like"><i
-                                                class="far fa-heart"></i></button>
-                                        {% endif %}
-                                    </form>
-                                    {% else %}
-                                    <span class="text-secondary"><i class="far fa-heart"></i></span>
-                                    {% endif %}
-
-                                    <!--            Number of likes in the Post            -->
-                                    <span class="text-secondary">{{ post.number_of_likes }} </span>
-                                </strong>
-                            </p>
-                            <p>
-                                {% with comments.count as total_comments %}
-                                <strong
-                                    ><i class="far fa-comments"></i>
-
-                                    <!--            Total Comments in the Post            -->
-                                    {{ total_comments }}</strong>
-                                {% endwith %}
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="d-none d-md-flex col-md-6 post-view-image">
-
-                <!--            Default Image incase user does not upload an image            -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img
-                src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
-                width="500" height="400"/>
-
-                <!--            Else if the User does upload an image            -->
-                {% else %}
-                <img src=" {{ post.featured_image.url }}" width="500" height="400"/>
-                {% endif %}
-            </div>
-        </div>
+  <div class="container col-sm-12 col-md-10 col-lg-7">
+    {% if user.is_superuser or request.user == post.author %}
+    <!--            Button to take you to the Edit Post form            -->
+    <div class="btn-custom mb-4" title="Edit Post">
+      <a type="button" class="btn" href="{% url 'edit_post' post.slug %}"
+        >Edit Post</a
+      >
     </div>
+    {% endif %}
+    <div class="row g-0 card-body">
+      <div class="col-md-6 masthead-text">
+        <!--            Post content            -->
+        <p class="card-text">{{ post.content | safe }}</p>
+        <div class="content-details">
+          {% if post.get_car_model_display %}
+          <div class="mb-1">
+            <strong>Car:</strong> {{ post.get_car_model_display }}
+          </div>
+          {% endif %}
+          <div class="content-details-bottom">
+            <div class="col-1-top">
+              <!--            Post Author and Date that was created on            -->
+              <p class="post-subtitle">
+                <a
+                  class="author-profile"
+                  href="{% url 'profile' post.author.id %}"
+                  title="{{ post.author }}'s profile"
+                  >{{ post.author }}</a
+                >
+                | {{ post.created_on }}
+              </p>
+            </div>
+            <div class="col-1-bottom">
+              <!--            If user is authenticated, if liked            -->
+              <p>
+                <strong>
+                  {% if user.is_authenticated %}
+                  <form
+                    class="d-inline"
+                    action="{% url 'post_like' post.slug %}"
+                    method="POST"
+                  >
+                    {% csrf_token %} {% if liked %}
+                    <button
+                      type="submit"
+                      name="blogpost_id"
+                      value="{{post.slug}}"
+                      class="btn-like"
+                    >
+                      <i class="fas fa-heart"></i>
+                    </button>
+                    {% else %}
+                    <button
+                      type="submit"
+                      name="blogpost_id"
+                      value="{{post.slug}}"
+                      class="btn-like"
+                    >
+                      <i class="far fa-heart"></i>
+                    </button>
+                    {% endif %}
+                  </form>
+                  {% else %}
+                  <span class="text-secondary"
+                    ><i class="far fa-heart"></i
+                  ></span>
+                  {% endif %}
+
+                  <!--            Number of likes in the Post            -->
+                  <span class="text-secondary"
+                    >{{ post.number_of_likes }}
+                  </span>
+                </strong>
+              </p>
+              <p>
+                {% with comments.count as total_comments %}
+                <strong
+                  ><i class="far fa-comments"></i>
+
+                  <!--            Total Comments in the Post            -->
+                  {{ total_comments }}</strong
+                >
+                {% endwith %}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-md-flex col-md-6 post-view-image">
+        <!--            Default Image incase user does not upload an image            -->
+        {% if "placeholder" in post.featured_image.url %}
+        <img
+          src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
+          width="500"
+          height="400"
+        />
+
+        <!--            Else if the User does upload an image            -->
+        {% else %}
+        <img src=" {{ post.featured_image.url }}" width="500" height="400" />
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 <div class="row">
-    <div class="col">
-        <hr />
-    </div>
+  <div class="col">
+    <hr />
+  </div>
 </div>
 <div class="container col-sm-12 col-md-10 col-lg-7">
-    <div class="row row-bottom">
+  <div class="row row-bottom">
+    <!--            If there is any comment            -->
+    {% if comments %}
+    <div class="col-sm-12 col-md-10 col-lg-12 card mt-3">
+      <h3 class="h3-padding">Comments:</h3>
+      <div class="comment-card-body comments-body">
+        <!--            Iterate through each comment in comments            -->
+        {% for comment in comments %}
+        <div class="comments" style="padding: 20px">
+          <p class="font-weight-bold">
+            <!--            Comment name            -->
+            <strong>{{ comment.name }}</strong>
+            wrote:
+          </p>
 
-        <!--            If there is any comment            -->
-        {% if comments %}
-        <div class="col-sm-12 col-md-10 col-lg-12 card mt-3">
-            <h3 class="h3-padding">Comments:</h3>
-            <div class="comment-card-body comments-body">
-                
-                <!--            Iterate through each comment in comments            -->
-                {% for comment in comments %}
-                <div class="comments" style="padding: 20px">
-                    <p class="font-weight-bold">
+          <!--            Comment body            -->
+          {{ comment.body | linebreaks }}
 
-                        <!--            Comment name            -->
-                        <strong>{{ comment.name }}</strong>
-                        wrote:
-                    </p>
+          <span class="text-muted font-weight-normal">
+            <!--            Comments date which was created on            -->
+            {{ comment.created_on }}
+          </span>
+        </div>
 
-                    <!--            Comment body            -->
-                    {{ comment.body | linebreaks }}
-
-                    <span class="text-muted font-weight-normal">
-                    
-                        <!--            Comments date which was created on            -->
-                        {{ comment.created_on }}
-                    </span>
-                </div>
-
-                <!--            Button to take you to the Edit Post form            -->
-                {% if user.is_superuser or request.user.username == comment.name %}
-                <div class="btn-add-post mb-4" style="padding-right: 20px" title="Edit comment" >
-                    <a type="button" class="btn btn-sm" href="{% url 'edit_comment' comment.pk %}"><i class="fa-regular fa-pen-to-square"></i></a>
-                </div>
-                {% endif %}
-
-                <!-- Our for loop ends here -->
-                {% endfor %}
-            </div>
+        <!--            Button to take you to the Edit Post form            -->
+        {% if user.is_superuser or request.user.username == comment.name %}
+        <div
+          class="btn-add-post mb-4"
+          style="padding-right: 20px"
+          title="Edit comment"
+        >
+          <a
+            type="button"
+            class="btn btn-sm"
+            href="{% url 'edit_comment' comment.pk %}"
+            ><i class="fa-regular fa-pen-to-square"></i
+          ></a>
         </div>
         {% endif %}
-        <div class="col-sm-12 col-md-10 col-lg-12 card mb-4">
-            <div class="card-body">
-        
-                <!--            If user is authenticated can comment the Post            -->
-                {% if user.is_authenticated %}
 
-                <!--            Comment form            -->
-                <form method="POST" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-                    {{ comment_form|crispy }}
-                    <div class="btn-display text-center" title="Add comment">
-                        <button type="submit" class="btn btn-sm btn-signup btn-lg"><i class="fa-regular fa-paper-plane"></i></button>
-                    </div>
-                </form>
-                {% endif %}
-            </div>
-        </div>
-
-        <!--            Back button to Forum            -->
-        <div class="btn-add-post mb-4" title="Back to Forum">
-            <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
-        </div>
+        <!-- Our for loop ends here -->
+        {% endfor %}
+      </div>
     </div>
+    {% endif %}
+    <div class="col-sm-12 col-md-10 col-lg-12 card mb-4">
+      <div class="card-body">
+        <!--            If user is authenticated can comment the Post            -->
+        {% if user.is_authenticated %}
+
+        <!--            Comment form            -->
+        <form method="POST" style="margin-top: 1.3em">
+          {% csrf_token %} {{ comment_form|crispy }}
+          <div class="btn-display text-center" title="Add comment">
+            <button type="submit" class="btn btn-sm btn-signup btn-lg">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+
+    <!--            Back button to Forum            -->
+    <div class="btn-add-post mb-4" title="Back to Forum">
+      <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
+    </div>
+  </div>
 </div>
-
-
 
 {% endblock %}
