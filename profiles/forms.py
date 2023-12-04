@@ -42,28 +42,35 @@ class EditProfileForm(UserChangeForm):
     To display the Edit Profile form
     """
 
-    first_name = forms.CharField(required=False)
-    last_name = forms.CharField(required=False)
+    first_name = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'First Name'}), required=False)
+    last_name = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'Last Name'}), required=False)
     car_model = models.CharField(
         max_length=30, choices=CAR_MODELS, default="Select Car Model"
     )
-    user_email = models.EmailField(default="email")
-    city = forms.CharField(required=False)
-    county = forms.CharField(required=False)
+    email_address = forms.EmailField(widget=forms.EmailInput(
+        attrs={'placeholder': '"example@hotmail.com"'}), required=False)
+    city = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'City'}), required=False)
+    county = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'County'}), required=False)
     country = CountryField(blank_label='Select Country')
-    postcode = forms.CharField(required=False)
+    postcode = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'Postcode'}), required=False)
+    facebook = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'https://www.facebook.com'}), required=False)
+    twitter = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'https://www.twitter.com'}), required=False)
+    instagram = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'https://www.instagram.com'}), required=False)
+    youtube = forms.CharField(widget=forms.TextInput(
+        attrs={'placeholder': 'https://www.youtube.com'}), required=False)
     password = None
 
     class Meta:
         model = UserProfile
-        fields = ['first_name', 'last_name', 'profile_image', 'user_email',
+        fields = ['first_name', 'last_name', 'profile_image', 'email_address',
                   'car_model', 'city', 'county', 'country', 'postcode',
-                  'facebook_url', 'twitter_url', 'instagram_url',
-                  'youtube_url']
+                  'facebook', 'twitter', 'instagram', 'youtube']
 
-        labels = {
-            'facebook_url': 'Facebook',
-            'twitter_url': 'Twitter',
-            'instagram_url': 'Instagram',
-            'youtube_url': 'Youtube'
-        }

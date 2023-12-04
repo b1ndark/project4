@@ -35,8 +35,8 @@ class EditProfile(SuccessMessageMixin, generic.UpdateView):
     model = UserProfile
     template_name = 'profiles/edit_profile.html'
     fields = ('first_name', 'last_name', 'profile_image', 'car_model',
-              'user_email', 'county', 'city', 'postcode', 'country',
-              'facebook_url', 'twitter_url', 'instagram_url', 'youtube_url')
+              'email_address', 'county', 'city', 'postcode', 'country',
+              'facebook', 'twitter', 'instagram', 'youtube')
 
     def get_context_data(self, **kwargs):
         profile = UserProfile.objects.get(user=self.kwargs['pk'])

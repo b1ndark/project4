@@ -151,7 +151,7 @@ h1 {
 }
 
 .post-link {
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -160,7 +160,7 @@ h1 {
 }
 
 .post-link:hover {
-    color: var(--white);
+    color: var(--red);
 }
 
 .card {

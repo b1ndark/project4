@@ -15,7 +15,7 @@ class UserProfile(models.Model):
     """
     user = models.OneToOneField(
         User, related_name='profile', on_delete=models.CASCADE)
-    user_email = models.EmailField(
+    email_address = models.EmailField(
         max_length=70, blank=True, default="")
     first_name = models.CharField(
         max_length=100, null=True, blank=True, default="")
@@ -31,13 +31,13 @@ class UserProfile(models.Model):
         max_length=15, null=True, blank=True, default="")
     profile_image = CloudinaryField(
         'profile-image', default="defaultProfilePicture")
-    facebook_url = models.CharField(
+    facebook = models.CharField(
         max_length=250, null=True, blank=True, default="")
-    twitter_url = models.CharField(
+    twitter = models.CharField(
         max_length=250, null=True, blank=True, default="")
-    instagram_url = models.CharField(
+    instagram = models.CharField(
         max_length=250, null=True, blank=True, default="")
-    youtube_url = models.CharField(
+    youtube = models.CharField(
         max_length=250, null=True, blank=True, default="")
 
     def __str__(self):

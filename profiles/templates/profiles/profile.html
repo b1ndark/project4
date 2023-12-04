@@ -28,8 +28,8 @@
                             {% if profile.get_car_model_display %}
                             <p><strong>Car:</strong> {{ profile.get_car_model_display }}</p>
                             {% endif %}
-                            {% if profile.user_email %}
-                            <p><strong>Email:</strong> {{ profile.user_email }}</p>
+                            {% if profile.email_address %}
+                            <p><strong>Email:</strong> {{ profile.email_address }}</p>
                             {% endif %}
                             {% if profile.city %}
                             <p><strong>City:</strong> {{ profile.city }}</p>
@@ -63,20 +63,20 @@
                         <h4 class="text-center">Socials</h4>
                         </p>
                         <p class="text-center">
-                            {% if profile.facebook_url %}
-                            <a href="{{ profile.facebook_url }}" target="_blank" title="Facebook"><i
+                            {% if profile.facebook %}
+                            <a href="{{ profile.facebook }}" target="_blank" title="{{ profile.user.username }}'s Facebook"><i
                                     class="fab fa-facebook-f m-2 social-icon"></i></a>
                             {% endif %}
-                            {% if profile.twitter_url %}
-                            <a href="{{ profile.twitter_url }}" target="_blank" title="Twitter"><i
+                            {% if profile.twitter %}
+                            <a href="{{ profile.twitter }}" target="_blank" title="{{ profile.user.username }}'s Twitter"><i
                                     class="fab fa-x-twitter m-2 social-icon"></i></a>
                             {% endif %}
-                            {% if profile.instagram_url %}
-                            <a href="{{ profile.instagram_url }}" target="_blank" title="Instagram"><i
+                            {% if profile.instagram %}
+                            <a href="{{ profile.instagram }}" target="_blank" title="{{ profile.user.username }}'s Instagram"><i
                                     class="fab fa-instagram m-2 social-icon"></i></a>
                             {% endif %}
-                            {% if profile.youtube_url %}
-                            <a href="{{ profile.youtube_url }}" target="_blank" title="Youtube"><i
+                            {% if profile.youtube %}
+                            <a href="{{ profile.youtube }}" target="_blank" title="{{ profile.user.username }}'s Youtube"><i
                                     class="fab fa-youtube m-2 social-icon"></i></a>
                             {% endif %}
                         </p>
