@@ -137,6 +137,15 @@ h1 {
     flex-direction: column;
 }
 
+.card-body-post-view {
+    border: 2px solid var(--nav);
+    background-color: var(--posts-background);
+    color: var(--white);
+    border-radius: 20px;
+    display: flex;
+    padding: 1rem 1rem;
+}
+
 .image-container {
     display: flex;
     flex-direction: column;
@@ -240,8 +249,6 @@ h1 {
 
 .content-details-bottom {
     display: flex;
-    flex-direction: row;
-    padding-right: 20px;
     justify-content: space-between;
 }
 
@@ -273,12 +280,6 @@ img {
 .row>* {
     padding-right: 0;
     padding-left: 0;
-}
-
-.row-bottom {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
 }
 
 .top-container {
@@ -315,6 +316,7 @@ img {
 .post-view-image {
     flex-direction: row;
     justify-content: flex-end;
+    width: auto;
 }
 
 .card-details p {
@@ -590,13 +592,18 @@ footer a:hover {
 
 /************************** Media queries **************************/
 
+/* for Large screens sizes from 1600px wide and down */
+
+@media screen and (max-width: 1600px) {
+    .card-img-top {
+        width: 75%;
+        height: auto;
+    }
+}
+
 /* for medium screens sizes from 1280px wide and down */
 
 @media screen and (max-width: 1280px) {
-
-    .card-img-top {
-        width: 75%;
-    }
 
     .footer {
         font-size: 1.1em;
@@ -610,10 +617,6 @@ footer a:hover {
     .image-container {
         padding-left: 0;
         padding-right: 0;
-    }
-
-    .card-img-top {
-        width: 100%;
     }
 
     .footer {
@@ -660,5 +663,31 @@ footer a:hover {
 
     .title-danger {
         margin-bottom: -20px;
+    }
+
+    .card-img-top {
+        height: auto;
+    }
+}
+
+/* for extra small screens sizes from 320px wide and down */
+
+@media screen and (max-width: 320px) {
+
+    h1 {
+        padding-top: 0px;
+    }
+
+    .home-card {
+        margin-top: 20px;
+    }
+
+    .xsm-screen {
+        margin-block-end: 0;
+    }
+
+    .row-index {
+        margin-right: -26px;
+        margin-left: -26px;
     }
 }

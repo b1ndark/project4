@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %} - Forum - {{ post.title }}
-{% endblock %} {% block content %} {% load crispy_forms_tags %}
+{% extends 'base.html' %} {% block title %} - Forum - {{ post.title }}{% endblock %} 
+{% block content %} {% load crispy_forms_tags %}
 
 <div class="container-fluid">
   <div class="row">
@@ -21,8 +21,22 @@
       >
     </div>
     {% endif %}
-    <div class="row g-0 card-body">
-      <div class="col-md-6 masthead-text">
+    <div class="row card-body-post-view">
+      <div class="d-none d-md-flex col-md-6 m-4 post-view-image">
+        <!--            Default Image incase user does not upload an image            -->
+        {% if "placeholder" in post.featured_image.url %}
+        <img
+          src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
+          width="500"
+          height="400"
+        />
+
+        <!--            Else if the User does upload an image            -->
+        {% else %}
+        <img src=" {{ post.featured_image.url }}" width="500" height="400" />
+        {% endif %}
+      </div>
+      <div class="m-4 masthead-text">
         <!--            Post content            -->
         <p class="card-text">{{ post.content | safe }}</p>
         <div class="content-details">
@@ -100,20 +114,6 @@
           </div>
         </div>
       </div>
-      <div class="d-none d-md-flex col-md-6 post-view-image">
-        <!--            Default Image incase user does not upload an image            -->
-        {% if "placeholder" in post.featured_image.url %}
-        <img
-          src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1697578831/typerfk2_s2nymz.webp"
-          width="500"
-          height="400"
-        />
-
-        <!--            Else if the User does upload an image            -->
-        {% else %}
-        <img src=" {{ post.featured_image.url }}" width="500" height="400" />
-        {% endif %}
-      </div>
     </div>
   </div>
 </div>
@@ -126,7 +126,7 @@
   <div class="row row-bottom">
     <!--            If there is any comment            -->
     {% if comments %}
-    <div class="col-sm-12 col-md-10 col-lg-12 card mt-3">
+    <div class="col-sm-12 col-lg-12 card mt-3">
       <h3 class="h3-padding">Comments:</h3>
       <div class="comment-card-body comments-body">
         <!--            Iterate through each comment in comments            -->
@@ -168,7 +168,7 @@
       </div>
     </div>
     {% endif %}
-    <div class="col-sm-12 col-md-10 col-lg-12 card mb-4">
+    <div class="col-sm-12 col-lg-12 card mb-4">
       <div class="card-body">
         <!--            If user is authenticated can comment the Post            -->
         {% if user.is_authenticated %}
