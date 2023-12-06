@@ -7,6 +7,7 @@ from django.db.models import Q
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
 
 def home(request):
@@ -122,17 +123,23 @@ class AddPost(SuccessMessageMixin, generic.CreateView):
     success_message = "Your Post has been added"
 
 
-class EditPost(SuccessMessageMixin, generic.UpdateView):
+class EditPost(LoginRequiredMixin, UserPassesTestMixin,
+               SuccessMessageMixin, generic.UpdateView):
     """
     Render Forum Edit Post Page so User can a Edit Post
     """
     model = Post
     template_name = 'forum_edit_post.html'
+
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
     fields = ('title', 'car_model', 'featured_image', 'content',)
     success_message = "Your Post has been Updated"
 
 
-class DeletePost(SuccessMessageMixin, generic.DeleteView):
+class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
+                 SuccessMessageMixin, generic.DeleteView):
     """
     Render Forum Delete Post Page so User can a Delete Post
     and redirect to forum
@@ -140,27 +147,39 @@ class DeletePost(SuccessMessageMixin, generic.DeleteView):
     model = Post
     template_name = 'forum_delete_post.html'
 
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
     success_url = reverse_lazy('forum')
     success_message = "Your Post has been Deleted"
 
 
-class EditComment(SuccessMessageMixin, generic.UpdateView):
+class EditComment(LoginRequiredMixin, UserPassesTestMixin,
+                  SuccessMessageMixin, generic.UpdateView):
     """
     Render Forum Edit Comment Page so User can a Edit Post
     """
     model = Comment
     template_name = 'forum_edit_comment.html'
+
+    def test_func(self):
+        return self.get_object().name == self.request.user.username
+
     fields = ('body',)
     success_message = "Your Comment has been Updated"
 
 
-class DeleteComment(SuccessMessageMixin, generic.DeleteView):
+class DeleteComment(LoginRequiredMixin, UserPassesTestMixin,
+                    SuccessMessageMixin, generic.DeleteView):
     """
     Render Forum Delete Comment Page so User can a Delete Comment
     and redirect to forum
     """
     model = Comment
     template_name = 'forum_delete_comment.html'
+
+    def test_func(self):
+        return self.get_object().name == self.request.user.username
 
     success_url = reverse_lazy('forum')
     success_message = "Your Comment has been Deleted"

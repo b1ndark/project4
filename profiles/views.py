@@ -9,6 +9,7 @@ from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.models import User
+from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 
 
 class UserProfiles(TemplateView):
@@ -28,7 +29,8 @@ class UserProfiles(TemplateView):
         return context
 
 
-class EditProfile(SuccessMessageMixin, generic.UpdateView):
+class EditProfile(LoginRequiredMixin, UserPassesTestMixin,
+                  SuccessMessageMixin, generic.UpdateView):
     """
     Render Edit Profile Page so User can a Edit Profile
     """
@@ -37,6 +39,9 @@ class EditProfile(SuccessMessageMixin, generic.UpdateView):
     fields = ('first_name', 'last_name', 'profile_image', 'car_model',
               'email_address', 'county', 'city', 'postcode', 'country',
               'facebook', 'twitter', 'instagram', 'youtube')
+
+    def test_func(self):
+        return self.get_object().user == self.request.user
 
     def get_context_data(self, **kwargs):
         profile = UserProfile.objects.get(user=self.kwargs['pk'])
@@ -50,13 +55,17 @@ class EditProfile(SuccessMessageMixin, generic.UpdateView):
     success_message = "Your Profile has been Updated"
 
 
-class DeleteProfile(SuccessMessageMixin, generic.DeleteView):
+class DeleteProfile(LoginRequiredMixin, UserPassesTestMixin,
+                    SuccessMessageMixin, generic.DeleteView):
     """
     Render Account delete Page so User can a Delete Account
     and get redirect to Home page
     """
     model = User
     template_name = 'profiles/delete_account.html'
+
+    def test_func(self):
+        return self.get_object().profile.user == self.request.user
 
     def get_context_data(self, **kwargs):
         profile = UserProfile.objects.get(user=self.kwargs['pk'])
