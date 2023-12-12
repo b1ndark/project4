@@ -7,7 +7,7 @@ urlpatterns = [
     path('forum/', views.PostList.as_view(), name="forum"),
     path('forum/<int:pk>/',
          views.PostDetail.as_view(), name='forum_detail'),
-    path('like/<int:pk>', views.PostLike.as_view(), name='post_like'),
+    path('forum/like/<int:pk>', views.PostLike.as_view(), name='post_like'),
     path('forum/post/add_post/', views.AddPost.as_view(), name='add_post'),
     path('forum/edit/<int:pk>/',
          views.EditPost.as_view(), name='edit_post'),

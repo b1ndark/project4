@@ -190,8 +190,8 @@ class PostLike(View):
     To like Posts
     """
 
-    def post(self, request, title):
-        post = get_object_or_404(Post, title=title)
+    def post(self, request, pk):
+        post = get_object_or_404(Post, pk=pk)
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
@@ -202,4 +202,4 @@ class PostLike(View):
             messages.add_message(self.request, messages.SUCCESS,
                                  "You have liked the Post")
 
-        return HttpResponseRedirect(reverse('forum_detail', args=[self.pk]))
+        return HttpResponseRedirect(reverse('forum_detail', args=[pk]))
