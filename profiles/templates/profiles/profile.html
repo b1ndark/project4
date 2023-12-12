@@ -44,11 +44,11 @@
                             <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
                             {% endif %}
                         </div>
-                        <div class="profile-picture">
+                        <div class="profile-picture" title="Profile picture">
 
                             <!--            Default Profile Picture incase user does not upload an Profile picture image            -->
                             {% if "defaultProfilePicture" in profile.profile_image.url %}
-                            <img src="{% static 'default_profile/default_profile_picture.png' %}"
+                            <img src="{% static 'images/default_profile/default_profile.jpg' %}"
                                 alt="Default profile picture" width="240" height="240" />
 
                             <!--            Else if the User does upload a Profile image            -->
