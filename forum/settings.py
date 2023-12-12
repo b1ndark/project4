@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     'contact',
 ]
 
+COUNTRIES_FLAG_URL = 'flags/{code}_16.png'
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
