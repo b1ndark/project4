@@ -47,12 +47,14 @@
         </p>
         <p>Keep it clean. Don't post anything obscene or sexually explicit.</p>
         <p>The main rule of the Forum is to respect the forum and everyone.</p>
+        {% if not user.is_authenticated %}
         <p>
           In order to access the Forum you will have to
           <a class="red-a-link" href="{% url 'signup' %}">Signup</a> or if you
           already have an account please
           <a class="red-a-link" href="{% url 'account_login' %}">Signin</a>.
         </p>
+        {% endif %}
         <h4>Contact</h4>
         <p class="xsm-screen">
           If you have any questions, Please do not hesitate and

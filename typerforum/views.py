@@ -17,7 +17,7 @@ def home(request):
     return render(request, 'index.html')
 
 
-class PostList(generic.ListView):
+class PostList(LoginRequiredMixin, generic.ListView):
     """
     Render Forum Page and display the Posts
     """
@@ -49,7 +49,7 @@ class PostList(generic.ListView):
         return posts
 
 
-class PostDetail(View):
+class PostDetail(LoginRequiredMixin, View):
     """
     Render Forum Detail Page and display the Post and its Comments
     """
