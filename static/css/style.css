@@ -232,7 +232,7 @@ h1 {
     color: var(--white);
     border-radius: 20px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -330,6 +330,17 @@ img {
 
 .author-profile:hover {
     color: var(--red);
+}
+
+.btn-edit-comment {
+    display: flex;
+    margin-top: 0;
+}
+
+.comment-author-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 
