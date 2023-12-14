@@ -7,8 +7,7 @@ class ContactAdmin(admin.ModelAdmin):
         'name',
         'email',
         'subject',
-        'car_model',
-        'message_content',
+        'message',
     )
 
 
