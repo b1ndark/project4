@@ -12,7 +12,7 @@ The main goal of the forum is to create a comunity where people will help and sh
 
 ![image](#)
 
-```To open the links in this document in a new browser tab please press CTRL + Mouse Click```
+`To open the links in this document in a new browser tab please press CTRL + Mouse Click`
 
 [**My TypeR Forum website on Am I Responsive**](x)
 
@@ -205,6 +205,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   - Once in the website the User will be presnted with a navbar at the top of the page which is fixed so it follows the User so the same one doesn't have to scroll up to find it.
   - Within the navbar the User will find the following buttons/links
+
     - The forum logo on the left if pressed takes you back to the home page
     - Home button which when pressed will take you to the home page
     - Contact button that will take you to the contact page so you can get in touch with the support for any kind of mather
@@ -344,6 +345,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **HTML**
 
   - HTML code passes with no errors when checked on W3C Markup Validation Service
+
     - page - PASS
 
     ![image](#)
@@ -351,6 +353,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **CSS**
 
   - CSS code passes with no errors when checked on W3C CSS Validation Service
+
     - style.css file - PASS
 
     ![image](#)
@@ -358,6 +361,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **JavaScript**
 
   - Python code passes with no errors when checked on JSHint
+
     - Script.js file - PASS
 
     ![image](#)
@@ -365,6 +369,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **Python**
 
   - Python code passes with no errors when checked on CI Python Linter
+
     - page - PASS
 
     ![image](#)
@@ -381,6 +386,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - Microsoft Edge
   - Firefox
 - It has been tested and work on different mobile phone brands:
+
   - Iphone 11 pro
   - Iphone 12 pro
   - Realme x2
@@ -399,11 +405,11 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 ### x
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
-| --- | --- | --- | --- | --- |
-| Title | # | # | # | pass |
-| # | # | # | # | pass |
-| # | # | # | # | pass |
-| # | # | # | # | pass |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Title   | #                | #       | #      | pass         |
+| #       | #                | #       | #      | pass         |
+| #       | #                | #       | #      | pass         |
+| #       | #                | #       | #      | pass         |
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -412,12 +418,15 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 ## **Bugs**
 
 - I was having an issue with CSRF_TRUSTED_ORIGINS.
+
   - To fix it I had to add CSRF_TRUSTED_ORIGINS to the app settings.
 
 - Found a bug while testing the comments, once commented if the User refreshed the page it would duplicate the same comment.
+
   - To fix it I have redirected the User to The Forum after commenting.
 
 - Add Post within the Admin page was working fine but, while on the website when adding a Post the picture wasn't being posted.
+
   - After looking for the issue found that I needed to add to the form the following
 
     ```ruby
@@ -435,7 +444,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ### **My Deployment**
 
-- The website was deployed to Github pages. Steps to deploy:  
+- The website was deployed to Github pages. Steps to deploy:
 
 1. Open Github
 2. Log in into your Github account.
@@ -451,41 +460,47 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 #### Fork the repository
 
-  1. Open Github.
-  2. Log in or sign up.
-  3. Look for my repository [Type R Forum](x).
-  4. Last on the right corner you will find the fork button(click on it).
+1. Open Github.
+2. Log in or sign up.
+3. Look for my repository [Type R Forum](x).
+4. Last on the right corner you will find the fork button(click on it).
 
 #### Clone the repository
 
-  1. Open Github
-  2. Log in or Sign up
-  3. Look for my repository [Type R Forum](x)
-  4. Look for code button next to the Gitpod button at the top right(click on it).
-  5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
-  6. Once selected copy the link that is shown.
-  7. Open your code editor terminal.
-  8. Type ```git clone``` in the terminal and paste the copied repository link.
-  9. After all that just Press enter to create the clone.
+1. Open Github
+2. Log in or Sign up
+3. Look for my repository [Type R Forum](x)
+4. Look for code button next to the Gitpod button at the top right(click on it).
+5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
+6. Once selected copy the link that is shown.
+7. Open your code editor terminal.
+8. Type `git clone` in the terminal and paste the copied repository link.
+9. After all that just Press enter to create the clone.
 
 #### Heroku deployment
 
-  1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file  
+1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
+
+
     - Type the command ```pip3 freeze > requirements.txt```
-  2. Make sure you commit and push it
-  3. Open and login to your Heroku account
-  4. Once your dashboard opens, on the top right-hand corner click on New and then on the Create new app
-  5. Give your app a name and select the location
-  6. Once created, the app dashboard will open.
-  7. Select Settings tab
-  8. Go down to Config Vars and add to Key "PORT" and to value "8000"
-  9. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"  
+
+2. Make sure you commit and push it
+3. Open and login to your Heroku account
+4. Once your dashboard opens, on the top right-hand corner click on New and then on the Create new app
+5. Give your app a name and select the location
+6. Once created, the app dashboard will open.
+7. Select Settings tab
+8. Go down to Config Vars and add to Key "PORT" and to value "8000"
+9. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
+
+
     - Make sure they are in this order first "heroku/python" and then in second "heroku/nodejs"
-  10. After all that select Deploy tab
-  11. Go down to Deployment method and select GitHub
-  12. Connect to your GitHub and enter the repository
-  13. Once is connected you can either have automatic or manual deployment
-  14. Choose your preferred one by pressing deploy
+
+10. After all that select Deploy tab
+11. Go down to Deployment method and select GitHub
+12. Connect to your GitHub and enter the repository
+13. Once is connected you can either have automatic or manual deployment
+14. Choose your preferred one by pressing deploy
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -496,10 +511,12 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - ### **Content**
 
   - #:
+
     - [x](x)
     - [x](x)
 
   - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
+
     - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
     - [Dee Mc - Part one](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)
     - [Dee Mc - Part Two](https://www.youtube.com/playlist?list=PLXuTq6OsqZjYSa-lrjd5wMGl23zpnhvln)
