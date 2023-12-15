@@ -25,8 +25,7 @@ class UserProfile(models.Model):
         max_length=30, choices=CAR_MODELS, default="")
     city = models.CharField(max_length=40, null=True, blank=True, default="")
     county = models.CharField(max_length=40, null=True, blank=True, default="")
-    country = CountryField(countries_flag_url='/static/flags/{code}_16.png',
-                           blank_label='Select country',
+    country = CountryField(blank_label='Select country',
                            null=True, blank=True, default="")
     postcode = models.CharField(
         max_length=15, null=True, blank=True, default="")

@@ -571,6 +571,10 @@ img {
     color: var(--red);
 }
 
+.country-flag {
+    border-radius: 0;
+}
+
 /************************** Footer **************************/
 
 footer {
