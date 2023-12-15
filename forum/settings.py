@@ -31,11 +31,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-b1ndark-project4-o3fitdazyh.us2.codeanyapp.com',
+ALLOWED_HOSTS = ['8000-b1ndark-project4-1wfafdpnm8.us2.codeanyapp.com',
                  'typerforum-fb5dd209c30e.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-b1ndark-project4-o3fitdazyh.us2.codeanyapp.com']
+    'https://8000-b1ndark-project4-1wfafdpnm8.us2.codeanyapp.com']
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -184,11 +184,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

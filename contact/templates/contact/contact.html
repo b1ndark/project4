@@ -1,13 +1,33 @@
-{% extends 'base.html' %} 
-{% block title %} - Contact{% endblock %} 
-{% block content %} 
-{% load crispy_forms_tags %} 
-{% load static %}
+{% extends 'base.html' %} {% block title %} - Contact{% endblock %} 
+{% block content %} {% load crispy_forms_tags %} {% load static %}
 
 <!--            Contact Content goes in this block content so it displays within the base.html            -->
 
 <!--            Main Section with background image and a container            -->
 <section class="align-items-center home-main-section">
+  <div class="container">
+    <div class="row alert-msg">
+      <div class="col-md-12 m-0 alert-msg offset-md-2">
+        <!--            Contact Form Alert Messages            -->
+        <!--  Success  -->
+        <div
+          id="alert-success"
+          class="alert alert-success alert-dismissible fade show text-center"
+          style="display: none; position: absolute"
+        >
+          Your Form has been submited, we will reply shortly!
+        </div>
+        <!--  Failed  -->
+        <div
+          id="alert-failed"
+          class="alert alert-danger alert-dismissible fade show text-center"
+          style="display: none; position: absolute"
+        >
+          Something went wrong! Please fill the form again.
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container-fuild">
     <div class="row me-3 ms-3">
       <!--            Container            -->
@@ -20,8 +40,67 @@
 
         <!--            Contact Form            -->
         <div class="account-form">
-          <form class="contact" id="contact_form" method="POST">
-            {% csrf_token %} {{ form|crispy }}
+          <form
+            class="contact"
+            id="contact_form"
+            onsubmit="return sendMail(this);"
+          >
+            {% csrf_token %}
+            <div id="div_id_name" class="mb-3">
+              <label for="name" class="form-label requiredField"> Name </label>
+              <input
+                type="text"
+                name="name"
+                maxlength="100"
+                class="textinput form-control"
+                placeholder="Type your Name"
+                required
+                id="name"
+              />
+            </div>
+            <div id="div_id_email" class="mb-3">
+              <label for="emailaddress" class="form-label requiredField">
+                Email
+              </label>
+              <input
+                type="email"
+                name="emailaddress"
+                maxlength="254"
+                class="emailinput form-control"
+                placeholder="Type your Email"
+                required
+                id="emailaddress"
+              />
+            </div>
+            <div id="div_id_subject" class="mb-3">
+              <label for="subject" class="form-label requiredField">
+                Subject
+              </label>
+              <input
+                type="text"
+                name="subject"
+                maxlength="100"
+                class="textinput form-control"
+                placeholder="Type the message subject"
+                required
+                id="subject"
+              />
+            </div>
+            <div id="div_id_message" class="mb-3">
+              <label for="message" class="form-label requiredField">
+                Message
+              </label>
+              <textarea
+                name="message"
+                cols="40"
+                rows="10"
+                class="textarea form-control"
+                placeholder="Type the message"
+                required
+                id="message"
+              ></textarea>
+            </div>
+
             <div class="btn-display mb-3">
               <button type="submit" class="btn btn-contact">Submit</button>
             </div>
