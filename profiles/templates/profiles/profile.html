@@ -38,7 +38,7 @@
                             <p><strong>County:</strong> {{ profile.county }}</p>
                             {% endif %}
                             {% if profile.get_country_display %}
-                            <p><strong>Country:</strong> {{ profile.get_country_display }} <img class="country-flag" src="{% static 'flags' %}{{ profile.country.flag }}" alt="{{ profile.get_country_display }}'s flag"></p>
+                            <p><strong>Country:</strong> {{ profile.get_country_display }} <img class="country-flag" src="{% static 'flags/../..' %}{{ profile.country.flag }}" alt="{{ profile.get_country_display }}'s flag"></p>
                             {% endif %}
                             {% if profile.postcode %}
                             <p><strong>Postcode:</strong> {{ profile.postcode }}</p>

@@ -356,7 +356,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
     - style.css file - PASS
 
-    ![image](#)
+    ![image](assets/readme/validator/css/style.css.webp)
 
 - ### **JavaScript**
 
@@ -364,15 +364,45 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
     - Script.js file - PASS
 
-    ![image](#)
+    ![image](assets/readme/validator/js/script.js.webp)
 
 - ### **Python**
 
-  - Python code passes with no errors when checked on CI Python Linter
+  - Python code passes with no errors when checked on CI Python Linter(forum)
 
     - page - PASS
 
-    ![image](#)
+    ![image](assets/readme/validator/python/forum_urls.py.webp)
+
+  - Python code passes with no errors when checked on CI Python Linter(typerforum)
+
+    - page - PASS
+
+    ![image](assets/readme/validator/python/typerforum_views.py.webp)
+    ![image](assets/readme/validator/python/typerforum_urls.py.webp)
+    ![image](assets/readme/validator/python/typerforum_models.py.webp)
+    ![image](assets/readme/validator/python/typerforum_forms.py.webp)
+    ![image](assets/readme/validator/python/typerforum_admin.py.webp)
+
+  - Python code passes with no errors when checked on CI Python Linter(profiles)
+
+    - page - PASS
+
+    ![image](assets/readme/validator/python/profile_views.py.webp)
+    ![image](assets/readme/validator/python/profile_urls.py.webp)
+    ![image](assets/readme/validator/python/profile_models.py.webp)
+    ![image](assets/readme/validator/python/profile_forms.py.webp)
+    ![image](assets/readme/validator/python/profile_admin.py.webp)
+
+  - Python code passes with no errors when checked on CI Python Linter(contact)
+
+    - page - PASS
+
+    ![image](assets/readme/validator/python/contact_views.py.webp)
+    ![image](assets/readme/validator/python/contact_urls.py.webp)
+    ![image](assets/readme/validator/python/contact_models.py.webp)
+    ![image](assets/readme/validator/python/contact_forms.py.webp)
+    ![image](assets/readme/validator/python/contact_admin.py.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -481,7 +511,6 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
 
-
     - Type the command ```pip3 freeze > requirements.txt```
 
 2. Make sure you commit and push it
@@ -492,7 +521,6 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 7. Select Settings tab
 8. Go down to Config Vars and add to Key "PORT" and to value "8000"
 9. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
-
 
     - Make sure they are in this order first "heroku/python" and then in second "heroku/nodejs"
 
