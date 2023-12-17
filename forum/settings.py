@@ -67,6 +67,9 @@ INSTALLED_APPS = [
     'contact',
 ]
 
+# Default path to the flags
+COUNTRIES_FLAG_URL = '../{code}.gif'
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
