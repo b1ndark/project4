@@ -15,8 +15,7 @@
         <p>
           Already have an account?
           <a href="{% url 'account_login' %}" class="red-a-link"
-            >Sign in here.</a
-          >
+            >Sign in here.</a>
         </p>
 
         <!--            Sign Up Form            -->
@@ -26,8 +25,7 @@
             <input
               type="hidden"
               name="{{ redirect_field_name }}"
-              value="{{ redirect_field_value }}"
-            />
+              value="{{ redirect_field_value }}">
             {% endif %}
             <div class="btn-display">
               <button type="submit" class="btn btn-signup">

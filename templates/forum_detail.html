@@ -18,9 +18,8 @@
     {% if user.is_superuser or request.user == post.author %}
     <!--            Button to take you to the Edit Post form            -->
     <div class="btn-custom mb-4" title="Edit Post">
-      <a type="button" class="btn" href="{% url 'edit_post' post.pk %}"
-        >Edit Post</a
-      >
+      <a class="btn" href="{% url 'edit_post' post.pk %}"
+        >Edit Post</a>
     </div>
     {% endif %}
     <div class="row card-body-post-view">
@@ -29,13 +28,14 @@
         {% if "placeholder" in post.featured_image.url %}
         <img
           src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1700781218/default_post_xkytf4.jpg"
+          alt="{{ post.featured_image.url }}'s image"
           width="500"
-          height="400"
-        />
+          height="400">
 
         <!--            Else if the User does upload an image            -->
         {% else %}
-        <img src=" {{ post.featured_image.url }}" width="500" height="400" />
+        <img src=" {{ post.featured_image.url }}"
+        alt="{{ post.featured_image.url }}'s image" width="500" height="400">
         {% endif %}
       </div>
       <div class="m-4 masthead-text">
@@ -55,15 +55,13 @@
                   class="author-profile"
                   href="{% url 'profile' post.author.id %}"
                   title="{{ post.author }}'s profile"
-                  >{{ post.author }}</a
-                >
+                  >{{ post.author }}</a>
                 | {{ post.created_on }}
               </p>
             </div>
             <div class="col-1-bottom">
               <!--            If user is authenticated, if liked            -->
-              <p>
-                <strong>
+              <div>
                   {% if user.is_authenticated %}
                   <form
                     class="d-inline"
@@ -100,8 +98,7 @@
                   <span class="text-secondary"
                     >{{ post.number_of_likes }}
                   </span>
-                </strong>
-              </p>
+            </div>
               <p>
                 {% with comments.count as total_comments %}
                 <strong
@@ -121,7 +118,7 @@
 </div>
 <div class="row">
   <div class="col">
-    <hr />
+    <hr>
   </div>
 </div>
 <div class="container col-sm-12 col-md-10 col-lg-7">
@@ -145,10 +142,8 @@
                 {% if user.is_superuser or request.user.username == comment.name %}
                 <div
                     class=""
-                    title="Edit comment"
-                >
+                    title="Edit comment">
                     <a
-                    type="button"
                     class="btn btn-sm btn-edit-comment"
                     href="{% url 'edit_comment' comment.pk %}"
                     ><i class="fa-regular fa-pen-to-square"></i
@@ -168,7 +163,7 @@
         </div>
 
         <!-- Our for loop ends here -->
-        <hr />
+        <hr>
         {% endfor %}
       </div>
     </div>
@@ -193,7 +188,7 @@
 
     <!--            Back button to Forum            -->
     <div class="btn-add-post mb-4" title="Back to Forum">
-      <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
+      <a class="btn" href="{% url 'forum' %}">Back</a>
     </div>
   </div>
 </div>

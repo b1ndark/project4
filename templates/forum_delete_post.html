@@ -20,7 +20,7 @@
     <div class="col-sm-12 col-md-10 col-lg-5 mt-3">
       <!--            Back button to Edit Post            -->
       <div class="btn-custom">
-        <a type="button" class="btn" href="{% url 'edit_post' post.pk %}"
+        <a class="btn" href="{% url 'edit_post' post.pk %}"
           >Back</a
         >
       </div>
@@ -40,8 +40,7 @@
                 <div class="btn-display text-center mt-4">
                   <button
                     type="submit"
-                    class="btn-delete p-1 px-2 btn-outline-danger"
-                  >
+                    class="btn-delete p-1 px-2 btn-outline-danger">
                     Delete
                   </button>
                 </div>

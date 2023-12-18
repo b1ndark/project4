@@ -21,7 +21,7 @@
     <div class="col-sm-12 col-md-10 col-lg-6 mt-3">
       <!--            Button to take you to the add a Post Page            -->
       <div class="btn-add-post mb-4" title="Add Post">
-        <a type="button" class="add-post" href="{% url 'add_post' %}"
+        <a class="add-post" href="{% url 'add_post' %}"
           ><i class="fa-solid fa-file-circle-plus"></i
         ></a>
       </div>
@@ -37,8 +37,7 @@
             name="q"
             type="search"
             placeholder="Search Post"
-            aria-label="Search"
-          />
+            aria-label="Search">
           <button class="search-bar-btn btn-outline-success" type="submit">
             Search
           </button>
@@ -62,8 +61,7 @@
                   src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1700781218/default_post_xkytf4.jpg"
                   alt="type r fk2"
                   width="500"
-                  height="400"
-                />
+                  height="400">
                 <!--            Else User posted image            -->
                 {% else %}
                 <img
@@ -71,13 +69,12 @@
                   src="{{ post.featured_image.url }}"
                   alt=" {{ post.title }}'s image"
                   width="500"
-                  height="400"
-                />
+                  height="400">
                 {% endif %}
               </div>
               <p class="card-text">{{ post.excerpt }}</p>
               <div class="card-details">
-                <br />
+                <br>
                 <div class="image-flash">
                   {% if post.get_car_model_display %}
                   <div>

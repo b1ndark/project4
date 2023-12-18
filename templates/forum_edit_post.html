@@ -21,7 +21,7 @@
       <div class="d-flex justify-content-between">
         <!--            Back button to the Post            -->
         <div class="btn-custom">
-          <a type="button" class="btn" href="{% url 'forum_detail' post.pk %}"
+          <a class="btn" href="{% url 'forum_detail' post.pk %}"
             >Back</a
           >
         </div>
@@ -49,11 +49,9 @@
                   <!--            Delete button to Forum            -->
                   <div class="btn-add-post">
                     <a
-                      type="button"
                       class="btn btn-sm"
                       href="{% url 'delete_post' post.pk %}"
-                      >Delete</a
-                    >
+                      >Delete</a>
                   </div>
                 </div>
               </form>

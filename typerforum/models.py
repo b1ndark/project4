@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 Car model list for User to choose one of the List
 """
 CAR_MODELS = (
-    ('select', ''),
+    ('select', 'Select Car model'),
     ('ek9', 'Honda Civic Type R EK9'),
     ('ep3', 'Honda Civic Type R EP3'),
     ('fn2', 'Honda Civic Type R FN2'),

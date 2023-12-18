@@ -19,7 +19,7 @@
     <div class="col-sm-12 col-md-10 col-lg-8 mt-3">
       <!--            Back button to Forum            -->
       <div class="btn-custom">
-        <a type="button" class="btn" href="{% url 'forum' %}">Back</a>
+        <a class="btn" href="{% url 'forum' %}">Back</a>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -32,8 +32,7 @@
               <form
                 method="POST"
                 enctype="multipart/form-data"
-                style="margin-top: 1.3em"
-              >
+                style="margin-top: 1.3em">
                 {% csrf_token %} {{ form|crispy }}
                 <div class="btn-display text-center">
                   <button type="submit" class="btn btn-signup">Add Post</button>

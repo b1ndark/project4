@@ -25,7 +25,8 @@
                             {% if profile.last_name %}
                             <p><strong>Last name:</strong> {{ profile.last_name }}</p>
                             {% endif %}
-                            {% if profile.get_car_model_display %}
+                            {% if profile.get_car_model_display == 'Select Car model' %}
+                            {% else %}
                             <p><strong>Car:</strong> {{ profile.get_car_model_display }}</p>
                             {% endif %}
                             {% if profile.email_address %}
@@ -38,7 +39,7 @@
                             <p><strong>County:</strong> {{ profile.county }}</p>
                             {% endif %}
                             {% if profile.get_country_display %}
-                            <p><strong>Country:</strong> {{ profile.get_country_display }} <img class="country-flag" src="{% static 'flags/../..' %}{{ profile.country.flag }}" alt="{{ profile.get_country_display }}'s flag"></p>
+                            <p><strong>Country:</strong> {{ profile.get_country_display }} <img class="country-flag" src="{% static 'flags/profile.country.flag' %}" alt="{{ profile.get_country_display }}'s flag"></p>
                             {% endif %}
                             {% if profile.postcode %}
                             <p><strong>Postcode:</strong> {{ profile.postcode }}</p>
@@ -49,19 +50,19 @@
                             <!--            Default Profile Picture incase user does not upload an Profile picture image            -->
                             {% if "defaultProfilePicture" in profile.profile_image.url %}
                             <img src="{% static 'images/default_profile/default_profile.jpg' %}"
-                                alt="Default profile picture" width="240" height="240" />
+                                alt="Default profile picture" width="240" height="240">
 
                             <!--            Else if the User does upload a Profile image            -->
                             {% else %}
                             <img src="{{ profile.profile_image.url }}" alt="{{ profile.user.name }}'s profile picture"
-                                width="240" height="240" />
+                                width="240" height="240">
                             {% endif %}
                         </div>
                     </div>
                     <div class="mb-2 socials">
-                        <p class="mt-2 mb-1">
+                        <div class="mt-2 mb-1">
                         <h4 class="text-center">Socials</h4>
-                        </p>
+                        </div>
                         <p class="text-center">
                             {% if profile.facebook %}
                             <a href="{{ profile.facebook }}" target="_blank" title="{{ profile.user.username }}'s Facebook"><i
@@ -87,7 +88,7 @@
             <div class="profile-update">
                 <div class="row edit-button">
                     <div class="btn-display text-center" title="Edit Profile">
-                        <form class="signup" id="signup_form" method="post"
+                        <form class="signup" id="signup_form"
                             action="{% url 'edit_profile' profile.pk %}">
                             {% csrf_token %}
                             <button id="btn-edit" class="btn btn-edit mt-0">Edit</button>
@@ -101,7 +102,7 @@
                     <div class="row edit-button" title="Delete Account">
                         <div class="btn-display text-center">
                             <div class="btn-add-post">
-                                <a type="button" class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>
+                                <a class="btn" href="{% url 'delete_profile' profile.pk %}">Delete</a>
                             </div>
                         </div>
                     </div>
