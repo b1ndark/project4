@@ -85,6 +85,9 @@ def signup(request):
     """
     Signup Template
     """
+    if request.user.is_authenticated:
+        return redirect('/')
+
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():

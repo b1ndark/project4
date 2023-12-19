@@ -14,9 +14,8 @@
                 <div class="profile-home-card col-12">
                     <div class="row">
                         <h3 class="mb-md-3 mb-lg-5 mt-3 text-center">
-                        {{ profile.user.username }}'s Profile {{ profile.country }}
+                        {{ profile.user.username }}'s Profile
                         </h3>
-                        
                     </div>
                     <div class="user-profile mb-3">
                         <div class="profile-content-details">
@@ -26,8 +25,8 @@
                         {% if profile.last_name %}
                         <p><strong>Last name:</strong> {{ profile.last_name }}</p>
                         {% endif %}
-                        {% if profile.get_car_model_display == 'Select Car model' %}
-                        <p></p>
+                        {% if profile.get_car_model_display is 'Select Car model' %}
+                        <p> </p>
                         {% else %}
                         <p><strong>Car:</strong> {{ profile.get_car_model_display }}</p>
                         {% endif %}
@@ -43,10 +42,6 @@
                         {% if profile.get_country_display %}
                         <p>
                             <strong>Country:</strong> {{ profile.get_country_display }}
-                            <img
-                            class="country-flag"
-                            src="{{ profile.country.flag }}"
-                            alt="{{ profile.get_country_display }}'s flag">
                         </p>
                         {% endif %}
                         {% if profile.postcode %}
