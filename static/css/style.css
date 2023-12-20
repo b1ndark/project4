@@ -623,6 +623,10 @@ footer a:hover {
     .footer {
         font-size: 1.1em;
     }
+
+    .home-card h1 {
+        padding-bottom: 10px;
+    }
 }
 
 /* for small screens sizes from 768px wide and down */
@@ -640,12 +644,8 @@ footer a:hover {
 
     .home-card {
         height: auto;
-        margin-top: 25px;
-    }
-
-    .row-index {
-        margin-right: -22px;
-        margin-left: -22px;
+        margin-top: 75px;
+        width: 95%;
     }
 
     .profile-home-card {
@@ -695,14 +695,11 @@ footer a:hover {
 
     .home-card {
         margin-top: 20px;
+        width: 100%;
     }
 
     .xsm-screen {
         margin-block-end: 0;
     }
 
-    .row-index {
-        margin-right: -26px;
-        margin-left: -26px;
-    }
 }
