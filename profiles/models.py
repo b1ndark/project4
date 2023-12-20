@@ -22,7 +22,7 @@ class UserProfile(models.Model):
     last_name = models.CharField(
         max_length=100, null=True, blank=True, default="")
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default="")
+        max_length=30, choices=CAR_MODELS, default="Select Car model")
     city = models.CharField(max_length=40, null=True, blank=True, default="")
     county = models.CharField(max_length=40, null=True, blank=True, default="")
     country = CountryField(blank_label='Select country',

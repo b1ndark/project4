@@ -50,7 +50,7 @@ class EditProfileForm(UserChangeForm):
         max_length=30, choices=CAR_MODELS, default="Select Car Model"
     )
     email_address = forms.EmailField(widget=forms.EmailInput(
-        attrs={'placeholder': '"example@hotmail.com"'}), required=False)
+        attrs={'placeholder': '"typperforum@example.com"'}), required=False)
     city = forms.CharField(widget=forms.TextInput(
         attrs={'placeholder': 'City'}), required=False)
     county = forms.CharField(widget=forms.TextInput(

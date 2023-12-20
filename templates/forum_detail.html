@@ -42,7 +42,7 @@
         <!--            Post content            -->
         <p class="card-text">{{ post.content | safe }}</p>
         <div class="content-details">
-          {% if post.get_car_model_display %}
+          {% if post.get_car_model_display != 'Select Car model' %}
           <div class="mb-1">
             <strong>Car:</strong> {{ post.get_car_model_display }}
           </div>

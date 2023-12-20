@@ -25,9 +25,7 @@
                         {% if profile.last_name %}
                         <p><strong>Last name:</strong> {{ profile.last_name }}</p>
                         {% endif %}
-                        {% if profile.get_car_model_display is 'Select Car model' %}
-                        <p> </p>
-                        {% else %}
+                        {% if profile.get_car_model_display != 'Select Car model' %}
                         <p><strong>Car:</strong> {{ profile.get_car_model_display }}</p>
                         {% endif %}
                         {% if profile.email_address %}
