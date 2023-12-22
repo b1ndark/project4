@@ -21,7 +21,7 @@
     <div class="col-sm-12 col-md-10 col-lg-6 mt-3">
       <!--            Button to take you to the add a Post Page            -->
       <div class="btn-add-post mb-4" title="Add Post">
-        <a class="add-post" href="{% url 'add_post' %}"
+        <a class="add-post" href="{% url 'add_post' %}" aria-label="Add post"
           ><i class="fa-solid fa-file-circle-plus"></i
         ></a>
       </div>
@@ -67,7 +67,7 @@
                 <img
                   class="card-img-top"
                   src="{{ post.featured_image.url }}"
-                  alt=" {{ post.title }}'s image"
+                  alt="Post image alternative"
                   width="500"
                   height="400">
                 {% endif %}

@@ -29,12 +29,12 @@
               <!--            Delete Account form            -->
               <form method="POST" style="margin-top: 1.3em" class="text-center">
                 {% csrf_token %}
-                <h5>We are sorry to see you going</h5>
-                <h5>
+                <h2 style="font-size: 1.45rem; font-weight: bold;">We are sorry to see you going</h2>
+                <p style="font-size: 1.25rem; font-weight: bold;">
                   Are you sure that you want to
                   <strong style="color: var(--red)">delete</strong> your
                   account?
-                </h5>
+                </p>
                 <div class="btn-display text-center mt-4">
                   <button
                     type="submit"

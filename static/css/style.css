@@ -83,6 +83,12 @@ h1 {
     font-weight: bolder;
 }
 
+/************************** Alert Messages **************************/
+
+.alert-msg {
+    display: flex;
+    justify-content: center;
+}
 
 /************************** Home Page **************************/
 
@@ -112,11 +118,8 @@ h1 {
     color: var(--red);
 }
 
-/************************** Alert Messages **************************/
-
-.alert-msg {
-    display: flex;
-    justify-content: center;
+.home-h2 {
+    font-size: 1.5rem;
 }
 
 /************************** Forum **************************/
@@ -286,8 +289,9 @@ img {
     margin-top: 30px;
 }
 
-.h3-padding {
+.h2-padding {
     padding-left: 10px;
+    font-size: 1.5rem;
 }
 
 .comments-body {

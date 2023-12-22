@@ -28,14 +28,14 @@
         {% if "placeholder" in post.featured_image.url %}
         <img
           src="https://res.cloudinary.com/dsabkjtsx/image/upload/v1700781218/default_post_xkytf4.jpg"
-          alt="{{ post.featured_image.url }}'s image"
+          alt="Defualt Post image alternative"
           width="500"
           height="400">
 
         <!--            Else if the User does upload an image            -->
         {% else %}
         <img src=" {{ post.featured_image.url }}"
-        alt="{{ post.featured_image.url }}'s image" width="500" height="400">
+        alt="Post image alternative" width="500" height="400">
         {% endif %}
       </div>
       <div class="m-4 masthead-text">
@@ -71,6 +71,7 @@
                     {% csrf_token %} {% if liked %}
                     <button
                       type="submit"
+                      aria-label="Like Post"
                       name="blogpost_id"
                       value="{{post.pk}}"
                       class="btn-like"
@@ -80,6 +81,7 @@
                     {% else %}
                     <button
                       type="submit"
+                      aria-label="Like Post"
                       name="blogpost_id"
                       value="{{post.pk}}"
                       class="btn-like"
@@ -126,7 +128,7 @@
     <!--            If there is any comment            -->
     {% if comments %}
     <div class="col-sm-12 col-lg-12 card">
-      <h3 class="h3-padding">Comments:</h3>
+      <h2 class="h2-padding">Comments:</h2>
       <div class="comment-card-body comments-body">
         <!--            Iterate through each comment in comments            -->
         {% for comment in comments %}
@@ -145,6 +147,7 @@
                     title="Edit comment">
                     <a
                     class="btn btn-sm btn-edit-comment"
+                    aria-label="Edit comment"
                     href="{% url 'edit_comment' comment.pk %}"
                     ><i class="fa-regular fa-pen-to-square"></i
                     ></a>
@@ -177,7 +180,8 @@
         <form method="POST" style="margin-top: 1.3em">
           {% csrf_token %} {{ comment_form|crispy }}
           <div class="btn-display text-center" title="Add comment">
-            <button type="submit" class="btn btn-sm btn-signup btn-lg">
+            <button type="submit" class="btn btn-sm btn-signup btn-lg" 
+            aria-label="Add comment">
               <i class="fa-regular fa-paper-plane"></i>
             </button>
           </div>
