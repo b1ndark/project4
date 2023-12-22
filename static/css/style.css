@@ -588,7 +588,7 @@ footer {
     color: var(--white);
     font-weight: bolder;
     font-family: var(--main-title);
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 footer a {
@@ -639,7 +639,7 @@ footer a:hover {
     }
 
     .footer {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .home-card {
@@ -694,7 +694,7 @@ footer a:hover {
     }
 
     .home-card {
-        margin-top: 20px;
+        margin-top: 5px;
         width: 100%;
     }
 

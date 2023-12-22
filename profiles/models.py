@@ -29,8 +29,7 @@ class UserProfile(models.Model):
                            null=True, blank=True, default="")
     postcode = models.CharField(
         max_length=15, null=True, blank=True, default="")
-    profile_image = CloudinaryField(
-        'profile-image', default="defaultProfilePicture")
+    profile_image = CloudinaryField('image', default='defaultProfilePicture')
     facebook = models.CharField(
         max_length=250, null=True, blank=True, default="")
     twitter = models.CharField(

@@ -73,6 +73,7 @@
                         {% if profile.facebook %}
                         <a
                             href="{{ profile.facebook }}"
+                            aria-label="Visit {{ profile.user.username }}'s Facebook page(opens in a new tab)"
                             target="_blank"
                             title="{{ profile.user.username }}'s Facebook"
                             ><i class="fab fa-facebook-f m-2 social-icon"></i></a>
@@ -80,6 +81,7 @@
                         {% if profile.twitter %}
                         <a
                             href="{{ profile.twitter }}"
+                            aria-label="Visit {{ profile.user.username }}'s Twitter page(opens in a new tab)"
                             target="_blank"
                             title="{{ profile.user.username }}'s Twitter"
                             ><i class="fab fa-x-twitter m-2 social-icon"></i></a>
@@ -87,6 +89,7 @@
                         {% if profile.instagram %}
                         <a
                             href="{{ profile.instagram }}"
+                            aria-label="Visit {{ profile.user.username }}'s Instagram page(opens in a new tab)"
                             target="_blank"
                             title="{{ profile.user.username }}'s Instagram"
                             ><i class="fab fa-instagram m-2 social-icon"></i></a>
@@ -94,6 +97,7 @@
                         {% if profile.youtube %}
                         <a
                             href="{{ profile.youtube }}"
+                            aria-label="Visit {{ profile.user.username }}'s Youtube page(opens in a new tab)"
                             target="_blank"
                             title="{{ profile.user.username }}'s Youtube"
                             ><i class="fab fa-youtube m-2 social-icon"></i></a>

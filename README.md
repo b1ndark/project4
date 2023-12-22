@@ -1,6 +1,8 @@
 # **TypeR Forum**
 
-## Welcome to [TypeR Forum](x)
+`To open the links in this document in a new browser tab please press CTRL + Mouse Click`
+
+## Welcome to [TypeR Forum](https://typerforum-fb5dd209c30e.herokuapp.com/)
 
 Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
 
@@ -10,11 +12,9 @@ You can expect a website that is easy to navigate and a friendly community that 
 
 The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered, experiences with a certain TypeR model, any thoughts and ideias.
 
-![image](#)
+![image](assets/readme/amiresponsive.webp)
 
-`To open the links in this document in a new browser tab please press CTRL + Mouse Click`
-
-[**My TypeR Forum website on Am I Responsive**](x)
+[**My TypeR Forum website on Am I Responsive**](https://ui.dev/amiresponsive?url=https://typerforum-fb5dd209c30e.herokuapp.com/)
 
 ---
 
@@ -43,6 +43,7 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Features**](#features)
   - [**Programs and tools used**](#programs-and-tools-used)
   - [**Languages**](#languages)
+  - [**Accessibility**](#accessibility)
   - [**Testing**](#testing)
     - [x](#x-1)
   - [**Bugs**](#bugs)
@@ -376,33 +377,75 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   - Python code passes with no errors when checked on CI Python Linter(typerforum)
 
-    - page - PASS
+    - typerforum_views.py - PASS
 
     ![image](assets/readme/validator/python/typerforum_views.py.webp)
+
+    - typerforum_urls.py - PASS
+
     ![image](assets/readme/validator/python/typerforum_urls.py.webp)
+
+    - typerforum_models.py - PASS
+
     ![image](assets/readme/validator/python/typerforum_models.py.webp)
+
+    - typerforum_forms.py - PASS
+
     ![image](assets/readme/validator/python/typerforum_forms.py.webp)
+
+    - typerforum_admin.py - PASS
+
     ![image](assets/readme/validator/python/typerforum_admin.py.webp)
 
   - Python code passes with no errors when checked on CI Python Linter(profiles)
 
-    - page - PASS
+    - profile_views - PASS
 
     ![image](assets/readme/validator/python/profile_views.py.webp)
+
+    - profile_urls.py - PASS
+
     ![image](assets/readme/validator/python/profile_urls.py.webp)
+
+    - profile_models.py - PASS
+
     ![image](assets/readme/validator/python/profile_models.py.webp)
+
+    - profile_forms.py - PASS
+
     ![image](assets/readme/validator/python/profile_forms.py.webp)
+
+    - profile_admin.py - PASS
+  
     ![image](assets/readme/validator/python/profile_admin.py.webp)
 
   - Python code passes with no errors when checked on CI Python Linter(contact)
 
-    - page - PASS
+    - contact_views - PASS
 
     ![image](assets/readme/validator/python/contact_views.py.webp)
+
+    - contact_urls.py - PASS
+
     ![image](assets/readme/validator/python/contact_urls.py.webp)
+
+    - contact_models.py - PASS
+  
     ![image](assets/readme/validator/python/contact_models.py.webp)
+
+    - contact_forms.py - PASS
+
     ![image](assets/readme/validator/python/contact_forms.py.webp)
+
+    - contact_admin.py - PASS
+  
     ![image](assets/readme/validator/python/contact_admin.py.webp)
+
+[**Back to the top**](#typer-forum "back_to_the_top")
+
+---
+
+## **Accessibility**
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 

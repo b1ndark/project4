@@ -47,8 +47,7 @@ class EditProfileForm(UserChangeForm):
     last_name = forms.CharField(widget=forms.TextInput(
         attrs={'placeholder': 'Last Name'}), required=False)
     car_model = models.CharField(
-        max_length=30, choices=CAR_MODELS, default="Select Car Model"
-    )
+        max_length=30, choices=CAR_MODELS, default="Select Car Model")
     email_address = forms.EmailField(widget=forms.EmailInput(
         attrs={'placeholder': '"typperforum@example.com"'}), required=False)
     city = forms.CharField(widget=forms.TextInput(
@@ -73,4 +72,3 @@ class EditProfileForm(UserChangeForm):
         fields = ['first_name', 'last_name', 'profile_image', 'email_address',
                   'car_model', 'city', 'county', 'country', 'postcode',
                   'facebook', 'twitter', 'instagram', 'youtube']
-
