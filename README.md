@@ -219,20 +219,26 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - If Admin is Logged In you will have an extra button
       - Admin page button to take you to the admin page where you can manage the website
 
-    ![image](#)
+    - Desktop navbar
+
+    ![image](assets/readme/features/navbar.webp)
+
+    - Small Screens navbar
+
+    ![image](assets/readme/features/navbar_sm_screens.webp)
 
 - #### Footer
 
   - The User is presented a message 'This Website is for Educational Purpose only'
   - Website Author and Socials
 
-    ![image](#)
+    ![image](assets/readme/features/footer.webp)
 
 - #### Home Page
 
   - The User is presented with a welcoming message and a few basic rules, a typeR in the background.
 
-    ![image](#)
+    ![image](assets/readme/features/home_page.webp)
 
 - #### Contact Page
 
@@ -345,37 +351,111 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - ### **HTML**
 
-  - HTML code passes with no errors when checked on W3C Markup Validation Service
+  - **HTML code passes with no errors when checked on W3C Markup Validation Service**
 
-    - page - PASS
+    - Home page results - PASS
 
-    ![image](#)
+    ![image](assets/readme/validator/html/html_home_page.webp)
+
+    - Contact page results - PASS
+
+    ![image](assets/readme/validator/html/html_contact.webp)
+
+    - Signin page results - PASS
+
+    ![image](assets/readme/validator/html/html_signin.webp)
+
+    - Signup page results - PASS
+
+    ![image](assets/readme/validator/html/html_signup.webp)
+
+    - Logout page results - PASS
+
+    ![image](assets/readme/validator/html/html_logout.webp)
+
+    - Profile page results - PASS
+
+    ![image](assets/readme/validator/html/html_profile.webp)
+
+    - Edit profile page results - PASS
+
+    ![image](assets/readme/validator/html/html_edit_profile.webp)
+
+    - Delete profile page results - PASS
+
+    ![image](assets/readme/validator/html/html_delete_profile.webp)
+
+    - Forum page results - PASS
+
+    ![image](assets/readme/validator/html/html_forum.webp)
+
+    - Forum detail page results - PASS
+
+    ![image](assets/readme/validator/html/html_forum_detail.webp)
+
+    - Add post page results - PASS
+
+    ![image](assets/readme/validator/html/html_add_post.webp)
+
+    - Edit post page results - PASS
+
+    ![image](assets/readme/validator/html/html_edit_post.webp)
+
+    - Delete post page results - PASS
+
+    ![image](assets/readme/validator/html/html_delete_post.webp)
+
+    - Edit comment page results - PASS
+
+    ![image](assets/readme/validator/html/html_edit_comment.webp)
+
+    - Delete comment page results - PASS
+
+    ![image](assets/readme/validator/html/html_delete_comment.webp)
+
+    - 403 Error page results - PASS
+
+    ![image](assets/readme/validator/html/html_403_page.webp)
+
+    - 404 Error page results - PASS
+
+    ![image](assets/readme/validator/html/html_404_page.webp)
+
+    - 500 Error page results - PASS
+
+    ![image](assets/readme/validator/html/html_500_page.webp)
+
+---
 
 - ### **CSS**
 
-  - CSS code passes with no errors when checked on W3C CSS Validation Service
+  - **CSS code passes with no errors when checked on W3C CSS Validation Service**
 
     - style.css file - PASS
 
     ![image](assets/readme/validator/css/style.css.webp)
 
+---
+
 - ### **JavaScript**
 
-  - Python code passes with no errors when checked on JSHint
+  - **JavaScript code passes with no errors when checked on JSHint**
 
     - Script.js file - PASS
 
     ![image](assets/readme/validator/js/script.js.webp)
 
+---
+
 - ### **Python**
 
-  - Python code passes with no errors when checked on CI Python Linter(forum)
+  - **Python code passes with no errors when checked on CI Python Linter(forum)**
 
     - page - PASS
 
     ![image](assets/readme/validator/python/forum_urls.py.webp)
 
-  - Python code passes with no errors when checked on CI Python Linter(typerforum)
+  - **Python code passes with no errors when checked on CI Python Linter(typerforum)**
 
     - typerforum_views.py - PASS
 
@@ -397,7 +477,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
     ![image](assets/readme/validator/python/typerforum_admin.py.webp)
 
-  - Python code passes with no errors when checked on CI Python Linter(profiles)
+  - **Python code passes with no errors when checked on CI Python Linter(profiles)**
 
     - profile_views - PASS
 
@@ -419,7 +499,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   
     ![image](assets/readme/validator/python/profile_admin.py.webp)
 
-  - Python code passes with no errors when checked on CI Python Linter(contact)
+  - **Python code passes with no errors when checked on CI Python Linter(contact)**
 
     - contact_views - PASS
 
@@ -446,6 +526,145 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 ---
 
 ## **Accessibility**
+
+- ### **Wave**
+
+- I have focused on making sure that the website forum is accessible:
+
+  - Staring with the navbar, made sure to keep it clean, that adaptes to mobiles and tables.
+  - Maintained the same layout and style through every page withon the website.
+  - Made sure of semantic HTML.
+  - Kept a clean colour contrast in every page.
+  - The website forum is simple and easy to navigate.
+  - Both edit profile and edit post have an error.
+
+    - Home page results
+
+    ![image](assets/readme/wave/wave_home.webp)
+
+    - Contact page results
+
+    ![image](assets/readme/wave/wave_contact.webp)
+
+    - Signin page results
+
+    ![image](assets/readme/wave/wave_signin.webp)
+
+    - Signup page results
+
+    ![image](assets/readme/wave/wave_signup.webp)
+
+    - Logout page results
+
+    ![image](assets/readme/wave/wave_logout.webp)
+
+    - Profile page results
+
+    ![image](assets/readme/wave/wave_profile.webp)
+
+    - Edit profile page results
+
+    ![image](assets/readme/wave/wave_edit_profile.webp)
+
+    - Delete profile page results
+
+    ![image](assets/readme/wave/wave_delete_profile.webp)
+
+    - Forum page results
+
+    ![image](assets/readme/wave/wave_forum.webp)
+
+    - Forum detail page results
+
+    ![image](assets/readme/wave/wave_forum_detail.webp)
+
+    - Add post page results
+
+    ![image](assets/readme/wave/wave_add_post.webp)
+
+    - Edit post page results
+
+    ![image](assets/readme/wave/wave_edit_post.webp)
+
+    - Delete post page results
+
+    ![image](assets/readme/wave/wave_delete_post.webp)
+
+    - Edit comment page results
+
+    ![image](assets/readme/wave/wave_edit_comment.webp)
+
+    - Delete comment page results
+
+    ![image](assets/readme/wave/wave_delete_comment.webp)
+
+[**Back to the top**](#typer-forum "back_to_the_top")
+
+---
+
+- ### **Lighthouse**
+
+  - I can confirm that Lighthouse performed really good
+  
+    - Home page results
+
+    ![image](assets/readme/lighthouse/lighthouse_home.webp)
+
+    - Contact page results
+
+    ![image](assets/readme/lighthouse/lighthouse_contact.webp)
+
+    - Signin page results
+
+    ![image](assets/readme/lighthouse/lighthouse_signin.webp)
+
+    - Signup page results
+
+    ![image](assets/readme/lighthouse/lighthouse_signup.webp)
+
+    - Logout page results
+
+    ![image](assets/readme/lighthouse/lighthouse_logout.webp)
+
+    - Profile page results
+
+    ![image](assets/readme/lighthouse/lighthouse_profile.webp)
+
+    - Edit profile page results
+
+    ![image](assets/readme/lighthouse/lighthouse_edit_profile.webp)
+
+    - Delete profile page results
+
+    ![image](assets/readme/lighthouse/lighthouse_delete_profile.webp)
+
+    - Forum page results
+
+    ![image](assets/readme/lighthouse/lighthouse_forum.webp)
+
+    - Forum detail page results
+
+    ![image](assets/readme/lighthouse/lighthouse_forum_detail.webp)
+
+    - Add post page results
+
+    ![image](assets/readme/lighthouse/lighthouse_add_post.webp)
+
+    - Edit post page results
+
+    ![image](assets/readme/lighthouse/lighthouse_edit_post.webp)
+
+    - Delete post page results
+
+    ![image](assets/readme/lighthouse/lighhouse_delete_post.webp)
+
+    - Edit comment page results
+
+    ![image](assets/readme/lighthouse/lighthouse_edit_comment.webp)
+
+    - Delete comment page results
+
+    ![image](assets/readme/lighthouse/lighthouse_delete_comment.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
