@@ -43,7 +43,13 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Features**](#features)
   - [**Programs and tools used**](#programs-and-tools-used)
   - [**Languages**](#languages)
+    - [**HTML**](#html)
+    - [**CSS**](#css)
+    - [**JavaScript**](#javascript)
+    - [**Python**](#python)
   - [**Accessibility**](#accessibility)
+    - [**Wave**](#wave)
+    - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
     - [x](#x-1)
   - [**Bugs**](#bugs)
@@ -217,13 +223,17 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
       - Forum button which when pressed will take you to the Forum where you will be able to explore, add and commments posts
       - Log Out button that will take you to the Log Out page so the USer can confirm
     - If Admin is Logged In you will have an extra button
-      - Admin page button to take you to the admin page where you can manage the website
+      - Admin button to take you to the admin page where you can manage the website
 
-    - Desktop navbar
+    - **Desktop navbar**
+    - The navbar displays all the menus for the user to navigate.
+    - Within the forum also has search bar.
 
     ![image](assets/readme/features/navbar.webp)
 
-    - Small Screens navbar
+    - **Small Screens navbar**
+    - When using devides with small screens the navbar adapts, by putting all the navbar menus into to the dropdown button.
+    - Also in the small screens when in the forum the search bar moves out of the navbar to improve the user experience, as it wouldn'y be practicle to clean the dropdown menu just to access the search bar.
 
     ![image](assets/readme/features/navbar_sm_screens.webp)
 
@@ -236,83 +246,145 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Home Page
 
-  - The User is presented with a welcoming message and a few basic rules, a typeR in the background.
+  - The User is presented with a welcoming message and a few basic rules.
+  - Within the context there is also direct links to signup, sigin and contact pages.
+  - It is presented with a blue Honda civic Type R in the background.
 
     ![image](assets/readme/features/home_page.webp)
 
 - #### Contact Page
 
-  - The User will be presented with a form to fill incase in need of conatcting the support for any reason/mather
-  - If Submited the User will get a notification
+  - The User will be presented with a form to fill incase in need of conatcting the support for any reason/mather.
+  - If Submited the User will get a notification.
 
-    ![image](#)
+    ![image](assets/readme/features/contact_page.webp)
+    ![image](assets/readme/features/contact_form_notification.webp)
+
+  - You will also get an email confirming it with a copy of what you wrote in your form.
+    ![image](assets/readme/features/confirmation_emailjs.webp)
 
 - #### Sign Up Page
 
-  - The User will have a Signup form whithin the Signup page to fill incase the same one wantes to become part of the TypeR community
-  - If Submited the User will get a notification and automaticaly logged in
+  - The User will have a Signup form whithin the Signup page to fill incase the same one wantes to become part of the TypeR community.
+  - If Submited the User will get a notification and automaticaly logged in.
 
-    ![image](#)
+    ![image](assets/readme/features/signup_page.webp)
 
 - #### Sign In Page
 
-  - The User will have a Login form to fill if already has a login and wants to access the Forum and be part of the community
-  - If the user logs in, it will be redirected to the Home page and a notification will display
-  - If the User does not have a loggin there is a link to press that will take gim to the Sign Up page
+  - The User will have a Login form to fill if already has a login and wants to access the Forum and be part of the community.
+  - If the user logs in, it will be redirected to the Home page and a notification will display.
+  - If the User does not have a loggin there is a link to press that will take gim to the Sign Up page.
 
-    ![image](#)
+    ![image](assets/readme/features/signin_page.webp)
 
 - #### Log Out Page
 
-  - Within the log out page the User will have a question whether wants to log out
-  - If confirmed it will be redirected to the Home page and a notification displayed
+  - Within the log out page the User will have a question whether wants to log out.
+  - If confirmed it will be redirected to the Home page and a notification displayed.
 
-    ![image](#)
+    ![image](assets/readme/features/logout_page.webp)
+
+- #### Profile Page
+
+  - If the user click on its name within the navbar, it will that them to their profile.
+  - Profile page will be presented with a default picture, and with with some info and socials if user has enter them.
+  - Also it has two buttons, edit and delete.
+  - Edit - The user will be able to update the profile.
+  - Delete - The user will be able to delete the account.
+
+    ![image](assets/readme/features/profile_page.webp)
+
+- #### Edit profile Page
+
+  - Within the edit profile page the User will be presented with a form to update the profile if desired.
+  - If User does update the profile it will be redirected to the profile page and a notification will be displayed.
+
+    ![image](assets/readme/features/edit_profile_page.webp)
+    ![image](assets/readme/features/update_profile_notification.webp)
+
+- #### Delete profile Page
+
+  - Within the delete profile page the User will be presented with a question whether is sure to delete the account.
+  - If User does delete the account it will be redirected to the home page and a notification will be displayed to confirm it.
+
+    ![image](assets/readme/features/delete_profile_page.webp)
+    ![image](assets/readme/features/delete_profile_notification.webp)
 
 - #### Forum Page
 
-  - The accessed the User will have a list of Posts displayed
-  - If there is more than four posts the page will be paginated where the User will be able to go next/previous page
-  - Within the Forum page a Search bar is displayed in the navbar so the User can look for the pretended post
-  - At the top there is a Add Post button that will take you to the Add Post page so you can add posts and contribute to the community
-  - When a post within the Post list is selected it will take you to the Post detail page
+  - The accessed the User will have a list of Posts displayed.
+  - If there is more than four posts the page will be paginated where the User will be able to go next/previous page.
+  - Within the Forum page a Search bar is displayed in the navbar so the User can look for the pretended post.
+  - At the top there is a Add Post button that will take you to the Add Post page so you can add posts and contribute to the community.
+  - When a post within the Post list is selected it will take you to the Post detail page.
 
-    ![image](#)
+    ![image](assets/readme/features/forum_page.webp)
 
 - #### Post Detail Page
 
-  - A post is displayed and the User can comment
-  - If the User is the Post auhtor an Edit button is displayed which when pressed takes you to the Edit Post page
+  - A post is displayed and the User can comment.
+  - If the User is the Post auhtor an Edit button is displayed which when pressed takes you to the Edit Post page.
 
-    ![image](#)
+    ![image](assets/readme/features/forum_detail_page.webp)
 
 - #### Edit Post Page
 
-  - If User pressed Edit then the Edit page is displayed so the Post can be either edited or deleted
-  - If the Post is edited and submited a notification will be pressented to the User
+  - If User pressed Edit then the Edit page is displayed so the Post can be either edited or deleted.
+  - If the Post is edited and submited a notification will be pressented to the User.
 
-    ![image](#)
+    ![image](assets/readme/features/edit_post_page.webp)
 
 - #### Delete Post Page
 
-  - A Delete Post confirmation is displayed
-  - If the User confirms, the Post is deleted and a notification displayed
+  - A Delete Post confirmation is displayed.
+  - If the User confirms, the Post is deleted and a notification displayed.
 
-    ![image](#)
+    ![image](assets/readme/features/delete_post_page.webp)
+
+- #### Add Comment
+
+  - A comment is displyed at the bottom of the Post detail page.
+  - If the User does want to comment the post just has to write the message and enter.
+  - If submited a notification will be displayed confirming it.
+
+    ![image](assets/readme/features/add_comment.webp)
+    ![image](assets/readme/features/add_comment_notification.webp)
 
 - #### Edit Comment Page
 
-  - If User pressed Edit then the Edit comment page is displayed so the Comment can be either edited or deleted
-  - If the Comment is edited and submited a notification will be pressented to the User
+  - If User pressed Edit then the Edit comment page is displayed so the Comment can be either edited or deleted.
+  - If the Comment is edited and submited a notification will be pressented to the User.
 
-    ![image](#)
+    ![image](assets/readme/features/edit_comment_page.webp)
 
 - #### Delete Comment Page
 
-  - A Delete Comment confirmation is displayed
-  - If the User confirms, the Comment is deleted and a notification displayed
+  - A Delete Comment confirmation is displayed.
+  - If the User confirms, the Comment is deleted and a notification displayed.
 
-    ![image](#)
+    ![image](assets/readme/features/delete_comment_page.webp)
+
+- #### 403 Error Page
+
+  - If the user tries to access something that doesn't belong to him, like for example try to edit somebody elses profile a 403 Error(Forbidden) page will be displayed, so that the user knows that he/she shouldn't be there.
+  - Within the 403 Error page there will be a link to take them back to home page.
+
+    ![image](assets/readme/features/403_error_page.webp)
+
+- #### 404 Error Page
+
+  - If the user tries to access something that doesn't exist, a 404 Error page will be displayed, so that the user knows that he/she shouldn't be there/ there is nothing there.
+  - Within the 404 Error page there will be a link to take them back to home page.
+
+    ![image](assets/readme/features/404_error_page.webp)
+
+- #### 500 Error Page
+
+  - If the user tries to access something that doesn't exist or never existed, like for example try to view somebodys profile that no longer exists a 500 Error(Server Error) page will be displayed, so that the user knows that there is something wrong with the server.
+  - Within the 500 Error page there will be a link to take them back to home page.
+
+    ![image](assets/readme/features/403_error_page.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -349,177 +421,171 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ## **Languages**
 
-- ### **HTML**
+### **HTML**
 
-  - **HTML code passes with no errors when checked on W3C Markup Validation Service**
+- **HTML code passes with no errors when checked on W3C Markup Validation Service**
 
-    - Home page results - PASS
+  - Home page results - PASS
 
-    ![image](assets/readme/validator/html/html_home_page.webp)
+  ![image](assets/readme/validator/html/html_home_page.webp)
 
-    - Contact page results - PASS
+  - Contact page results - PASS
 
-    ![image](assets/readme/validator/html/html_contact.webp)
+  ![image](assets/readme/validator/html/html_contact.webp)
 
-    - Signin page results - PASS
+  - Signin page results - PASS
 
-    ![image](assets/readme/validator/html/html_signin.webp)
+  ![image](assets/readme/validator/html/html_signin.webp)
 
-    - Signup page results - PASS
+  - Signup page results - PASS
 
-    ![image](assets/readme/validator/html/html_signup.webp)
+  ![image](assets/readme/validator/html/html_signup.webp)
 
-    - Logout page results - PASS
+  - Logout page results - PASS
 
-    ![image](assets/readme/validator/html/html_logout.webp)
+  ![image](assets/readme/validator/html/html_logout.webp)
 
-    - Profile page results - PASS
+  - Profile page results - PASS
 
-    ![image](assets/readme/validator/html/html_profile.webp)
+  ![image](assets/readme/validator/html/html_profile.webp)
 
-    - Edit profile page results - PASS
+  - Edit profile page results - PASS
 
-    ![image](assets/readme/validator/html/html_edit_profile.webp)
+  ![image](assets/readme/validator/html/html_edit_profile.webp)
 
-    - Delete profile page results - PASS
+  - Delete profile page results - PASS
 
-    ![image](assets/readme/validator/html/html_delete_profile.webp)
+  ![image](assets/readme/validator/html/html_delete_profile.webp)
 
-    - Forum page results - PASS
+  - Forum page results - PASS
 
-    ![image](assets/readme/validator/html/html_forum.webp)
+  ![image](assets/readme/validator/html/html_forum.webp)
 
-    - Forum detail page results - PASS
+  - Forum detail page results - PASS
 
-    ![image](assets/readme/validator/html/html_forum_detail.webp)
+  ![image](assets/readme/validator/html/html_forum_detail.webp)
 
-    - Add post page results - PASS
+  - Add post page results - PASS
 
-    ![image](assets/readme/validator/html/html_add_post.webp)
+  ![image](assets/readme/validator/html/html_add_post.webp)
 
-    - Edit post page results - PASS
+  - Edit post page results - PASS
 
-    ![image](assets/readme/validator/html/html_edit_post.webp)
+  ![image](assets/readme/validator/html/html_edit_post.webp)
 
-    - Delete post page results - PASS
+  - Delete post page results - PASS
 
-    ![image](assets/readme/validator/html/html_delete_post.webp)
+  ![image](assets/readme/validator/html/html_delete_post.webp)
 
-    - Edit comment page results - PASS
+  - Edit comment page results - PASS
 
-    ![image](assets/readme/validator/html/html_edit_comment.webp)
+  ![image](assets/readme/validator/html/html_edit_comment.webp)
 
-    - Delete comment page results - PASS
+  - Delete comment page results - PASS
 
-    ![image](assets/readme/validator/html/html_delete_comment.webp)
+  ![image](assets/readme/validator/html/html_delete_comment.webp)
 
-    - 403 Error page results - PASS
+  - 403 Error page results - PASS
 
-    ![image](assets/readme/validator/html/html_403_page.webp)
+  ![image](assets/readme/validator/html/html_403_page.webp)
 
-    - 404 Error page results - PASS
+  - 404 Error page results - PASS
 
-    ![image](assets/readme/validator/html/html_404_page.webp)
+  ![image](assets/readme/validator/html/html_404_page.webp)
 
-    - 500 Error page results - PASS
+  - 500 Error page results - PASS
 
-    ![image](assets/readme/validator/html/html_500_page.webp)
+  ![image](assets/readme/validator/html/html_500_page.webp)
 
----
+### **CSS**
 
-- ### **CSS**
+- **CSS code passes with no errors when checked on W3C CSS Validation Service**
 
-  - **CSS code passes with no errors when checked on W3C CSS Validation Service**
+  - style.css file - PASS
 
-    - style.css file - PASS
+  ![image](assets/readme/validator/css/style.css.webp)
 
-    ![image](assets/readme/validator/css/style.css.webp)
+### **JavaScript**
 
----
+- **JavaScript code passes with no errors when checked on JSHint**
 
-- ### **JavaScript**
+  - Script.js file - PASS
 
-  - **JavaScript code passes with no errors when checked on JSHint**
+  ![image](assets/readme/validator/js/script.js.webp)
 
-    - Script.js file - PASS
+### **Python**
 
-    ![image](assets/readme/validator/js/script.js.webp)
+- **Python code passes with no errors when checked on CI Python Linter(forum)**
 
----
+  - page - PASS
 
-- ### **Python**
+  ![image](assets/readme/validator/python/forum_urls.py.webp)
 
-  - **Python code passes with no errors when checked on CI Python Linter(forum)**
+- **Python code passes with no errors when checked on CI Python Linter(typerforum)**
 
-    - page - PASS
+  - typerforum_views.py - PASS
 
-    ![image](assets/readme/validator/python/forum_urls.py.webp)
+  ![image](assets/readme/validator/python/typerforum_views.py.webp)
 
-  - **Python code passes with no errors when checked on CI Python Linter(typerforum)**
+  - typerforum_urls.py - PASS
 
-    - typerforum_views.py - PASS
+  ![image](assets/readme/validator/python/typerforum_urls.py.webp)
 
-    ![image](assets/readme/validator/python/typerforum_views.py.webp)
+  - typerforum_models.py - PASS
 
-    - typerforum_urls.py - PASS
+  ![image](assets/readme/validator/python/typerforum_models.py.webp)
 
-    ![image](assets/readme/validator/python/typerforum_urls.py.webp)
+  - typerforum_forms.py - PASS
 
-    - typerforum_models.py - PASS
+  ![image](assets/readme/validator/python/typerforum_forms.py.webp)
 
-    ![image](assets/readme/validator/python/typerforum_models.py.webp)
+  - typerforum_admin.py - PASS
 
-    - typerforum_forms.py - PASS
+  ![image](assets/readme/validator/python/typerforum_admin.py.webp)
 
-    ![image](assets/readme/validator/python/typerforum_forms.py.webp)
+- **Python code passes with no errors when checked on CI Python Linter(profiles)**
 
-    - typerforum_admin.py - PASS
+  - profile_views - PASS
 
-    ![image](assets/readme/validator/python/typerforum_admin.py.webp)
+  ![image](assets/readme/validator/python/profile_views.py.webp)
 
-  - **Python code passes with no errors when checked on CI Python Linter(profiles)**
+  - profile_urls.py - PASS
 
-    - profile_views - PASS
+  ![image](assets/readme/validator/python/profile_urls.py.webp)
 
-    ![image](assets/readme/validator/python/profile_views.py.webp)
+  - profile_models.py - PASS
 
-    - profile_urls.py - PASS
+  ![image](assets/readme/validator/python/profile_models.py.webp)
 
-    ![image](assets/readme/validator/python/profile_urls.py.webp)
+  - profile_forms.py - PASS
 
-    - profile_models.py - PASS
+  ![image](assets/readme/validator/python/profile_forms.py.webp)
 
-    ![image](assets/readme/validator/python/profile_models.py.webp)
+  - profile_admin.py - PASS
 
-    - profile_forms.py - PASS
+  ![image](assets/readme/validator/python/profile_admin.py.webp)
 
-    ![image](assets/readme/validator/python/profile_forms.py.webp)
+- **Python code passes with no errors when checked on CI Python Linter(contact)**
 
-    - profile_admin.py - PASS
-  
-    ![image](assets/readme/validator/python/profile_admin.py.webp)
+  - contact_views - PASS
 
-  - **Python code passes with no errors when checked on CI Python Linter(contact)**
+  ![image](assets/readme/validator/python/contact_views.py.webp)
 
-    - contact_views - PASS
+  - contact_urls.py - PASS
 
-    ![image](assets/readme/validator/python/contact_views.py.webp)
+  ![image](assets/readme/validator/python/contact_urls.py.webp)
 
-    - contact_urls.py - PASS
+  - contact_models.py - PASS
 
-    ![image](assets/readme/validator/python/contact_urls.py.webp)
+  ![image](assets/readme/validator/python/contact_models.py.webp)
 
-    - contact_models.py - PASS
-  
-    ![image](assets/readme/validator/python/contact_models.py.webp)
+  - contact_forms.py - PASS
 
-    - contact_forms.py - PASS
+  ![image](assets/readme/validator/python/contact_forms.py.webp)
 
-    ![image](assets/readme/validator/python/contact_forms.py.webp)
+  - contact_admin.py - PASS
 
-    - contact_admin.py - PASS
-  
-    ![image](assets/readme/validator/python/contact_admin.py.webp)
+  ![image](assets/readme/validator/python/contact_admin.py.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -527,7 +593,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ## **Accessibility**
 
-- ### **Wave**
+### **Wave**
 
 - I have focused on making sure that the website forum is accessible:
 
@@ -602,69 +668,69 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-- ### **Lighthouse**
+### **Lighthouse**
 
-  - I can confirm that Lighthouse performed really good
-  
-    - Home page results
+- I can confirm that Lighthouse performed really good
 
-    ![image](assets/readme/lighthouse/lighthouse_home.webp)
+  - Home page results
 
-    - Contact page results
+  ![image](assets/readme/lighthouse/lighthouse_home.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_contact.webp)
+  - Contact page results
 
-    - Signin page results
+  ![image](assets/readme/lighthouse/lighthouse_contact.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_signin.webp)
+  - Signin page results
 
-    - Signup page results
+  ![image](assets/readme/lighthouse/lighthouse_signin.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_signup.webp)
+  - Signup page results
 
-    - Logout page results
+  ![image](assets/readme/lighthouse/lighthouse_signup.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_logout.webp)
+  - Logout page results
 
-    - Profile page results
+  ![image](assets/readme/lighthouse/lighthouse_logout.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_profile.webp)
+  - Profile page results
 
-    - Edit profile page results
+  ![image](assets/readme/lighthouse/lighthouse_profile.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_edit_profile.webp)
+  - Edit profile page results
 
-    - Delete profile page results
+  ![image](assets/readme/lighthouse/lighthouse_edit_profile.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_delete_profile.webp)
+  - Delete profile page results
 
-    - Forum page results
+  ![image](assets/readme/lighthouse/lighthouse_delete_profile.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_forum.webp)
+  - Forum page results
 
-    - Forum detail page results
+  ![image](assets/readme/lighthouse/lighthouse_forum.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_forum_detail.webp)
+  - Forum detail page results
 
-    - Add post page results
+  ![image](assets/readme/lighthouse/lighthouse_forum_detail.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_add_post.webp)
+  - Add post page results
 
-    - Edit post page results
+  ![image](assets/readme/lighthouse/lighthouse_add_post.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_edit_post.webp)
+  - Edit post page results
 
-    - Delete post page results
+  ![image](assets/readme/lighthouse/lighthouse_edit_post.webp)
 
-    ![image](assets/readme/lighthouse/lighhouse_delete_post.webp)
+  - Delete post page results
 
-    - Edit comment page results
+  ![image](assets/readme/lighthouse/lighhouse_delete_post.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_edit_comment.webp)
+  - Edit comment page results
 
-    - Delete comment page results
+  ![image](assets/readme/lighthouse/lighthouse_edit_comment.webp)
 
-    ![image](assets/readme/lighthouse/lighthouse_delete_comment.webp)
+  - Delete comment page results
+
+  ![image](assets/readme/lighthouse/lighthouse_delete_comment.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -686,9 +752,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - Hauwei p30 lite
   - Poco F5 pro
 
-- x
-
-- x
+- Tests were carried out by myself, friends and family, different devices from desktop PCs, laptops, tables to mobile phones.
+- Also in diffrent operating systems from macOS, IOS, Windows to Android.
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -802,7 +867,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   - #:
 
-    - [x](x)
+    - For the forum rules [Elm](https://discourse.elm-lang.org/faq)
     - [x](x)
 
   - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
@@ -813,6 +878,22 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - [Tech With Tim](https://www.youtube.com/playlist?list=PLzMcBGfZo4-kQkZp-j9PNyKq7Yw5VYjq9)
 
   - I have used the Readme structure from my third project as a template.
+
+- ### **Media**
+
+  - Websites Used
+    - [Pexels](https://www.pexels.com/)
+
+  - Photos and Authors where to find them:
+    - **Background photo** - Photo of a Blue Honda Civic Type R FK8 and author is Liviu Gorincioi [Blue Type R](https://www.pexels.com/photo/close-up-photo-of-a-blue-car-10339797/)
+    - Both default Profile and Post pictures I have used the ones from Code Institute [Default profile](https://codeinstitute.s3.amazonaws.com/ReactEssentials/DRF/Images/default_profile.jpg) and [Default post](https://codeinstitute.s3.amazonaws.com/ReactEssentials/DRF/Images/default_post.jpg) in the Advanced Front End specialization sample.
+
+  - The Favicon was created using - [Favicon Generator](https://favicon.io/favicon-generator/)
+  - Socials networks used in the footer:
+    - [Github](https://github.com/b1ndark)
+    - [Linkedin](https://www.linkedin.com/in/vitor-de-oliveira-50076b268/)
+    - [Twitter(X)](https://twitter.com/)
+    - [Instagram](https://www.instagram.com/)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
