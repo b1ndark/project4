@@ -51,7 +51,13 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Wave**](#wave)
     - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
-    - [x](#x-1)
+    - [Navbar](#navbar)
+    - [Navbar when logged in](#navbar-when-logged-in)
+    - [Footer](#footer)
+    - [Home page](#home-page)
+    - [Signup page](#signup-page)
+    - [Signin page](#signin-page)
+    - [Contact page](#contact-page)
   - [**Bugs**](#bugs)
   - [**Deployment**](#deployment)
     - [**My Deployment**](#my-deployment)
@@ -261,6 +267,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     ![image](assets/readme/features/contact_form_notification.webp)
 
   - You will also get an email confirming it with a copy of what you wrote in your form.
+
     ![image](assets/readme/features/confirmation_emailjs.webp)
 
 - #### Sign Up Page
@@ -759,14 +766,72 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### x
+### Navbar
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Title   | #                | #       | #      | pass         |
-| #       | #                | #       | #      | pass         |
-| #       | #                | #       | #      | pass         |
-| #       | #                | #       | #      | pass         |
+| Forum logo | When clicked to take back to home | Clicked on the logo | Takes me back to home page | pass |
+| Home button | When clicked to take back to home | Clicked on the home button | Takes me back to home page | pass |
+| Signup button | when clicked to take me to the signup page | Clicked on the signup button | Takes me to the signup page | pass |
+| Signin page | When clicked to take me to the signin page | Clicked on the signin button | Takes me to the signin page | pass |
+| Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
+
+### Navbar when logged in
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Forum logo | When clicked to take back to home | Clicked on the logo | Takes me back to home page | pass |
+| Username button | When clicked to take me to the profile page | Clicked on the username button | Takes me to the profile page | pass |
+| Home button | When clicked to take back to home | Clicked on the home button | Takes me back to home page | pass |
+| Forum page | When clicked to take me to the forum page | Clicked on the Forum button | Takes me to the forum page | pass |
+| Logout button | when clicked to take me to the logout page | Clicked on the logout button | Takes me to the logout page | pass |
+| Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
+
+### Footer
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Github within the footer | When clicked opens my github page in a new tab | Clicked on the github logo | Takes me to the github page in a new tab | pass |
+| Twitter within the footer | When clicked opens twitter page in a new tab | Clicked on the twitter(X) logo | Takes me to the twitter page in a new tab | pass |
+| Instagram within the footer | When clicked opens instagram page in a new tab | Clicked on the instagram logo | Takes me to the instagram page in a new tab | pass |
+| Linkedin within the footer | When clicked opens my linkedin page in a new tab | Clicked on the linkedin logo | Takes me to the linkedin page in a new tab | pass |
+
+### Home page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Within the rules section in the welcome message there is a signup clickable link | When clicked to take to signup page | Clicked on the signup link | Takes me back to the signup page | pass |
+| Within the rules section in the welcome message there is a signin clickable link | When clicked to take to signin page | Clicked on the signin link | Takes me back to the signin page | pass |
+| Within the contact section in the welcome message there is a contact clickable link | When clicked to take to signup page | Clicked on the signup link | Takes me back to the signup page | pass |
+
+### Signup page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Check whether the form has empty fields or not | When submitting an empty form it will ask to fill the fields | When clicked in the submit button | It will ask to fill the required field | pass |
+| Check whether the passwords match | If passwords don't match it will say "The two password fields didn't match", also a notification will be displayed on the top of the screen | Submited form with passwords not matching | A notification is displayed at the top of the screen and also says "The two password fields didn't match" in the form | pass |
+| Notification is displayed | When successfully submited the form a notification is displayed | Submited form | A notification is displayed after successfully submited form | pass |
+| Login after signing up | To login after form successfully submited | Submited form | User logged in | pass |
+| Redirect to home | When successfully submited the form, the user is redirected to home | Submited form | User redirected to home page | pass |
+
+### Signin page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Check whether the login form has empty fields or not | When submitting an empty form it will ask to fill the fields | Clicked in the submit button with empty form/fields | It will ask to fill the required field | pass |
+| Check whether the username is correct/exists | If username is incorrect a message is displayed in the form "The username and/or password you specified are not correct." | Submited form with username incorrect | A message is displayed within the form "The username and/or password you specified are not correct." | pass |
+| Check whether the password is correct | If password is incorrect a message is displayed in the form "The username and/or password you specified are not correct." | Submited form with passwords incorrect | A message is displayed within the form "The username and/or password you specified are not correct." | pass |
+| Notification is displayed | When successfully submit the login form a notification is displayed | Submited login form | A notification is displayed after successfully submited form | pass |
+| Redirect to home page | When successfully submited the login form, the user is redirected to home | Submited form | User redirected to home page | pass |
+
+### Contact page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Check whether the contact form has empty fields or not | When submitting an empty form it will ask to fill the fields | Clicked in the submit button with empty form/fields | It will ask to fill the required field | pass |
+| Notification is displayed | When successfully submit the form a notification is displayed | Submit contact form | A notification is displayed after the form is successfully submited | pass |
+| Contact page refresh | When successfully submit the form, the page refreshes after three seconds | Submited form | Contact page refreshes three seconds after form is submited | pass |
+| Auto reply email | When successfully submit the form, the user will get an auto reply email | Form submited | Auto reply email received to let user know that form was seccussefully submited | pass |
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
