@@ -58,6 +58,18 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [Signup page](#signup-page)
     - [Signin page](#signin-page)
     - [Contact page](#contact-page)
+    - [Logout page](#logout-page)
+    - [Profile page](#profile-page)
+    - [Edit profile page](#edit-profile-page)
+    - [Delete account page](#delete-account-page)
+    - [Forum page](#forum-page)
+    - [Add page](#add-page)
+    - [Forum detail(Post) page](#forum-detailpost-page)
+    - [Edit post page](#edit-post-page)
+    - [Delete post page](#delete-post-page)
+    - [Edit comment page](#edit-comment-page)
+    - [Delete comment page](#delete-comment-page)
+    - [Admin page](#admin-page)
   - [**Bugs**](#bugs)
   - [**Deployment**](#deployment)
     - [**My Deployment**](#my-deployment)
@@ -392,6 +404,16 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - Within the 500 Error page there will be a link to take them back to home page.
 
     ![image](assets/readme/features/403_error_page.webp)
+
+- #### Admin Page
+
+  - As an Admin, you will have access to the admin page where you will be able to manage the website
+    - you will be able to update and delete Users.
+    - You will be able to update Users profile.
+    - You will be able to add, update and delete posts.
+    - You will be able to update and delete comments.
+
+    ![image](assets/readme/features/admin_page.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -833,6 +855,148 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Contact page refresh | When successfully submit the form, the page refreshes after three seconds | Submited form | Contact page refreshes three seconds after form is submited | pass |
 | Auto reply email | When successfully submit the form, the user will get an auto reply email | Form submited | Auto reply email received to let user know that form was seccussefully submited | pass |
 
+### Logout page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Logout question | Question whether or not the user wants to log out | Press Logout in the navbar | Once logout age loads a question is displayed "Are you sure you want to log out?" | pass |
+| Logout once confirmed | When the user presses the button to confirm, the user is logged out | Press the logout button to confirm | The user is logged off | pass |
+| Confirm logout notification | When successfully loged out a notification is displayed | Press the logout button to confirm | A notification is displayed to confirm that the user is no longer logged in | pass |
+| Redirect to home | When successfully logged out, the user will be redirected to the home page | Press the logout button to confirm | The user is redirected to the home page | pass |
+
+### Profile page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display profile page | Profile page to display the user information and profile picture | Enter the profile page | Once the profile is displayed the profile picture is dispalyed and information if user has entered it | pass |
+| User profile socials | When the user clicks on one of the socials, the social link will open in a new tab | Press one of the social links | The social network is displayed in a new tab | pass |
+| Edit button | When clicked on edit button, a new page is displayed to edit profile | Press the edit button | A new page is dispalyed with a form to edit profile | pass |
+| Delete button | When clicked on, the user will be taken to delete account page | Press delete button | The user is taken to the delete page | pass |
+
+### Edit profile page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display edit profile page | When Edit profile page is openned should display a edit profile form | Clicked the Edit button | Once clicked the Edit profile form is displayed | pass |
+| Back button | When pressing back button, the user should be taken back to profile page | Clicked back button | Once clicked the profile page is displayed | pass |
+| User information fields | When the user fills the fields and clicks update, User info is updated in profile page | Fill the form fields and clicked update | ALl the info is updated in the profile page | pass |
+| Image | When user selects a photo and clicks update, the default profile photo is replaced with the new one | New photo selected and click update | The Selected photo is presented as profile photo | pass |
+| Notification | When User updates the profile, should show display a notification with "Your profile has been updated" | User updates the profile | A notification is displayed "Your profile has been updated" | pass |
+| Redirect to profile | When User updates the profile, should redirect to the profile | User updates the profile | User is redirected to the profile page | pass |
+| User authentication | When User tries edit a profile that isn't his, a 403 error page (forbiden) page is displayed | tried to edit the profile from other user | 403 error page is displayed (forbiden) | pass |
+
+### Delete account page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display question | When delete account page is openned should display a question "Are you sure that you want to delete your account?" | Clicked delete button | Once clicked the question is displayed | pass |
+| Back button | When pressing back button, the user should be taken back to profile page | Clicked back button | Once clicked the profile page is displayed | pass |
+| Delete button | When user clicks delete button it should delete the account | Clicked delete button | The account gets deleted | pass |
+| notification |  When user clicks delete button it should delete the account and display a notification | Clicked delete button | The account gets deleted and notification displayed | pass |
+| Redirect to home page | When user clicks delete button it should delete the account and redirect to home page | Clicked delete button | The account is deleted and redirected to home page | pass |
+| Account deleted | When User tries to loggin after deleting account should display "The username and/or password you specified are not correct." | Tried to loggin again after deleting account | Loggin not successfull and displays the message | pass |
+| Posts and comments delete | When deletes account both posts and comments from the same one are deleted | Delted account | Both posts and comments have been deleted | pass |
+| User authentication | When User tries to delete a profile that isn't his, a 403 error page (forbiden) page is displayed | tried to delete the profile from other user | 403 error page is displayed (forbiden) | pass |
+
+### Forum page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| List of posts | When in forum page it should display a list of posts | Enter the forum page | Once in the forum page a list of posts is displayed | pass |
+| Search bar | When User searches for a post title, That same post should be displayed | Search post title | The post is displayed | pass |
+| Search bar empty | When User clicks search with empty field, will get a notification | Search with empty field | A notification is displayed | pass |
+| add post | At the top of forum page there should be an add post button to take the user to an add post form | Clicked add post | Add post form is displayed | pass |
+| Clickable post title | When clicked on post title, should take the user to tyhe post detail page | clicked on a post title | Post detail page is displayed | pass |
+| Pagination(by 4) | When the post list is more than four posts  there will be a pagination system | add five posts | pagination buttons are displayed at the bottom of the page before footer | pass |
+| Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info(author, date, likes and comments) | pass |
+
+### Add page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| add post | Add post form | Clicked add post | Once clicked an add post form is displayed | pass |
+| Back button | When pressing back button, the user should be taken back to forum page | Clicked back button | Once clicked the forum page is displayed | pass |
+| Empty form | If user tries to add post with empty form, should ask to fill out the fields | Clicked add post | An message is displayed "please fill out this field" | pass |
+| Submit add post form | When user fills the form and clicks add post, should add the post | Fill the form and clicked add post | The added post detail page is displayed | pass |
+| Notification | When post is added it should, display a message "Post has been added" | Fill the form and clicked add post | Notification has been displayed | pass |
+| Redirect | User should be redirected to the Created post view | Fill the form and clicked add post | User redirected to the created post view | pass |
+
+### Forum detail(Post) page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Post view | When user selects a post, it should display the post view | Clicked on one of the posts | The Post view is displayed(Post detail/info) | pass |
+| Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info(author, date, likes and comments) | pass |
+| Like button | When User clicks the like button it should like the post | Clicked like button | I have liked the post | pass |
+| Unlike button | When User clicks the like button after been liked by the same one it should unlike the post | Clicked like button | I have unliked the post | pass |
+| Like/Unlike notification | When User likes or unlikes the post a notification should be displayed | Clicked like/unlike button | A notification is displayed "You have liked the post" or "You have unliked the post" | pass |
+| Comments | If post has comments, a list of comments is displayed underneath the post | Open post view | List of comments is displayed | pass |
+| Add comments | At the bottom of the page there should be a comments form to add comments | Open post view | Add comments form displayed at the bottom of the page | pass |
+| Comment notification | Once a commented is added, the user should get a notification displayed | Add comment | Notification is displayed "Your comment has been added to the Post" | pass |
+| Back button | When pressing back button, the user should be taken back to forum page | Clicked back button | Once clicked the forum page is displayed | pass |
+
+### Edit post page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display edit post page | When Edit post page is openned should display a edit post form | Clicked the Edit button | Once clicked the Edit post form is displayed | pass |
+| Gets current info | When Edit post page is openned should display the current info in the form | Clicked the Edit button | Once clicked the Edit post form is displayed with current info | pass |
+| Back button | When pressing back button, the user should be taken back to post page | Clicked back button | Once clicked the post page is displayed | pass |
+| update button | When the user updates the fields and clicks update, Post is updated | Update the form fields and clicked update | All the info is updated in the post page | pass |
+| Image | When user selects a new image, the default post photo is replaced with the new one | New photo selected and click update | The Selected photo is presented in the post | pass |
+| Notification | When User updates the post, should display a notification with "Your post has been updated" | User updates the post | A notification is displayed "Your post has been updated" | pass |
+| Redirect to the post detail | When User updates the post, should be redirected to the post | User updates the post | User is redirected to the post detail view page | pass |
+| User authentication | When User tries edit a post that isn't his, a 403 error page (forbiden) page should be displayed | tried to edit the post from other user | 403 error page is displayed (forbiden) | pass |
+| Delete button | When pressing delete button, the user should be taken to delete post page | Clicked delete button | Once clicked the delete post page is displayed | pass |
+
+### Delete post page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display question | When delete post page is openned should display a question "Are you sure that you want to delete this Post??" | Clicked delete button | Once clicked the question is displayed | pass |
+| Back button | When pressing back button, the user should be taken back to edit post page | Clicked back button | Once clicked the edit post page is displayed | pass |
+| Delete button | When user clicks delete button it should delete the post | Clicked delete button | The post is deleted | pass |
+| notification |  When user clicks delete button it should delete the post and display a notification | Clicked delete button | The post is deleted and notification displayed | pass |
+| Redirect to forum page | When user clicks delete button it should delete the post and redirect to forum page | Clicked delete button | The post is deleted and redirected to forum page | pass |
+| Comments deleted | When User deletes the post all comments within the post should be deleted | Delted post | Comments have been deleted with the post | pass |
+| User authentication | When User tries to delete a post that isn't his/hers, a 403 error page (forbiden) page is displayed | tried to delete the post from other user | 403 error page is displayed (forbiden) | pass |
+
+### Edit comment page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display edit comment page | When Edit comment page is openned should display a edit comment form | Clicked the Edit button | Once clicked the Edit comment form is displayed | pass |
+| Gets current comment | When Edit comment page is openned should display the current comment in the form | Clicked the Edit button | Once clicked the Edit comment form is displayed with current message | pass |
+| Back button | When pressing back button, the user should be taken back to post page | Clicked back button | Once clicked the post page is displayed | pass |
+| update button | When the user updates the fields and clicks update, comment is updated | Update the form fields and clicked update | The comment is updated in the post page | pass |
+| Notification | When User updates the comment, should display a notification with "Your comment has been updated" | User updates the comment | A notification is displayed "Your comment has been updated" | pass |
+| User authentication | When User tries edit a comment that isn't his, a 403 error page (forbiden) page should be displayed | tried to edit the comment from other user | 403 error page is displayed (forbiden) | pass |
+| Delete button | When pressing delete button, the user should be taken to delete comment page | Clicked delete button | Once clicked the delete comment page is displayed | pass |
+
+### Delete comment page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Display question | When delete comment page is openned should display a question "Are you sure that you want to delete your comment??" | Clicked delete comment button | Once clicked the question is displayed | pass |
+| Back button | When pressing back button, the user should be taken back to edit comment page | Clicked back button | Once clicked the edit comment page is displayed | pass |
+| Delete button | When user clicks delete button it should delete the comment | Clicked delete button | The comment is deleted | pass |
+| notification |  When user clicks delete button it should delete the comment and display a notification to confirm that the comment has been deleted | Clicked delete button | The comment is deleted and notification displayed | pass |
+| Redirect to forum page | When user clicks delete button it should delete the comment and redirect to forum page | Clicked delete button | The comment is deleted and redirected to forum page | pass |
+| User authentication | When User tries to delete a comment that isn't his/hers, a 403 error page (forbiden) page is displayed | tried to delete the comment from other user | 403 error page is displayed (forbiden) | pass |
+
+### Admin page
+
+| Feature | Expected Outcome | Testing | Result | Pass or Fail |
+| ------- | ---------------- | ------- | ------ | ------------ |
+| Delete user | As an Admin I should be able to delete any User | Select User and delete | User has been deleted and notification displayed | pass |
+| Update User password | As an Admin I should be able to update Users password | Select User and update his/hers password | Password is updated and a notification is displayed | pass |
+| Update User profile | As an Admin I should be able to update User profile | Select User and Update his/hers profile | Profile update and notification displayed | pass |
+| Create Posts | As an Admin I should be able to create posts | Selec add post and posted it | Post was created and notification was displayed | pass |
+| Edit Posts | As an Admin I should be able to update posts | Select the post and update it | Post was updated and notification was displayed | pass |
+| Delete Posts | As an Admin I should be able to delet posts | Select the post and delete it | Post was deleted and notification was displayed | pass |
+| Edit Comments | As an Admin I should be able to update comments | Select the comment and update it | Comment was updated and notification was displayed | pass |
+| Delete Comments | As an Admin I should be able to delet comments | Select the comment and delete it | Comment was deleted and notification was displayed | pass |
+
 [**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
@@ -858,6 +1022,11 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - When deployed to heroku I was having a bug with the background image as it wasn't showing in the website
   - After the conversation with tutor that helped me understand what was wrong I then uploaded the image to cloudinary and used the link instead of having it stored within static folder.
 
+- A lot of times that I would modify/update the models I would have errors while running the website
+  - I would have to go to ElephantSQL(PostgreSQL databases) look for typerforum app dashboard and reset its database.
+  - Then run migrations commands: "python3 manage.py makemigrations", then "python3 manage.py migrate"
+  - After create a new super user: "python3 manage.py createsuperuser"
+
 [**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
@@ -876,7 +1045,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 6. Go to branch, and select master branch.
 7. Once master branch is selected, wait a moment and it will provide a page link to the website.
 
-- The live link can be found here - [Type R Forum](x).
+- The live link can be found here - [Type R Forum](https://typerforum-fb5dd209c30e.herokuapp.com/).
 
 ### **Local Deployment**
 
@@ -884,14 +1053,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 1. Open Github.
 2. Log in or sign up.
-3. Look for my repository [Type R Forum](x).
+3. Look for my repository [Type R Forum](https://github.com/b1ndark/project4).
 4. Last on the right corner you will find the fork button(click on it).
 
 #### Clone the repository
 
 1. Open Github
 2. Log in or Sign up
-3. Look for my repository [Type R Forum](x)
+3. Look for my repository [Type R Forum](https://github.com/b1ndark/project4)
 4. Look for code button next to the Gitpod button at the top right(click on it).
 5. A window will pop up with options for you to select to clone it with such as HTTPS, SSH or GitHub CLI.
 6. Once selected copy the link that is shown.
@@ -911,7 +1080,11 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 5. Give your app a name and select the location
 6. Once created, the app dashboard will open.
 7. Select Settings tab
-8. Go down to Config Vars and add to Key "PORT" and to value "8000"
+8. Go down to Config Vars
+    - add to Key "PORT" and to value "8000"
+    - add to key "CLOUDINARY_URL" and to value "add your cloudinary url"
+    - add to key "DATABASE_URL" and to value "add your Postgres url"
+    - add to key "SECRET_KEY" and to value "add your secret key"
 9. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
 
     - Make sure they are in this order first "heroku/python" and then in second "heroku/nodejs"
@@ -930,10 +1103,17 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - ### **Content**
 
-  - #:
+  - Various resources were used to help through out the project:
 
+    - Code Institute Think before I blog tutorial was a good help through out the project, from setting up the project, building it to the deployment.
+    - [Font-anwsome libraries](https://cdnjs.com/libraries/font-awesome)
+    - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+    - [Django Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
+    - Basic setup and deployment [](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit#heading=h.5s9novsydyp1)
     - For the forum rules [Elm](https://discourse.elm-lang.org/faq)
-    - [x](x)
+    - To help out with active links [Stackoverfow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar)
+    - For generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/)
+    - For Edit generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/)
 
   - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
 
