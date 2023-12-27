@@ -39,7 +39,7 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Typography**](#typography)
       - [Fonts used](#fonts-used)
       - [Colours used](#colours-used)
-    - [x](#x)
+    - [Wireframes](#wireframes)
     - [**Features**](#features)
   - [**Programs and tools used**](#programs-and-tools-used)
   - [**Languages**](#languages)
@@ -216,9 +216,81 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### x
+### Wireframes
 
-![image](#)
+- Wireframes created for both mobiles and desktops
+  
+  - **Home page**
+
+    ![image](assets/readme/wireframes/home.webp)
+
+  - **Contact page**
+
+    ![image](assets/readme/wireframes/contact.webp)
+
+  - **Signup page**
+
+    ![image](assets/readme/wireframes/signup.webp)
+
+  - **Signin page**
+
+    ![image](assets/readme/wireframes/signin.webp)
+
+  - **Logout page**
+
+    ![image](assets/readme/wireframes/logout.webp)
+
+  - **Profile page**
+
+    ![image](assets/readme/wireframes/profile.webp)
+
+  - **Edit profile page**
+
+    ![image](assets/readme/wireframes/edit_profile.webp)
+
+  - **Delete account page**
+
+    ![image](assets/readme/wireframes/delete_account.webp)
+
+  - **Forum page**
+
+    ![image](assets/readme/wireframes/forum.webp)
+
+  - **Forum detail page**
+
+    ![image](assets/readme/wireframes/post_view.webp)
+
+  - **Add post page**
+
+    ![image](assets/readme/wireframes/add_post.webp)
+
+  - **Edit post page**
+
+    ![image](assets/readme/wireframes/edit_post.webp)
+
+  - **Delete post page**
+
+    ![image](assets/readme/wireframes/delete_post.webp)
+
+  - **Edit comment page**
+
+    ![image](assets/readme/wireframes/edit_comment.webp)
+
+  - **Delete comment page**
+
+    ![image](assets/readme/wireframes/delete_comment.webp)
+
+  - **403 Error page**
+
+    ![image](assets/readme/wireframes/403_error.webp)
+
+  - **404 Error page**
+
+    ![image](assets/readme/wireframes/404_error.webp)
+
+  - **500 Error page**
+
+    ![image](assets/readme/wireframes/500_error.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
