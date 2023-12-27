@@ -2,26 +2,23 @@
 
 `To open the links in this document in a new browser tab please press CTRL + Mouse Click`
 
-## Welcome to [TypeR Forum](https://typerforum-fb5dd209c30e.herokuapp.com/)
+Welcome to the forum where the users will be able to exchange experiences, ideas and solutions.
 
-Welcome to the forum where the users will be able to exchange experiences, ideias and solutions.
-
-The website is targeted for everyone, from every age group, what it counts and mathers is the TypeR spirit.
+The website is targeted for everyone, from every age group, what it counts and matters is the TypeR spirit.
 
 You can expect a website that is easy to navigate and a friendly community that is ready to help each other.
 
-The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered, experiences with a certain TypeR model, any thoughts and ideias.
+The main goal of the forum is to create a community where people will help and share their problems that they may have encountered, experiences with a certain TypeR model, any thoughts and ideas.
 
 ![image](assets/readme/amiresponsive.webp)
 
-[**My TypeR Forum website on Am I Responsive**](https://ui.dev/amiresponsive?url=https://typerforum-fb5dd209c30e.herokuapp.com/)
+[**Live website**](https://typerforum-fb5dd209c30e.herokuapp.com/)
 
 ---
 
 ## **Content**
 
 - [**TypeR Forum**](#typer-forum)
-  - [Welcome to TypeR Forum](#welcome-to-typer-forum)
   - [**Content**](#content)
   - [**User Experience**](#user-experience)
     - [**Visitors**](#visitors)
@@ -41,7 +38,7 @@ The main goal of the forum is to create a comunity where people will help and sh
       - [Colours used](#colours-used)
     - [Wireframes](#wireframes)
     - [**Features**](#features)
-  - [**Programs and tools used**](#programs-and-tools-used)
+  - [**Technologies, programs and tools used**](#technologies-programs-and-tools-used)
   - [**Languages**](#languages)
     - [**HTML**](#html)
     - [**CSS**](#css)
@@ -51,25 +48,6 @@ The main goal of the forum is to create a comunity where people will help and sh
     - [**Wave**](#wave)
     - [**Lighthouse**](#lighthouse)
   - [**Testing**](#testing)
-    - [Navbar](#navbar)
-    - [Navbar when logged in](#navbar-when-logged-in)
-    - [Footer](#footer)
-    - [Home page](#home-page)
-    - [Signup page](#signup-page)
-    - [Signin page](#signin-page)
-    - [Contact page](#contact-page)
-    - [Logout page](#logout-page)
-    - [Profile page](#profile-page)
-    - [Edit profile page](#edit-profile-page)
-    - [Delete account page](#delete-account-page)
-    - [Forum page](#forum-page)
-    - [Add page](#add-page)
-    - [Forum detail(Post) page](#forum-detailpost-page)
-    - [Edit post page](#edit-post-page)
-    - [Delete post page](#delete-post-page)
-    - [Edit comment page](#edit-comment-page)
-    - [Delete comment page](#delete-comment-page)
-    - [Admin page](#admin-page)
   - [**Bugs**](#bugs)
   - [**Deployment**](#deployment)
     - [**My Deployment**](#my-deployment)
@@ -86,16 +64,16 @@ The main goal of the forum is to create a comunity where people will help and sh
 
 ### **Visitors**
 
-- Users will experience a friendly comunity where users and moderators cooperate together to healp each other.
+- Users will experience a friendly community where users and moderators cooperate together to help each other.
 - Users will be provided with all the support that they might need.
 - The website forum content is carefully supervised to make sure that everyone is being respected.
 - The objective of the TypeR forum is to get the TypeR community together.
 
 ### **Goals**
 
-- The main goal of the forum is to create a comunity where people will help and share their problems that they may have encontered.
+- The main goal of the forum is to create a community where people will help and share their problems that they may have encountered.
 - To share experiences with a certain TypeR model that they might have had.
-- To try help each other with certain problems thta they have encountered by sharing any thoughts and ideias.
+- To try help each other with certain problems that they have encountered by sharing any thoughts and ideas.
 - x
 
 ### **The TypeR forum**
@@ -103,20 +81,20 @@ The main goal of the forum is to create a comunity where people will help and sh
 - The website is presented with a welcoming message in the Home page.
 - The navbar if you are not logged in will have the following options:
   - **Home** - If pressed takes you to Home page where you will have a welcoming message with a Typer in the background
-  - **Sign Up** - If pressed takes you to the Sign Up page where you will be able to register to access the Forum, once you have filled the form and submited a notification will be presented to let you know that you have signed up and logged in.
-  - **Sign In** - If pressed takes you to the Login page where you will be able to login so you can access the Forum and your profile, once you have filled the form and pressed signin a notification will be presented to let you know that you are logged in.
-  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit incase you need to contact the support
-- If you are logged in the navbar will hvve the following options:
-  - **Home** - If pressed takes you to Home page where you will have a welcoming message with a Typer in the background
+  - **Sign Up** - If pressed takes you to the Sign Up page where you will be able to register to access the Forum, once you have filled the form and submitted a notification will be presented to let you know that you have signed up and logged in.
+  - **Sign In** - If pressed takes you to the Login page where you will be able to login so you can access the Forum and your profile, once you have filled the form and pressed sign in a notification will be presented to let you know that you are logged in.
+  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit in case you need to contact the support
+- If you are logged in the navbar will have the following options:
   - **Hello,'username'** - If pressed takes you to your profile where you will be able to update it.
+  - **Home** - If pressed takes you to Home page where you will have a welcoming message with a Typer in the background
   - **Forum** - If pressed takes you to the Forum where you will be able to read other Users posts and share your experiences.
   - **Logout** - If pressed takes you to the logout page where you can confirm it, once logout a notification will be presented to let you know that you have logged out.
-  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit incase you need to contact the support
+  - **Contact** - If pressed takes you to the contact page where you will be presented with a form to fill and submit in case you need to contact the support
 - User profile lets you:
-  - Edit profile so its allways updated with the correct details.
+  - Edit profile so its always updated with the correct details.
 - Once in the Forum page you will be able to:
   - View the Users posts, this page is paginated, will show up to four posts per page
-  - Add a post so others can see your ideias
+  - Add a post so others can see your ideas
   - In the navbar you have a search bar where you will be able to look for a certain post
 - If User is the admin you will have extra features:
   - Admin page button in the navbar which will take you to the Admin page where you will be able to control the Website/Forum/Users
@@ -171,7 +149,7 @@ The main goal of the forum is to create a comunity where people will help and sh
 ### **Epic 6 - Admin and Deployment**
 
 - As a Admin I can login so that I can manage the forum
-- As a Admin I want to access the admin page so that I can Add/Edit/Modifty Posts, I can delete Users, I can delete comments
+- As a Admin I want to access the admin page so that I can Add/Edit/Modify Posts, I can delete Users, I can delete comments
 - As a developer I can deploy the website to heroku so that Users can start using it
 
 ### **Epic 7 - Documentation**
@@ -300,18 +278,18 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Nav Bar
 
-  - Once in the website the User will be presnted with a navbar at the top of the page which is fixed so it follows the User so the same one doesn't have to scroll up to find it.
+  - Once in the website the User will be presented with a navbar at the top of the page which is fixed so it follows the User so the same one doesn't have to scroll up to find it.
   - Within the navbar the User will find the following buttons/links
 
     - The forum logo on the left if pressed takes you back to the home page
     - Home button which when pressed will take you to the home page
-    - Contact button that will take you to the contact page so you can get in touch with the support for any kind of mather
+    - Contact button that will take you to the contact page so you can get in touch with the support for any kind of matter
     - If not Logged In it will display the following
       - Sign Up button that will take you to the Signup page where the User will be able to register to access the Forum by filling the form.
       - Sign In button to take the User to the Login page to enable access to the Forum
     - If Logged In the navbar will have the following displayed
-      - Forum button which when pressed will take you to the Forum where you will be able to explore, add and commments posts
-      - Log Out button that will take you to the Log Out page so the USer can confirm
+      - Forum button which when pressed will take you to the Forum where you will be able to explore, add and comments posts
+      - Log Out button that will take you to the Log Out page so the User can confirm
     - If Admin is Logged In you will have an extra button
       - Admin button to take you to the admin page where you can manage the website
 
@@ -322,8 +300,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     ![image](assets/readme/features/navbar.webp)
 
     - **Small Screens navbar**
-    - When using devides with small screens the navbar adapts, by putting all the navbar menus into to the dropdown button.
-    - Also in the small screens when in the forum the search bar moves out of the navbar to improve the user experience, as it wouldn'y be practicle to clean the dropdown menu just to access the search bar.
+    - When using devices with small screens the navbar adapts, by putting all the navbar menus into to the dropdown button.
+    - Also in the small screens when in the forum the search bar moves out of the navbar to improve the user experience, as it wouldn't be practical to click the dropdown menu just to access the search bar.
 
     ![image](assets/readme/features/navbar_sm_screens.webp)
 
@@ -337,15 +315,15 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - #### Home Page
 
   - The User is presented with a welcoming message and a few basic rules.
-  - Within the context there is also direct links to signup, sigin and contact pages.
+  - Within the context there is also direct links to signup, sign in and contact pages.
   - It is presented with a blue Honda civic Type R in the background.
 
     ![image](assets/readme/features/home_page.webp)
 
 - #### Contact Page
 
-  - The User will be presented with a form to fill incase in need of conatcting the support for any reason/mather.
-  - If Submited the User will get a notification.
+  - The User will be presented with a form to fill in case in need of contacting the support for any reason/matter.
+  - If Submitted the User will get a notification.
 
     ![image](assets/readme/features/contact_page.webp)
     ![image](assets/readme/features/contact_form_notification.webp)
@@ -356,8 +334,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Sign Up Page
 
-  - The User will have a Signup form whithin the Signup page to fill incase the same one wantes to become part of the TypeR community.
-  - If Submited the User will get a notification and automaticaly logged in.
+  - The User will have a Signup form within the Signup page to fill in case the same one wants to become part of the TypeR community.
+  - If Submitted the User will get a notification and automatically logged in.
 
     ![image](assets/readme/features/signup_page.webp)
 
@@ -365,7 +343,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   - The User will have a Login form to fill if already has a login and wants to access the Forum and be part of the community.
   - If the user logs in, it will be redirected to the Home page and a notification will display.
-  - If the User does not have a loggin there is a link to press that will take gim to the Sign Up page.
+  - If the User does not have a login there is a link to press that will take him/her to the Sign Up page.
 
     ![image](assets/readme/features/signin_page.webp)
 
@@ -378,9 +356,9 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Profile Page
 
-  - If the user click on its name within the navbar, it will that them to their profile.
-  - Profile page will be presented with a default picture, and with with some info and socials if user has enter them.
-  - Also it has two buttons, edit and delete.
+  - If the user clicks on its name within the navbar, it will that them to their profile.
+  - Profile page will be presented with a default picture, and with some info and socials if user has entered them.
+  - Also, it has two buttons, edit and delete.
   - Edit - The user will be able to update the profile.
   - Delete - The user will be able to delete the account.
 
@@ -388,8 +366,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Edit profile Page
 
-  - Within the edit profile page the User will be presented with a form to update the profile if desired.
-  - If User does update the profile it will be redirected to the profile page and a notification will be displayed.
+  - Within the edit profile page, the User will be presented with a form to update the profile if desired.
+  - If User does update the profile, it will be redirected to the profile page and a notification will be displayed.
 
     ![image](assets/readme/features/edit_profile_page.webp)
     ![image](assets/readme/features/update_profile_notification.webp)
@@ -397,7 +375,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - #### Delete profile Page
 
   - Within the delete profile page the User will be presented with a question whether is sure to delete the account.
-  - If User does delete the account it will be redirected to the home page and a notification will be displayed to confirm it.
+  - If User does delete the account, it will be redirected to the home page and a notification will be displayed to confirm it.
 
     ![image](assets/readme/features/delete_profile_page.webp)
     ![image](assets/readme/features/delete_profile_notification.webp)
@@ -405,7 +383,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - #### Forum Page
 
   - The accessed the User will have a list of Posts displayed.
-  - If there is more than four posts the page will be paginated where the User will be able to go next/previous page.
+  - If there are more than four posts the page will be paginated where the User will be able to go next/previous page.
   - Within the Forum page a Search bar is displayed in the navbar so the User can look for the pretended post.
   - At the top there is a Add Post button that will take you to the Add Post page so you can add posts and contribute to the community.
   - When a post within the Post list is selected it will take you to the Post detail page.
@@ -415,14 +393,24 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - #### Post Detail Page
 
   - A post is displayed and the User can comment.
-  - If the User is the Post auhtor an Edit button is displayed which when pressed takes you to the Edit Post page.
+  - If the User is the Post author an Edit button is displayed which when pressed takes you to the Edit Post page.
 
     ![image](assets/readme/features/forum_detail_page.webp)
+
+- #### Add post page
+
+  - Add post page displays a form that the User can fill in order to add a post.
+  - Posts are used to share experiences, knowledge and help or be helped with some issue.
+  - If the User does want to add on picture, it can do it so.
+  - If submitted a notification will be displayed confirming it.
+
+    ![image](assets/readme/features/add_post_page.webpp)
+    ![image](assets/readme/features/add_post_notification.webp)
 
 - #### Edit Post Page
 
   - If User pressed Edit then the Edit page is displayed so the Post can be either edited or deleted.
-  - If the Post is edited and submited a notification will be pressented to the User.
+  - If the Post is edited and submitted a notification will be presented to the User.
 
     ![image](assets/readme/features/edit_post_page.webp)
 
@@ -435,17 +423,17 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Add Comment
 
-  - A comment is displyed at the bottom of the Post detail page.
+  - A comment is displayed at the bottom of the Post detail page.
   - If the User does want to comment the post just has to write the message and enter.
-  - If submited a notification will be displayed confirming it.
+  - If submitted a notification will be displayed confirming it.
 
     ![image](assets/readme/features/add_comment.webp)
     ![image](assets/readme/features/add_comment_notification.webp)
 
 - #### Edit Comment Page
 
-  - If User pressed Edit then the Edit comment page is displayed so the Comment can be either edited or deleted.
-  - If the Comment is edited and submited a notification will be pressented to the User.
+  - If User pressed Edit then the Edit, comment page is displayed so the Comment can be either edited or deleted.
+  - If the Comment is edited and submitted a notification will be presented to the User.
 
     ![image](assets/readme/features/edit_comment_page.webp)
 
@@ -458,7 +446,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### 403 Error Page
 
-  - If the user tries to access something that doesn't belong to him, like for example try to edit somebody elses profile a 403 Error(Forbidden) page will be displayed, so that the user knows that he/she shouldn't be there.
+  - If the user tries to access something that doesn't belong to him, like for example try to edit somebody else's profile a 403 Error(Forbidden) page will be displayed, so that the user knows that he/she shouldn't be there.
   - Within the 403 Error page there will be a link to take them back to home page.
 
     ![image](assets/readme/features/403_error_page.webp)
@@ -472,7 +460,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### 500 Error Page
 
-  - If the user tries to access something that doesn't exist or never existed, like for example try to view somebodys profile that no longer exists a 500 Error(Server Error) page will be displayed, so that the user knows that there is something wrong with the server.
+  - If the user tries to access something that doesn't exist or never existed, like for example try to view somebody's profile that no longer exists a 500 Error(Server Error) page will be displayed, so that the user knows that there is something wrong with the server.
   - Within the 500 Error page there will be a link to take them back to home page.
 
     ![image](assets/readme/features/403_error_page.webp)
@@ -491,8 +479,13 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-## **Programs and tools used**
+## **Technologies, programs and tools used**
 
+- [HTML](https://en.wikipedia.org/wiki/HTML) - Used to create the templates for the website.
+- [CSS](https://en.wikipedia.org/wiki/CSS) - Used to customize the website style.
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the timeout and emailJS functionality.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Used in Django as it is Python-based web framework.
+- [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) - Used the django framework to develop the forum.
 - [Codeanywhere](https://app.codeanywhere.com/) - Used to create the project.
 - [Github](https://github.com/) - Where the website is stored.
 - [Spell Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - Used to check spelling.
@@ -508,6 +501,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - [Heroku](https://dashboard.heroku.com/apps) - Used to deploy the TypeR forum website.
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Used to create project template.
 - [ElephantSQL](https://www.elephantsql.com/) - Database used to store the data.
+- [Cloudinary](https://cloudinary.com/) - Used to store image.
 - [Font Awesome](https://fontawesome.com/) - Used to display icons.
 - [Favicon](https://favicon.io/) - Used to create the website favicon.
 - [Am I Responsive?](https://ui.dev/amiresponsive) - Used to display the website on different devices.
@@ -646,7 +640,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - **Python code passes with no errors when checked on CI Python Linter(profiles)**
 
-  - profile_views - PASS
+  - profile_views.py - PASS
 
   ![image](assets/readme/validator/python/profile_views.py.webp)
 
@@ -698,8 +692,8 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - I have focused on making sure that the website forum is accessible:
 
-  - Staring with the navbar, made sure to keep it clean, that adaptes to mobiles and tables.
-  - Maintained the same layout and style through every page withon the website.
+  - Staring with the navbar, made sure to keep it clean, that adapts to mobiles and tables.
+  - Maintained the same layout and style through every page within the website.
   - Made sure of semantic HTML.
   - Kept a clean colour contrast in every page.
   - The website forum is simple and easy to navigate.
@@ -854,13 +848,13 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - Poco F5 pro
 
 - Tests were carried out by myself, friends and family, different devices from desktop PCs, laptops, tables to mobile phones.
-- Also in diffrent operating systems from macOS, IOS, Windows to Android.
+- Also in different operating systems from macOS, IOS, Windows to Android.
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
 ---
 
-### Navbar
+- ### Navbar
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -870,7 +864,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Signin page | When clicked to take me to the signin page | Clicked on the signin button | Takes me to the signin page | pass |
 | Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
 
-### Navbar when logged in
+- ### Navbar when logged in
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -881,7 +875,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Logout button | when clicked to take me to the logout page | Clicked on the logout button | Takes me to the logout page | pass |
 | Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
 
-### Footer
+- ### Footer
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -890,7 +884,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Instagram within the footer | When clicked opens instagram page in a new tab | Clicked on the instagram logo | Takes me to the instagram page in a new tab | pass |
 | Linkedin within the footer | When clicked opens my linkedin page in a new tab | Clicked on the linkedin logo | Takes me to the linkedin page in a new tab | pass |
 
-### Home page
+- ### Home page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -898,79 +892,79 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Within the rules section in the welcome message there is a signin clickable link | When clicked to take to signin page | Clicked on the signin link | Takes me back to the signin page | pass |
 | Within the contact section in the welcome message there is a contact clickable link | When clicked to take to signup page | Clicked on the signup link | Takes me back to the signup page | pass |
 
-### Signup page
+- ### Signup page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
 | Check whether the form has empty fields or not | When submitting an empty form it will ask to fill the fields | When clicked in the submit button | It will ask to fill the required field | pass |
 | Check whether the passwords match | If passwords don't match it will say "The two password fields didn't match", also a notification will be displayed on the top of the screen | Submited form with passwords not matching | A notification is displayed at the top of the screen and also says "The two password fields didn't match" in the form | pass |
-| Notification is displayed | When successfully submited the form a notification is displayed | Submited form | A notification is displayed after successfully submited form | pass |
-| Login after signing up | To login after form successfully submited | Submited form | User logged in | pass |
-| Redirect to home | When successfully submited the form, the user is redirected to home | Submited form | User redirected to home page | pass |
+| Notification is displayed | When successfully submitted the form a notification is displayed | Submitted form | A notification is displayed after successfully submitted form | pass |
+| Login after signing up | To login after form successfully submitted | Submitted form | User logged in | pass |
+| Redirect to home | When successfully submitted the form, the user is redirected to home | Submited form | User redirected to home page | pass |
 
-### Signin page
+- ### Signin page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
 | Check whether the login form has empty fields or not | When submitting an empty form it will ask to fill the fields | Clicked in the submit button with empty form/fields | It will ask to fill the required field | pass |
 | Check whether the username is correct/exists | If username is incorrect a message is displayed in the form "The username and/or password you specified are not correct." | Submited form with username incorrect | A message is displayed within the form "The username and/or password you specified are not correct." | pass |
 | Check whether the password is correct | If password is incorrect a message is displayed in the form "The username and/or password you specified are not correct." | Submited form with passwords incorrect | A message is displayed within the form "The username and/or password you specified are not correct." | pass |
-| Notification is displayed | When successfully submit the login form a notification is displayed | Submited login form | A notification is displayed after successfully submited form | pass |
-| Redirect to home page | When successfully submited the login form, the user is redirected to home | Submited form | User redirected to home page | pass |
+| Notification is displayed | When successfully submit the login form a notification is displayed | Submited login form | A notification is displayed after successfully submitted form | pass |
+| Redirect to home page | When successfully submitted the login form, the user is redirected to home | Submited form | User redirected to home page | pass |
 
-### Contact page
+- ### Contact page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
 | Check whether the contact form has empty fields or not | When submitting an empty form it will ask to fill the fields | Clicked in the submit button with empty form/fields | It will ask to fill the required field | pass |
-| Notification is displayed | When successfully submit the form a notification is displayed | Submit contact form | A notification is displayed after the form is successfully submited | pass |
-| Contact page refresh | When successfully submit the form, the page refreshes after three seconds | Submited form | Contact page refreshes three seconds after form is submited | pass |
-| Auto reply email | When successfully submit the form, the user will get an auto reply email | Form submited | Auto reply email received to let user know that form was seccussefully submited | pass |
+| Notification is displayed | When successfully submit the form a notification is displayed | Submit contact form | A notification is displayed after the form is successfully submitted | pass |
+| Contact page refresh | When successfully submit the form, the page refreshes after three seconds | Submitted form | Contact page refreshes three seconds after form is submitted | pass |
+| Auto reply email | When successfully submit the form, the user will get an auto reply email | Form submitted | Auto reply email received to let user know that form was seccussefully submitted | pass |
 
-### Logout page
+- ### Logout page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
 | Logout question | Question whether or not the user wants to log out | Press Logout in the navbar | Once logout age loads a question is displayed "Are you sure you want to log out?" | pass |
 | Logout once confirmed | When the user presses the button to confirm, the user is logged out | Press the logout button to confirm | The user is logged off | pass |
-| Confirm logout notification | When successfully loged out a notification is displayed | Press the logout button to confirm | A notification is displayed to confirm that the user is no longer logged in | pass |
+| Confirm logout notification | When successfully logged out a notification is displayed | Press the logout button to confirm | A notification is displayed to confirm that the user is no longer logged in | pass |
 | Redirect to home | When successfully logged out, the user will be redirected to the home page | Press the logout button to confirm | The user is redirected to the home page | pass |
 
-### Profile page
+- ### Profile page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display profile page | Profile page to display the user information and profile picture | Enter the profile page | Once the profile is displayed the profile picture is dispalyed and information if user has entered it | pass |
+| Display profile page | Profile page to display the user information and profile picture | Enter the profile page | Once the profile is displayed the profile picture is displayed and information if user has entered it | pass |
 | User profile socials | When the user clicks on one of the socials, the social link will open in a new tab | Press one of the social links | The social network is displayed in a new tab | pass |
-| Edit button | When clicked on edit button, a new page is displayed to edit profile | Press the edit button | A new page is dispalyed with a form to edit profile | pass |
+| Edit button | When clicked on edit button, a new page is displayed to edit profile | Press the edit button | A new page is displayed with a form to edit profile | pass |
 | Delete button | When clicked on, the user will be taken to delete account page | Press delete button | The user is taken to the delete page | pass |
 
-### Edit profile page
+- ### Edit profile page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display edit profile page | When Edit profile page is openned should display a edit profile form | Clicked the Edit button | Once clicked the Edit profile form is displayed | pass |
+| Display edit profile page | When Edit profile page is opened should display a edit profile form | Clicked the Edit button | Once clicked the Edit profile form is displayed | pass |
 | Back button | When pressing back button, the user should be taken back to profile page | Clicked back button | Once clicked the profile page is displayed | pass |
-| User information fields | When the user fills the fields and clicks update, User info is updated in profile page | Fill the form fields and clicked update | ALl the info is updated in the profile page | pass |
+| User information fields | When the user fills the fields and clicks update, User info is updated in profile page | Fill the form fields and clicked update | All the info is updated in the profile page | pass |
 | Image | When user selects a photo and clicks update, the default profile photo is replaced with the new one | New photo selected and click update | The Selected photo is presented as profile photo | pass |
 | Notification | When User updates the profile, should show display a notification with "Your profile has been updated" | User updates the profile | A notification is displayed "Your profile has been updated" | pass |
 | Redirect to profile | When User updates the profile, should redirect to the profile | User updates the profile | User is redirected to the profile page | pass |
-| User authentication | When User tries edit a profile that isn't his, a 403 error page (forbiden) page is displayed | tried to edit the profile from other user | 403 error page is displayed (forbiden) | pass |
+| User authentication | When User tries edit a profile that isn't his, a 403 error page (forbidden) page is displayed | tried to edit the profile from other user | 403-error page is displayed (forbidden) | pass |
 
-### Delete account page
+- ### Delete account page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display question | When delete account page is openned should display a question "Are you sure that you want to delete your account?" | Clicked delete button | Once clicked the question is displayed | pass |
+| Display question | When delete account page is opened should display a question "Are you sure that you want to delete your account?" | Clicked delete button | Once clicked the question is displayed | pass |
 | Back button | When pressing back button, the user should be taken back to profile page | Clicked back button | Once clicked the profile page is displayed | pass |
 | Delete button | When user clicks delete button it should delete the account | Clicked delete button | The account gets deleted | pass |
-| notification |  When user clicks delete button it should delete the account and display a notification | Clicked delete button | The account gets deleted and notification displayed | pass |
+| notification | When user clicks delete button it should delete the account and display a notification | Clicked delete button | The account gets deleted and notification displayed | pass |
 | Redirect to home page | When user clicks delete button it should delete the account and redirect to home page | Clicked delete button | The account is deleted and redirected to home page | pass |
 | Account deleted | When User tries to loggin after deleting account should display "The username and/or password you specified are not correct." | Tried to loggin again after deleting account | Loggin not successfull and displays the message | pass |
-| Posts and comments delete | When deletes account both posts and comments from the same one are deleted | Delted account | Both posts and comments have been deleted | pass |
-| User authentication | When User tries to delete a profile that isn't his, a 403 error page (forbiden) page is displayed | tried to delete the profile from other user | 403 error page is displayed (forbiden) | pass |
+| Posts and comments delete | When deletes account both posts and comments from the same one is deleted | Deleted account | Both posts and comments have been deleted | pass |
+| User authentication | When User tries to delete a profile that isn't his, a 403 error page (forbidden) page is displayed | tried to delete the profile from other user | 403 error page is displayed (forbidden) | pass |
 
-### Forum page
+- ### Forum page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -978,11 +972,11 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Search bar | When User searches for a post title, That same post should be displayed | Search post title | The post is displayed | pass |
 | Search bar empty | When User clicks search with empty field, will get a notification | Search with empty field | A notification is displayed | pass |
 | add post | At the top of forum page there should be an add post button to take the user to an add post form | Clicked add post | Add post form is displayed | pass |
-| Clickable post title | When clicked on post title, should take the user to tyhe post detail page | clicked on a post title | Post detail page is displayed | pass |
-| Pagination(by 4) | When the post list is more than four posts  there will be a pagination system | add five posts | pagination buttons are displayed at the bottom of the page before footer | pass |
-| Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info(author, date, likes and comments) | pass |
+| Clickable post title | When clicked on post title, should take the user to the post detail page | clicked on a post title | Post detail page is displayed | pass |
+| Pagination (by 4) | When the post list is more than four posts there will be a pagination system | add five posts | pagination buttons are displayed at the bottom of the page before footer | pass |
+| Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info (author, date, likes and comments) | pass |
 
-### Add page
+- ### Add post page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -993,7 +987,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Notification | When post is added it should, display a message "Post has been added" | Fill the form and clicked add post | Notification has been displayed | pass |
 | Redirect | User should be redirected to the Created post view | Fill the form and clicked add post | User redirected to the created post view | pass |
 
-### Forum detail(Post) page
+- ### Forum detail(Post) page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1001,73 +995,73 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info(author, date, likes and comments) | pass |
 | Like button | When User clicks the like button it should like the post | Clicked like button | I have liked the post | pass |
 | Unlike button | When User clicks the like button after been liked by the same one it should unlike the post | Clicked like button | I have unliked the post | pass |
-| Like/Unlike notification | When User likes or unlikes the post a notification should be displayed | Clicked like/unlike button | A notification is displayed "You have liked the post" or "You have unliked the post" | pass |
+| Like/Unlike notification | When User likes or unlike the post a notification should be displayed | Clicked like/unlike button | A notification is displayed "You have liked the post" or "You have unliked the post" | pass |
 | Comments | If post has comments, a list of comments is displayed underneath the post | Open post view | List of comments is displayed | pass |
 | Add comments | At the bottom of the page there should be a comments form to add comments | Open post view | Add comments form displayed at the bottom of the page | pass |
 | Comment notification | Once a commented is added, the user should get a notification displayed | Add comment | Notification is displayed "Your comment has been added to the Post" | pass |
 | Back button | When pressing back button, the user should be taken back to forum page | Clicked back button | Once clicked the forum page is displayed | pass |
 
-### Edit post page
+- ### Edit post page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display edit post page | When Edit post page is openned should display a edit post form | Clicked the Edit button | Once clicked the Edit post form is displayed | pass |
-| Gets current info | When Edit post page is openned should display the current info in the form | Clicked the Edit button | Once clicked the Edit post form is displayed with current info | pass |
+| Display edit post page | When Edit post page is opened should display a edit post form | Clicked the Edit button | Once clicked the Edit post form is displayed | pass |
+| Gets current info | When Edit post page is opened should display the current info in the form | Clicked the Edit button | Once clicked the Edit post form is displayed with current info | pass |
 | Back button | When pressing back button, the user should be taken back to post page | Clicked back button | Once clicked the post page is displayed | pass |
 | update button | When the user updates the fields and clicks update, Post is updated | Update the form fields and clicked update | All the info is updated in the post page | pass |
 | Image | When user selects a new image, the default post photo is replaced with the new one | New photo selected and click update | The Selected photo is presented in the post | pass |
 | Notification | When User updates the post, should display a notification with "Your post has been updated" | User updates the post | A notification is displayed "Your post has been updated" | pass |
 | Redirect to the post detail | When User updates the post, should be redirected to the post | User updates the post | User is redirected to the post detail view page | pass |
-| User authentication | When User tries edit a post that isn't his, a 403 error page (forbiden) page should be displayed | tried to edit the post from other user | 403 error page is displayed (forbiden) | pass |
+| User authentication | When User tries edit a post that isn't his, a 403 error page (forbidden) page should be displayed | tried to edit the post from other user | 403-error page is displayed (forbidden) | pass |
 | Delete button | When pressing delete button, the user should be taken to delete post page | Clicked delete button | Once clicked the delete post page is displayed | pass |
 
-### Delete post page
+- ### Delete post page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display question | When delete post page is openned should display a question "Are you sure that you want to delete this Post??" | Clicked delete button | Once clicked the question is displayed | pass |
+| Display question | When delete post page is opened should display a question "Are you sure that you want to delete this Post??" | Clicked delete button | Once clicked the question is displayed | pass |
 | Back button | When pressing back button, the user should be taken back to edit post page | Clicked back button | Once clicked the edit post page is displayed | pass |
 | Delete button | When user clicks delete button it should delete the post | Clicked delete button | The post is deleted | pass |
-| notification |  When user clicks delete button it should delete the post and display a notification | Clicked delete button | The post is deleted and notification displayed | pass |
+| notification | When user clicks delete button it should delete the post and display a notification | Clicked delete button | The post is deleted and notification displayed | pass |
 | Redirect to forum page | When user clicks delete button it should delete the post and redirect to forum page | Clicked delete button | The post is deleted and redirected to forum page | pass |
-| Comments deleted | When User deletes the post all comments within the post should be deleted | Delted post | Comments have been deleted with the post | pass |
-| User authentication | When User tries to delete a post that isn't his/hers, a 403 error page (forbiden) page is displayed | tried to delete the post from other user | 403 error page is displayed (forbiden) | pass |
+| Comments deleted | When User deletes the post all comments within the post should be deleted | Deleted post | Comments have been deleted with the post | pass |
+| User authentication | When User tries to delete a post that isn't his/hers, a 403 error page (forbidden) page is displayed | tried to delete the post from other user | 403 error page is displayed (forbidden) | pass |
 
-### Edit comment page
+- ### Edit comment page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display edit comment page | When Edit comment page is openned should display a edit comment form | Clicked the Edit button | Once clicked the Edit comment form is displayed | pass |
-| Gets current comment | When Edit comment page is openned should display the current comment in the form | Clicked the Edit button | Once clicked the Edit comment form is displayed with current message | pass |
+| Display edit comment page | When Edits comment page is opened should display a edit comment form | Clicked the Edit button | Once clicked the Edit comment form is displayed | pass |
+| Gets current comment | When Edit comment page is opened should display the current comment in the form | Clicked the Edit button | Once clicked the Edit comment form is displayed with current message | pass |
 | Back button | When pressing back button, the user should be taken back to post page | Clicked back button | Once clicked the post page is displayed | pass |
 | update button | When the user updates the fields and clicks update, comment is updated | Update the form fields and clicked update | The comment is updated in the post page | pass |
 | Notification | When User updates the comment, should display a notification with "Your comment has been updated" | User updates the comment | A notification is displayed "Your comment has been updated" | pass |
-| User authentication | When User tries edit a comment that isn't his, a 403 error page (forbiden) page should be displayed | tried to edit the comment from other user | 403 error page is displayed (forbiden) | pass |
+| User authentication | When User tries edit a comment that isn't his, a 403 error page (forbidden) page should be displayed | tried to edit the comment from other user | 403 error page is displayed (forbidden) | pass |
 | Delete button | When pressing delete button, the user should be taken to delete comment page | Clicked delete button | Once clicked the delete comment page is displayed | pass |
 
-### Delete comment page
+- ### Delete comment page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
-| Display question | When delete comment page is openned should display a question "Are you sure that you want to delete your comment??" | Clicked delete comment button | Once clicked the question is displayed | pass |
+| Display question | When delete comment page is opened should display a question "Are you sure that you want to delete your comment??" | Clicked delete comment button | Once clicked the question is displayed | pass |
 | Back button | When pressing back button, the user should be taken back to edit comment page | Clicked back button | Once clicked the edit comment page is displayed | pass |
 | Delete button | When user clicks delete button it should delete the comment | Clicked delete button | The comment is deleted | pass |
-| notification |  When user clicks delete button it should delete the comment and display a notification to confirm that the comment has been deleted | Clicked delete button | The comment is deleted and notification displayed | pass |
+| notification | When user clicks delete button it should delete the comment and display a notification to confirm that the comment has been deleted | Clicked delete button | The comment is deleted and notification displayed | pass |
 | Redirect to forum page | When user clicks delete button it should delete the comment and redirect to forum page | Clicked delete button | The comment is deleted and redirected to forum page | pass |
-| User authentication | When User tries to delete a comment that isn't his/hers, a 403 error page (forbiden) page is displayed | tried to delete the comment from other user | 403 error page is displayed (forbiden) | pass |
+| User authentication | When User tries to delete a comment that isn't his/her, a 403 error page (forbidden) page is displayed | tried to delete the comment from other user | 403 error page is displayed (forbidden) | pass |
 
-### Admin page
+- ### Admin page
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
 | Delete user | As an Admin I should be able to delete any User | Select User and delete | User has been deleted and notification displayed | pass |
 | Update User password | As an Admin I should be able to update Users password | Select User and update his/hers password | Password is updated and a notification is displayed | pass |
 | Update User profile | As an Admin I should be able to update User profile | Select User and Update his/hers profile | Profile update and notification displayed | pass |
-| Create Posts | As an Admin I should be able to create posts | Selec add post and posted it | Post was created and notification was displayed | pass |
+| Create Posts | As an Admin I should be able to create posts | Select add post and posted it | Post was created and notification was displayed | pass |
 | Edit Posts | As an Admin I should be able to update posts | Select the post and update it | Post was updated and notification was displayed | pass |
-| Delete Posts | As an Admin I should be able to delet posts | Select the post and delete it | Post was deleted and notification was displayed | pass |
+| Delete Posts | As an Admin I should be able to delete posts | Select the post and delete it | Post was deleted and notification was displayed | pass |
 | Edit Comments | As an Admin I should be able to update comments | Select the comment and update it | Comment was updated and notification was displayed | pass |
-| Delete Comments | As an Admin I should be able to delet comments | Select the comment and delete it | Comment was deleted and notification was displayed | pass |
+| Delete Comments | As an Admin I should be able to delete comments | Select the comment and delete it | Comment was deleted and notification was displayed | pass |
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -1092,12 +1086,17 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     ```
 
 - When deployed to heroku I was having a bug with the background image as it wasn't showing in the website
-  - After the conversation with tutor that helped me understand what was wrong I then uploaded the image to cloudinary and used the link instead of having it stored within static folder.
+  - After the conversation with tutor that helped me understand what was wrong, I then uploaded the image to cloudinary and used the link instead of having it stored within static folder.
 
 - A lot of times that I would modify/update the models I would have errors while running the website
-  - I would have to go to ElephantSQL(PostgreSQL databases) look for typerforum app dashboard and reset its database.
+  - I would have to go to ElephantSQL(PostgreSQL databases) look for typerforum app dashboard and reset the database.
   - Then run migrations commands: "python3 manage.py makemigrations", then "python3 manage.py migrate"
   - After create a new super user: "python3 manage.py createsuperuser"
+
+- Custom 500 Error page not displaying.
+  - After formating html it messed with the block content tag, had to refactor the html file.
+
+    ![image](assets/readme/refactor.webp)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -1180,12 +1179,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - Code Institute Think before I blog tutorial was a good help through out the project, from setting up the project, building it to the deployment.
     - [Font-anwsome libraries](https://cdnjs.com/libraries/font-awesome)
     - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+    - Django documentation [Django](https://docs.djangoproject.com/en/5.0/)
     - [Django Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
     - Basic setup and deployment [](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit#heading=h.5s9novsydyp1)
     - For the forum rules [Elm](https://discourse.elm-lang.org/faq)
     - To help out with active links [Stackoverfow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar)
     - For generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/)
     - For Edit generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/)
+    - To display labels in kanban view [Github community](https://github.com/orgs/community/discussions/10788)
 
   - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
 
