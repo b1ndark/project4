@@ -36,9 +36,9 @@ The main goal of the forum is to create a community where people will help and s
       - [**Epic 7 - Documentation**](#epic-7---documentation)
   - [**Design**](#design)
     - [**Typography**](#typography)
-      - [Fonts used](#fonts-used)
-      - [Colours used](#colours-used)
-    - [Wireframes](#wireframes)
+      - [**Fonts used**](#fonts-used)
+      - [**Colours used**](#colours-used)
+    - [**Wireframes**](#wireframes)
     - [**Features**](#features)
   - [**Technologies, libraries, programs and tools used**](#technologies-libraries-programs-and-tools-used)
   - [**Languages**](#languages)
@@ -54,9 +54,9 @@ The main goal of the forum is to create a community where people will help and s
   - [**Deployment**](#deployment)
     - [**My Deployment**](#my-deployment)
     - [**Local Deployment**](#local-deployment)
-      - [Fork the repository](#fork-the-repository)
-      - [Clone the repository](#clone-the-repository)
-      - [Heroku deployment](#heroku-deployment)
+      - [**Fork the repository**](#fork-the-repository)
+      - [**Clone the repository**](#clone-the-repository)
+      - [**Heroku deployment**](#heroku-deployment)
   - [**Credits**](#credits)
   - [**Acknowledgments**](#acknowledgments)
 
@@ -76,7 +76,7 @@ The main goal of the forum is to create a community where people will help and s
 - The main goal of the forum is to create a community where people will help and share their problems that they may have encountered.
 - To share experiences with a certain TypeR model that they might have had.
 - To try help each other with certain problems that they have encountered by sharing any thoughts and ideas.
-- x
+- To feel welcomed in the friendly typeR community.
 
 ### **The TypeR forum**
 
@@ -188,14 +188,14 @@ I did develop this project using agile methodology.
 
 ### **Typography**
 
-#### Fonts used
+#### **Fonts used**
 
 From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - [**'Noto Sans JP', sans-serif**](https://fonts.google.com/noto/specimen/Noto+Sans+JP?preview.text=Hello%20World!&noto.query=Noto+Sans+JP&noto.lang=ja_Jpan&noto.script=Jpan&query=Noto+Serif+Japanese)
 - [**'Noto Serif JP', serif**](https://fonts.google.com/noto/specimen/Noto+Serif+JP?preview.text=Hello%20World!&noto.query=Noto+Serif+JP&noto.lang=ja_Jpan&noto.script=Jpan&query=Noto+Serif+Japanese)
 
-#### Colours used
+#### **Colours used**
 
 - Grey colour: #2c2b2ce3 - Used for the background
 - Very dark colour: #161516f3 - Used for the navbar
@@ -214,7 +214,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### Wireframes
+### **Wireframes**
 
 - Wireframes created for both mobiles and desktops
   
@@ -519,7 +519,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - [WAVE](https://wave.webaim.org/) - Used to help improving accessibility to individuals with disabilities, by showing where there might be errors.
 - [Heroku](https://dashboard.heroku.com/apps) - Used to deploy the TypeR forum website.
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Used to create project template.
-- [ElephantSQL](https://www.elephantsql.com/) - Database used to store the data.
+- [ElephantSQL](https://www.elephantsql.com/) - PostgreSQL database used to store the data.
 - [Cloudinary](https://cloudinary.com/) - Used to store image.
 - [Font Awesome](https://fontawesome.com/) - Used to display icons.
 - [Favicon](https://favicon.io/) - Used to create the website favicon.
@@ -873,7 +873,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-- ### Navbar
+- ### **Navbar**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -883,7 +883,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Signin page | When clicked to take me to the signin page | Clicked on the signin button | Takes me to the signin page | pass |
 | Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
 
-- ### Navbar when logged in
+- ### **Navbar when logged in**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -894,7 +894,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Logout button | when clicked to take me to the logout page | Clicked on the logout button | Takes me to the logout page | pass |
 | Contact page | When clicked to take me to the contact page | Clicked on the contact button | Takes me to the contact page | pass |
 
-- ### Footer
+- ### **Footer**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -903,7 +903,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Instagram within the footer | When clicked opens instagram page in a new tab | Clicked on the instagram logo | Takes me to the instagram page in a new tab | pass |
 | Linkedin within the footer | When clicked opens my linkedin page in a new tab | Clicked on the linkedin logo | Takes me to the linkedin page in a new tab | pass |
 
-- ### Home page
+- ### **Home page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -911,7 +911,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Within the rules section in the welcome message there is a signin clickable link | When clicked to take to signin page | Clicked on the signin link | Takes me back to the signin page | pass |
 | Within the contact section in the welcome message there is a contact clickable link | When clicked to take to signup page | Clicked on the signup link | Takes me back to the signup page | pass |
 
-- ### Signup page
+- ### **Signup page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -921,7 +921,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Login after signing up | To login after form successfully submitted | Submitted form | User logged in | pass |
 | Redirect to home | When successfully submitted the form, the user is redirected to home | Submited form | User redirected to home page | pass |
 
-- ### Signin page
+- ### **Signin page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -931,7 +931,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Notification is displayed | When successfully submit the login form a notification is displayed | Submited login form | A notification is displayed after successfully submitted form | pass |
 | Redirect to home page | When successfully submitted the login form, the user is redirected to home | Submited form | User redirected to home page | pass |
 
-- ### Contact page
+- ### **Contact page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -940,7 +940,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Contact page refresh | When successfully submit the form, the page refreshes after three seconds | Submitted form | Contact page refreshes three seconds after form is submitted | pass |
 | Auto reply email | When successfully submit the form, the user will get an auto reply email | Form submitted | Auto reply email received to let user know that form was seccussefully submitted | pass |
 
-- ### Logout page
+- ### **Logout page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -949,7 +949,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Confirm logout notification | When successfully logged out a notification is displayed | Press the logout button to confirm | A notification is displayed to confirm that the user is no longer logged in | pass |
 | Redirect to home | When successfully logged out, the user will be redirected to the home page | Press the logout button to confirm | The user is redirected to the home page | pass |
 
-- ### Profile page
+- ### **Profile page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -958,7 +958,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Edit button | When clicked on edit button, a new page is displayed to edit profile | Press the edit button | A new page is displayed with a form to edit profile | pass |
 | Delete button | When clicked on, the user will be taken to delete account page | Press delete button | The user is taken to the delete page | pass |
 
-- ### Edit profile page
+- ### **Edit profile page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -970,7 +970,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Redirect to profile | When User updates the profile, should redirect to the profile | User updates the profile | User is redirected to the profile page | pass |
 | User authentication | When User tries edit a profile that isn't his, a 403 error page (forbidden) page is displayed | tried to edit the profile from other user | 403-error page is displayed (forbidden) | pass |
 
-- ### Delete account page
+- ### **Delete account page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -983,7 +983,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Posts and comments delete | When deletes account both posts and comments from the same one is deleted | Deleted account | Both posts and comments have been deleted | pass |
 | User authentication | When User tries to delete a profile that isn't his, a 403 error page (forbidden) page is displayed | tried to delete the profile from other user | 403 error page is displayed (forbidden) | pass |
 
-- ### Forum page
+- ### **Forum page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -995,7 +995,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Pagination (by 4) | When the post list is more than four posts there will be a pagination system | add five posts | pagination buttons are displayed at the bottom of the page before footer | pass |
 | Post Info | The post should display Author, date which was created on, total likes and comments. | Created a post | Post shows all info (author, date, likes and comments) | pass |
 
-- ### Add post page
+- ### Add **post page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1006,7 +1006,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Notification | When post is added it should, display a message "Post has been added" | Fill the form and clicked add post | Notification has been displayed | pass |
 | Redirect | User should be redirected to the Created post view | Fill the form and clicked add post | User redirected to the created post view | pass |
 
-- ### Forum detail(Post) page
+- ### **Forum detail(Post) page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1020,7 +1020,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Comment notification | Once a commented is added, the user should get a notification displayed | Add comment | Notification is displayed "Your comment has been added to the Post" | pass |
 | Back button | When pressing back button, the user should be taken back to forum page | Clicked back button | Once clicked the forum page is displayed | pass |
 
-- ### Edit post page
+- ### **Edit post page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1034,7 +1034,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | User authentication | When User tries edit a post that isn't his, a 403 error page (forbidden) page should be displayed | tried to edit the post from other user | 403-error page is displayed (forbidden) | pass |
 | Delete button | When pressing delete button, the user should be taken to delete post page | Clicked delete button | Once clicked the delete post page is displayed | pass |
 
-- ### Delete post page
+- ### **Delete post page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1046,7 +1046,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Comments deleted | When User deletes the post all comments within the post should be deleted | Deleted post | Comments have been deleted with the post | pass |
 | User authentication | When User tries to delete a post that isn't his/hers, a 403 error page (forbidden) page is displayed | tried to delete the post from other user | 403 error page is displayed (forbidden) | pass |
 
-- ### Edit comment page
+- ### **Edit comment page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1058,7 +1058,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | User authentication | When User tries edit a comment that isn't his, a 403 error page (forbidden) page should be displayed | tried to edit the comment from other user | 403 error page is displayed (forbidden) | pass |
 | Delete button | When pressing delete button, the user should be taken to delete comment page | Clicked delete button | Once clicked the delete comment page is displayed | pass |
 
-- ### Delete comment page
+- ### **Delete comment page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1069,7 +1069,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 | Redirect to forum page | When user clicks delete button it should delete the comment and redirect to forum page | Clicked delete button | The comment is deleted and redirected to forum page | pass |
 | User authentication | When User tries to delete a comment that isn't his/her, a 403 error page (forbidden) page is displayed | tried to delete the comment from other user | 403 error page is displayed (forbidden) | pass |
 
-- ### Admin page
+- ### **Admin page**
 
 | Feature | Expected Outcome | Testing | Result | Pass or Fail |
 | ------- | ---------------- | ------- | ------ | ------------ |
@@ -1139,14 +1139,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ### **Local Deployment**
 
-#### Fork the repository
+#### **Fork the repository**
 
 1. Open Github.
 2. Log in or sign up.
 3. Look for my repository [Type R Forum](https://github.com/b1ndark/project4).
 4. Last on the right corner you will find the fork button(click on it).
 
-#### Clone the repository
+#### **Clone the repository**
 
 1. Open Github
 2. Log in or Sign up
@@ -1158,7 +1158,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 8. Type `git clone` in the terminal and paste the copied repository link.
 9. After all that just Press enter to create the clone.
 
-#### Heroku deployment
+#### **Heroku deployment**
 
 1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
 
@@ -1207,9 +1207,10 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - To help out with active links [Stackoverfow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar)
     - For generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/)
     - For Edit generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-editing/)
+    - Bootstrap [alerts](https://getbootstrap.com/docs/5.0/components/alerts/)
     - To display labels in kanban view [Github community](https://github.com/orgs/community/discussions/10788)
 
-  - I have watched some tutorials on Youtube that have helped me with understanding and learning through out the project:
+  - I have watched some tutorials on Youtube that have helped me understand and learn through out the project:
 
     - [Codemy.com](https://www.youtube.com/playlist?list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
     - [Dee Mc - Part one](https://www.youtube.com/playlist?list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy)

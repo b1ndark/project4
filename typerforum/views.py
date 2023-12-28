@@ -126,7 +126,7 @@ class AddPost(SuccessMessageMixin, generic.CreateView):
 class EditPost(LoginRequiredMixin, UserPassesTestMixin,
                SuccessMessageMixin, generic.UpdateView):
     """
-    Render Forum Edit Post Page so User can a Edit Post
+    Render Forum Edit Post Page so User can Edit a Post
     """
     model = Post
     template_name = 'forum_edit_post.html'
@@ -142,7 +142,7 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
                  SuccessMessageMixin, generic.DeleteView):
     """
     Render Forum Delete Post Page so User can a Delete Post
-    and redirect to forum
+    and be redirect to forum
     """
     model = Post
     template_name = 'forum_delete_post.html'
@@ -157,7 +157,7 @@ class DeletePost(LoginRequiredMixin, UserPassesTestMixin,
 class EditComment(LoginRequiredMixin, UserPassesTestMixin,
                   SuccessMessageMixin, generic.UpdateView):
     """
-    Render Forum Edit Comment Page so User can a Edit Post
+    Render Forum Edit Comment Page so User can Edit a comment
     """
     model = Comment
     template_name = 'forum_edit_comment.html'
@@ -172,8 +172,8 @@ class EditComment(LoginRequiredMixin, UserPassesTestMixin,
 class DeleteComment(LoginRequiredMixin, UserPassesTestMixin,
                     SuccessMessageMixin, generic.DeleteView):
     """
-    Render Forum Delete Comment Page so User can a Delete Comment
-    and redirect to forum
+    Render Forum Delete Comment Page so User can Delete a Comment
+    and be redirect to forum
     """
     model = Comment
     template_name = 'forum_delete_comment.html'

@@ -16,7 +16,7 @@
         <!--            Title            -->
         <h1 class="pb-3 text-center">{% trans "Edit Profile" %}</h1>
 
-        <!--            Sign Up Form            -->
+        <!--            Edit profile Form            -->
         <div class="account-form">
           <form class="signup" enctype="multipart/form-data" method="post">
             {% csrf_token %} {{ form|crispy }}
