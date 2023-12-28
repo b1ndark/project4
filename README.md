@@ -24,21 +24,23 @@ The main goal of the forum is to create a community where people will help and s
     - [**Visitors**](#visitors)
     - [**Goals**](#goals)
     - [**The TypeR forum**](#the-typer-forum)
-  - [**User Stories(Epics)**](#user-storiesepics)
-    - [**Epic 1 - Structure**](#epic-1---structure)
-    - [**Epic 2 - Home and Error Pages**](#epic-2---home-and-error-pages)
-    - [**Epic 3 - User Management**](#epic-3---user-management)
-    - [**Epic 4 - Forum - Posts**](#epic-4---forum---posts)
-    - [**Epic 5 - Forum - Comments**](#epic-5---forum---comments)
-    - [**Epic 6 - Admin and Deployment**](#epic-6---admin-and-deployment)
-    - [**Epic 7 - Documentation**](#epic-7---documentation)
+  - [**Agile**](#agile)
+    - [**MoSCoW prioritization method**](#moscow-prioritization-method)
+    - [**User Stories(Epics)**](#user-storiesepics)
+      - [**Epic 1 - Structure**](#epic-1---structure)
+      - [**Epic 2 - Home and Error Pages**](#epic-2---home-and-error-pages)
+      - [**Epic 3 - User Management**](#epic-3---user-management)
+      - [**Epic 4 - Forum - Posts**](#epic-4---forum---posts)
+      - [**Epic 5 - Forum - Comments**](#epic-5---forum---comments)
+      - [**Epic 6 - Admin and Deployment**](#epic-6---admin-and-deployment)
+      - [**Epic 7 - Documentation**](#epic-7---documentation)
   - [**Design**](#design)
     - [**Typography**](#typography)
       - [Fonts used](#fonts-used)
       - [Colours used](#colours-used)
     - [Wireframes](#wireframes)
     - [**Features**](#features)
-  - [**Technologies, programs and tools used**](#technologies-programs-and-tools-used)
+  - [**Technologies, libraries, programs and tools used**](#technologies-libraries-programs-and-tools-used)
   - [**Languages**](#languages)
     - [**HTML**](#html)
     - [**CSS**](#css)
@@ -104,9 +106,26 @@ The main goal of the forum is to create a community where people will help and s
 
 ---
 
-## **User Stories(Epics)**
+## **Agile**
 
-### **Epic 1 - Structure**
+I did develop this project using agile methodology.
+
+### **MoSCoW prioritization method**
+
+- The MoSCoW prioritization method was utilized for the project in order to achieve the goals.
+- The MoSCoW categories:
+  - Must-Have - They are guaranteed to be delivered as they are critical in order to success.
+  - Should-Have - They do complement the project by adding value but vital for it to run, so they can be added in future.
+  - Could-Have - If not implemented it will not affect the functionality, but could improve User/Customer experience.
+  - Won't-Have - It is not a priority for this iteration.
+  - For more info on MoSCoW method please click [here](https://monday.com/blog/project-management/moscow-prioritization-method/)
+- I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/5/views/1).
+
+  ![image](assets/readme/moscow_prioritization.webp)
+
+### **User Stories(Epics)**
+
+#### **Epic 1 - Structure**
 
 - As a developer I can create a base.html file so that all other pages can reuse it
 - As a developer I can create static folder so that it can store all the other subfolders and files
@@ -115,14 +134,14 @@ The main goal of the forum is to create a community where people will help and s
 - As developer I can create a includes folder so that I can store the navbar and footer file in it to keep the file tidy
 - As developer I can Setup all the import features so that it is ready to deploy to heroku
 
-### **Epic 2 - Home and Error Pages**
+#### **Epic 2 - Home and Error Pages**
 
 - As a User I can view the home page so that I get a welcome message
 - As a User I can get 404 Error page so that I know that something went wrong
 - As a User I can a 403 Forbidden Error so that I know that I haven't got permission to access a web page or something else
 - As a User I can get a 500 error page so that I know that there was a internal server error
 
-### **Epic 3 - User Management**
+#### **Epic 3 - User Management**
 
 - As a User I can sign up/register so that I can login
 - As a User I can check for registration confirmation so that I know that I have successfully registered
@@ -130,7 +149,7 @@ The main goal of the forum is to create a community where people will help and s
 - As a user I can see a confirmation of login so that I know that I have successfully logged in
 - As a User I can view Profile page so that I can modify or view other users profile
 
-### **Epic 4 - Forum - Posts**
+#### **Epic 4 - Forum - Posts**
 
 - As a User I can select Forum page so that I can view posts
 - As a User I can view a post so that I can be updated
@@ -139,20 +158,21 @@ The main goal of the forum is to create a community where people will help and s
 - As a User I can edit a post so that I can correct grammar errors
 - As a User I can delete a post that I have created so that the post is deleted from the forum
 
-### **Epic 5 - Forum - Comments**
+#### **Epic 5 - Forum - Comments**
 
 - As a User I can view comments so that I can see what people have commented on posts
 - As a User I can add a comment to the post that I am interested in so that other users/post owner can read my opinion
 - As a User I can receive a notification so that I know that my comment has successfully been posted
 - As a user I can edit a comment so that comment is corrected/updated
 
-### **Epic 6 - Admin and Deployment**
+#### **Epic 6 - Admin and Deployment**
 
 - As a Admin I can login so that I can manage the forum
 - As a Admin I want to access the admin page so that I can Add/Edit/Modify Posts, I can delete Users, I can delete comments
 - As a developer I can deploy the website to heroku so that Users can start using it
+- As a User I can receive a confirmation from contact support so that I know that my message is being dealt with
 
-### **Epic 7 - Documentation**
+#### **Epic 7 - Documentation**
 
 - Write the readme with all documentation
   - Content nav menu
@@ -404,7 +424,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If the User does want to add on picture, it can do it so.
   - If submitted a notification will be displayed confirming it.
 
-    ![image](assets/readme/features/add_post_page.webpp)
+    ![image](assets/readme/features/add_post_page.webp)
     ![image](assets/readme/features/add_post_notification.webp)
 
 - #### Edit Post Page
@@ -479,13 +499,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-## **Technologies, programs and tools used**
+## **Technologies, libraries, programs and tools used**
 
-- [HTML](https://en.wikipedia.org/wiki/HTML) - Used to create the templates for the website.
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to create the templates for the website.
 - [CSS](https://en.wikipedia.org/wiki/CSS) - Used to customize the website style.
 - [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the timeout and emailJS functionality.
-- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Used in Django as it is Python-based web framework.
-- [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) - Used the django framework to develop the forum.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Python language used in Django.
+- [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) - Django which is Python-based web framework used to develop the forum.
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - This toolkit was used to help build the website faster.
 - [Codeanywhere](https://app.codeanywhere.com/) - Used to create the project.
 - [Github](https://github.com/) - Where the website is stored.
 - [Spell Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik/related) - Used to check spelling.
@@ -496,8 +517,6 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - [JSHint](https://jshint.com/) - Used to check for JavaScript code errors.
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to check for Python code errors.
 - [WAVE](https://wave.webaim.org/) - Used to help improving accessibility to individuals with disabilities, by showing where there might be errors.
-- [screen Pal](https://screenpal.com/) - Used to record the screen.
-- [Giphy](https://giphy.com/create/gifmaker) - Used to create gifs.
 - [Heroku](https://dashboard.heroku.com/apps) - Used to deploy the TypeR forum website.
 - [Code Institute Template](https://github.com/Code-Institute-Org/ci-full-template) - Used to create project template.
 - [ElephantSQL](https://www.elephantsql.com/) - Database used to store the data.
@@ -1143,7 +1162,9 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
 
-    - Type the command ```pip3 freeze > requirements.txt```
+    - Type the command ```pip3 freeze --local > requirements.txt```
+
+    ![image](assets/readme/requirements.webp)
 
 2. Make sure you commit and push it
 3. Open and login to your Heroku account
