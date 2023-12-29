@@ -70,19 +70,13 @@ class Comment(models.Model):
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, related_name='comments')
     name = models.CharField(max_length=100)
-    email = models.EmailField()
     body = models.TextField(verbose_name=('Update your comment...'))
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=True)
-    likes = models.ManyToManyField(
-        User, related_name='comment_like', blank=True)
 
     class Meta:
         ordering = ['created_on']
-
-    def number_of_likes(self):
-        return self.likes.count()
 
     def __str__(self):
         return f'Comment {self.body} by {self.name}'

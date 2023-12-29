@@ -39,6 +39,7 @@ The main goal of the forum is to create a community where people will help and s
       - [**Fonts used**](#fonts-used)
       - [**Colours used**](#colours-used)
     - [**Wireframes**](#wireframes)
+    - [**Entity Relationship Diagram(ERD)**](#entity-relationship-diagramerd)
     - [**Features**](#features)
   - [**Technologies, libraries, programs and tools used**](#technologies-libraries-programs-and-tools-used)
   - [**Languages**](#languages)
@@ -52,11 +53,10 @@ The main goal of the forum is to create a community where people will help and s
   - [**Testing**](#testing)
   - [**Bugs**](#bugs)
   - [**Deployment**](#deployment)
-    - [**My Deployment**](#my-deployment)
-    - [**Local Deployment**](#local-deployment)
-      - [**Fork the repository**](#fork-the-repository)
-      - [**Clone the repository**](#clone-the-repository)
-      - [**Heroku deployment**](#heroku-deployment)
+    - [**Fork the repository**](#fork-the-repository)
+    - [**Clone the repository**](#clone-the-repository)
+    - [**ElephantSQL**](#elephantsql)
+    - [**Heroku deployment**](#heroku-deployment)
   - [**Credits**](#credits)
   - [**Acknowledgments**](#acknowledgments)
 
@@ -122,6 +122,7 @@ I did develop this project using agile methodology.
 - I have created a Kanban using Github projects, the User story template and labels were created following [Code Institute](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+AG101+2021_T1/courseware/a4e548ca70a3473aa890ba2ab9bf612c/db69a5829de8467eb071e63bde630a2e/?child=last) and where in each user story I have added acceptance criteria and tasks that needed to be completed in order to close them. The Kanban can be found [here](https://github.com/users/b1ndark/projects/5/views/1).
 
   ![image](assets/readme/moscow_prioritization.webp)
+  [Kanban link image](https://i.gyazo.com/3afcaae9c1ccdbe9fac798a3ac5d2605.png)
 
 ### **User Stories(Epics)**
 
@@ -169,8 +170,8 @@ I did develop this project using agile methodology.
 
 - As a Admin I can login so that I can manage the forum
 - As a Admin I want to access the admin page so that I can Add/Edit/Modify Posts, I can delete Users, I can delete comments
-- As a developer I can deploy the website to heroku so that Users can start using it
 - As a User I can receive a confirmation from contact support so that I know that my message is being dealt with
+- As a developer I can deploy the website to heroku so that Users can start using it
 
 #### **Epic 7 - Documentation**
 
@@ -289,6 +290,18 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - **500 Error page**
 
     ![image](assets/readme/wireframes/500_error.webp)
+
+[**Back to the top**](#typer-forum "back_to_the_top")
+
+---
+
+### **Entity Relationship Diagram(ERD)**
+
+- To illustrate the relationships between the users, profiles, posts, comments and likes. I have created a diagram to help understand it.
+
+    ![image](assets/readme/typerforum_diagram.webp)
+
+    [Image link](https://i.gyazo.com/439128f20c7095beb9fe3524c8c4a18f.png)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 
@@ -526,6 +539,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 - [Am I Responsive?](https://ui.dev/amiresponsive) - Used to display the website on different devices.
 - [Google Fonts](https://fonts.google.com/) - Used for the fonts in the website.
 - [Uizard](https://uizard.io/) - Used to create the website wireframes.
+- [Lucidchart](https://lucid.app/) - Used to create the Entity Relationship Diagram (ERD)
 - [Microsoft Word](https://www.microsoft.com/en-gb/microsoft-365/p/word/cfq7ttc0hlkm?activetab=pivot:overviewtab) - Used to write some texts to apply in the project.
 - [ColorKit](https://colorkit.co/) - Used to create the colour palette.
 
@@ -1123,30 +1137,14 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ## **Deployment**
 
-### **My Deployment**
-
-- The website was deployed to Github pages. Steps to deploy:
-
-1. Open Github
-2. Log in into your Github account.
-3. In the Github repository select the project.
-4. Navigate to the settings tab.
-5. Then scroll down and on your left select Pages.
-6. Go to branch, and select master branch.
-7. Once master branch is selected, wait a moment and it will provide a page link to the website.
-
-- The live link can be found here - [Type R Forum](https://typerforum-fb5dd209c30e.herokuapp.com/).
-
-### **Local Deployment**
-
-#### **Fork the repository**
+### **Fork the repository**
 
 1. Open Github.
 2. Log in or sign up.
 3. Look for my repository [Type R Forum](https://github.com/b1ndark/project4).
 4. Last on the right corner you will find the fork button(click on it).
 
-#### **Clone the repository**
+### **Clone the repository**
 
 1. Open Github
 2. Log in or Sign up
@@ -1157,8 +1155,66 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 7. Open your code editor terminal.
 8. Type `git clone` in the terminal and paste the copied repository link.
 9. After all that just Press enter to create the clone.
+10. Once the workspace(typerforum) is opened type the following command to install all the required packages to ruin the app
 
-#### **Heroku deployment**
+    - Type the command ```pip install -r requirements.txt```
+
+11. Within the settings make sure to set ```DEBUG = True```
+12. Before deploying it, when all the modifications done make sure to set ```DEBUG = False```, because if left True it might expose vulnerabilities, so to minimize the security risk set it to 'False'
+13. After setting it to False commit your changes by adding the following
+    - Type the command ```git add .```
+    - Type the command ```git commit -m "commit message"```
+    - At last type the command ```git push```
+
+### **ElephantSQL**
+
+1. First go to [ElephantSQL website](https://www.elephantsql.com/)
+2. If you already have an account login if not create an account.
+3. Once logged in please click "+ Create New Instance" on the top right hand corner.
+4. Add a name and the plan select "Tiny Turtle(Free)". Press Select Region.
+5. Select your Region and click "Review".
+6. Review all details and you are happy with it click "Create Instance".
+7. Once the instance is created you will be redirected to the instance dashboard.
+8. Go to details and copy the instance URL.
+9. Within your workspace if you haven't got and "env.py" file create one.
+10. In your "env.py" type the Following
+    - type ```import os```
+    - type ```os.environ["DATABASE_URL"]="<copied URL from elephantSQL>"```
+11. Now go to your settings.py file and add the following
+    - type
+
+        ```ruby
+        if os.path.isfile('env.py'):
+            import env
+        ```
+
+    - then type
+
+        ```ruby
+        # DATABASES = {
+        #     'default': {
+        #         'ENGINE': 'django.db.backends.sqlite3',
+        #         'NAME': BASE_DIR / 'db.sqlite3',
+        #     }
+        # }
+            
+        DATABASES = {
+            'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
+        ```
+
+12. Now after setting it all up, you have to run migrations so in your terminal type
+    - First type
+        ```python3 manage.py makemigrations```
+
+    - Then type
+        ```python3 manage.py migrate```
+
+13. Now to confirm go back to your elephantSQL instance dashboard and on the left select "BROWSER".
+14. Click "Table queries" and you will be able to see your database structure.
+15. Last make sure to commit so it's all saved.
+
+### **Heroku deployment**
 
 1. Within your opened project in Codeanywhere or Gitpod you will have to freeze requirements.txt file
 
@@ -1166,26 +1222,38 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
     ![image](assets/readme/requirements.webp)
 
-2. Make sure you commit and push it
-3. Open and login to your Heroku account
-4. Once your dashboard opens, on the top right-hand corner click on New and then on the Create new app
-5. Give your app a name and select the location
-6. Once created, the app dashboard will open.
-7. Select Settings tab
-8. Go down to Config Vars
-    - add to Key "PORT" and to value "8000"
-    - add to key "CLOUDINARY_URL" and to value "add your cloudinary url"
-    - add to key "DATABASE_URL" and to value "add your Postgres url"
-    - add to key "SECRET_KEY" and to value "add your secret key"
-9. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
+2. Go to your settings.py file and change DEBUG to "False".
+3. Add the following to your settings.py file
+
+   ```ruby
+   ALLOWED_HOSTS = ['localhost', 'your-app-name.herokuapp.com']
+   ```
+
+4. Store all the sensible data such as for "SECRET_KEY" and "DATABASE_URL" into to the "env.py" file.
+5. Double check if "env.py" file is in your ".gitignore" file so it is stopped from being uploaded.
+6. Make sure you commit and push it.
+7. Open and login to your Heroku account.
+8. Once your dashboard opens, on the top right-hand corner click on New and then on the Create new app.
+9. Give your app a name and select the location.
+10. Once created, the app dashboard will open.
+11. Select Settings tab.
+12. Go down to Config Vars
+    - add to Key "PORT" and to add value "8000"
+    - add to key "CLOUDINARY_URL" and to add value "add your cloudinary url"
+    - add to key "DATABASE_URL" and to add value "add your Postgres url"
+    - add to key "SECRET_KEY" and to add value "add your secret key"
+13. Next go to Buildpacks and add "heroku/python" and "heroku/nodejs"
 
     - Make sure they are in this order first "heroku/python" and then in second "heroku/nodejs"
 
-10. After all that select Deploy tab
-11. Go down to Deployment method and select GitHub
-12. Connect to your GitHub and enter the repository
-13. Once is connected you can either have automatic or manual deployment
-14. Choose your preferred one by pressing deploy
+14. After all that select Deploy tab.
+15. Go down to Deployment method and select GitHub.
+16. Connect to your GitHub and enter the repository.
+17. Once is connected you can either have automatic or manual deployment.
+18. Choose your preferred one by pressing deploy.
+19. Once the app is successfully deployed click "View"
+
+[Live project](https://typerforum-fb5dd209c30e.herokuapp.com/)
 
 [**Back to the top**](#typer-forum "back_to_the_top")
 

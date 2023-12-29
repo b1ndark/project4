@@ -187,7 +187,7 @@ class DeleteComment(LoginRequiredMixin, UserPassesTestMixin,
 
 class PostLike(View):
     """
-    To like Posts
+    To like/unlike Posts
     """
 
     def post(self, request, pk):
