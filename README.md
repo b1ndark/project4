@@ -39,7 +39,7 @@ The main goal of the forum is to create a community where people will help and s
       - [**Fonts used**](#fonts-used)
       - [**Colours used**](#colours-used)
     - [**Wireframes**](#wireframes)
-    - [**Entity Relationship Diagram(ERD)**](#entity-relationship-diagramerd)
+    - [**Entity Relationship Diagram (ERD)**](#entity-relationship-diagram-erd)
     - [**Features**](#features)
   - [**Technologies, libraries, programs and tools used**](#technologies-libraries-programs-and-tools-used)
   - [**Languages**](#languages)
@@ -295,9 +295,16 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 ---
 
-### **Entity Relationship Diagram(ERD)**
+### **Entity Relationship Diagram (ERD)**
 
-- To illustrate the relationships between the users, profiles, posts, comments and likes. I have created a diagram to help understand it.
+Entity Relationship Diagram (ERD) was used to help understand the relationships between the models.
+
+- User and UserProfile have an OneToOne relationship, a User can only have one profile and a profile can only belong to one User.
+- User and Post have an OneToMany relationship, a User can have many Posts but, a post can only belong to one User.
+- Post and Comments have an OneToMany relationship, a post can have many comments but, each comment can only belong to one post.
+- Post and PostLike have an OneToMany relationship, a post can have multiple likes.
+- User and PostLike have a ManyToMany relationship, where a User can add many likes to many posts, and a post can be liked by many Users.
+- To illustrate the relationships between the users, profiles, posts, comments and likes. I have created a diagram using [Lucidchart](https://www.lucidchart.com/) to help understand it.
 
     ![image](assets/readme/typerforum_diagram.webp)
 
@@ -371,6 +378,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If Submitted the User will get a notification and automatically logged in.
 
     ![image](assets/readme/features/signup_page.webp)
+    ![image](assets/readme/features/signup_notification.webp)
 
 - #### Sign In Page
 
@@ -379,6 +387,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If the User does not have a login there is a link to press that will take him/her to the Sign Up page.
 
     ![image](assets/readme/features/signin_page.webp)
+    ![image](assets/readme/features/signin_notification.webp)
 
 - #### Log Out Page
 
@@ -386,6 +395,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If confirmed it will be redirected to the Home page and a notification displayed.
 
     ![image](assets/readme/features/logout_page.webp)
+    ![image](assets/readme/features/logout_notification.webp)
 
 - #### Profile Page
 
@@ -415,18 +425,22 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - #### Forum Page
 
-  - The accessed the User will have a list of Posts displayed.
+  - The User will have a list of Posts displayed.
   - If there are more than four posts the page will be paginated where the User will be able to go next/previous page.
   - Within the Forum page a Search bar is displayed in the navbar so the User can look for the pretended post.
+  - When User is using a device with a small screen the search bar moves from navbar to under the add post button to.
   - At the top there is a Add Post button that will take you to the Add Post page so you can add posts and contribute to the community.
   - When a post within the Post list is selected it will take you to the Post detail page.
 
     ![image](assets/readme/features/forum_page.webp)
+    ![image](assets/readme/features/small_screen_search_bar.webp)
 
 - #### Post Detail Page
 
-  - A post is displayed and the User can comment.
+  - A post is displayed and the User can add a comment.
+  - Users can like/unlike the post.
   - If the User is the Post author an Edit button is displayed which when pressed takes you to the Edit Post page.
+  - Users can access the post author profile by clicking on the post author's name.
 
     ![image](assets/readme/features/forum_detail_page.webp)
 
@@ -444,8 +458,10 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
   - If User pressed Edit then the Edit page is displayed so the Post can be either edited or deleted.
   - If the Post is edited and submitted a notification will be presented to the User.
+  - If User presses Delete button, User will be taken to Delete post page.
 
     ![image](assets/readme/features/edit_post_page.webp)
+    ![image](assets/readme/features/edit_post_notification.webp)
 
 - #### Delete Post Page
 
@@ -453,6 +469,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If the User confirms, the Post is deleted and a notification displayed.
 
     ![image](assets/readme/features/delete_post_page.webp)
+    ![image](assets/readme/features/delete_post_notification.webp)
 
 - #### Add Comment
 
@@ -469,6 +486,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If the Comment is edited and submitted a notification will be presented to the User.
 
     ![image](assets/readme/features/edit_comment_page.webp)
+    ![image](assets/readme/features/edit_comment_notification.webp)
 
 - #### Delete Comment Page
 
@@ -476,6 +494,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
   - If the User confirms, the Comment is deleted and a notification displayed.
 
     ![image](assets/readme/features/delete_comment_page.webp)
+    ![image](assets/readme/features/delete_comment_notification.webp)
 
 - #### 403 Error Page
 
@@ -516,7 +535,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5) - Used to create the templates for the website.
 - [CSS](https://en.wikipedia.org/wiki/CSS) - Used to customize the website style.
-- [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the timeout and emailJS functionality.
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript) - Used to setup the settimeout for notifications and emailJS functionality in contact page.
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - Python language used in Django.
 - [Django](https://en.wikipedia.org/wiki/Django_(web_framework)) - Django which is Python-based web framework used to develop the forum.
 - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - This toolkit was used to help build the website faster.
@@ -1270,7 +1289,7 @@ From [Google Fonts](https://fonts.google.com/ "google_fonts"):
     - [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
     - Django documentation [Django](https://docs.djangoproject.com/en/5.0/)
     - [Django Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html)
-    - Basic setup and deployment [](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit#heading=h.5s9novsydyp1)
+    - [Basic setup and deployment](https://docs.google.com/document/d/1P5CWvS5cYalkQOLeQiijpSViDPogtKM7ZGyqK-yehhQ/edit#heading=h.5s9novsydyp1)
     - For the forum rules [Elm](https://discourse.elm-lang.org/faq)
     - To help out with active links [Stackoverfow](https://stackoverflow.com/questions/39639264/django-highlight-current-page-in-navbar)
     - For generic views [Django docs](https://docs.djangoproject.com/en/3.2/topics/class-based-views/generic-display/)
