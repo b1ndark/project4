@@ -1,4 +1,4 @@
-// sendMail function to send email using emailJS where I have set auto reply aswell.
+// sendMail function to send email using emailJS where I have set auto reply aswell. from Code institue
 function sendMail(contactForm) {
     // collects the values from the form
     emailjs.send('service_nxryx3l', 'typerforum', {
